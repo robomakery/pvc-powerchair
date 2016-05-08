@@ -2,7 +2,7 @@
 
 PVC based pediatric powerchair initial developed at BYU and continued by the [Open Wheelchair Foundation](http://openwheelchair.org/).
 
-![PVC Powerchair with tester](iamges/pvc-chair.jpg)
+![PVC Powerchair with tester](images/pvc-chair.jpg)
 
 ## License Information
 
