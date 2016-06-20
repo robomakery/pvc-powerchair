@@ -8,7 +8,7 @@
         <mass>100</mass>
       </inertial>
       <visual name="vis_body">
-        <pose>0 0 0.04 0 0 0</pose>
+        <pose>0 0 0.02 0 0 0</pose>
         <geometry>
           <box>
 						<size>0.3 0.3 0.3</size>
@@ -104,6 +104,77 @@
 		</link>
 
 
+    <!-- left small wheel -->
+    <link name="left_small_wheel">
+      <pose>0.17 0.13 -0.1 0 1.56 0</pose>
+      <self_collide>0</self_collide>
+      <inertial>
+        <pose>0 0 0.5 0 0 0</pose>
+      </inertial>
+
+      <visual name="vis_left_small_wheel">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.02</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+
+      <collision name="col_left_small_wheel">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.02</length>
+          </cylinder>
+        </geometry>
+      </collision>
+		</link>
+
+    <!-- right small wheel -->
+    <link name="right_small_wheel">
+      <pose>-0.17 0.13 -0.1 0 1.56 0</pose>
+      <self_collide>0</self_collide>
+      <inertial>
+        <pose>0 0 0.5 0 0 0</pose>
+      </inertial>
+
+      <visual name="vis_right_small_wheel">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.02</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+
+      <collision name="col_right_small_wheel">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.02</length>
+          </cylinder>
+        </geometry>
+      </collision>
+		</link>
+
+
 
     <!-- pin joint for body and wheels -->
     <joint name="joint_left_big_wheel" type="revolute">
@@ -124,6 +195,23 @@
       </axis>
     </joint>
 
+    <joint name="joint_left_small_wheel" type="revolute">
+      <parent>body</parent>
+      <child>left_small_wheel</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+
+    <joint name="joint_right_small_wheel" type="revolute">
+      <parent>body</parent>
+      <child>right_small_wheel</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
 
   </model>
 </sdf>
