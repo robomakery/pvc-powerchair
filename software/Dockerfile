@@ -1,11 +1,11 @@
-FROM ros:jade-ros-base
+FROM ros:kinetic-ros-base
 MAINTAINER Dylan Vaughn dylan@robomakery.com
 
 ENV PVC_VERSION 0.1.0
 
 RUN apt-get update && apt-get install -y \
-    ros-jade-robot=1.2.0-0* \
-    ros-jade-perception=1.2.0-0* \
+    ros-kinetic-robot=1.3.0-0* \
+    ros-kinetic-perception=1.3.0-0* \
     python-pip \
     vim \
     emacs \
@@ -35,7 +35,7 @@ EXPOSE 11311
 ENTRYPOINT []
 
 # Build ROS packages
-RUN . /opt/ros/jade/setup.sh \
+RUN . /opt/ros/kinetic/setup.sh \
 && cd /usr/src/app/ros \
 && catkin_make
 

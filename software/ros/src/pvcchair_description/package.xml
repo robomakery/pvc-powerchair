@@ -1,14 +1,13 @@
 <?xml version="1.0"?>
 <package>
   <name>pvcchair_description</name>
-  <version>0.0.1</version>
+  <version>0.1.0</version>
   <description>pvcchair_description - the software for the PVC Pediatric Powerchair.</description>
 
   <maintainer email="dylan@robomakery.com">Dylan Vaughn</maintainer>
-  <license>MIT</license>
+  <license>GPLv3</license>
   <url type="website">https://github.com/robomakery/pvc-powerchair</url>
   <author email="dylan@robomakery.com">Dylan Vaughn</author>
-
 
   <!-- The *_depend tags are used to specify dependencies -->
   <!-- Dependencies can be catkin packages or system dependencies -->

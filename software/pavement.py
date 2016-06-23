@@ -15,7 +15,7 @@ setup(
 @task
 def docker_build():
     """Builds the docker container"""
-    os.system("docker build -t pfc .")
+    os.system("docker build -t pvc .")
 
 @task
 def docker_run():
