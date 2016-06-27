@@ -11,7 +11,7 @@
         <pose>0 0 0.02 0 0 0</pose>
         <geometry>
           <box>
-						<size>0.3 0.3 0.3</size>
+            <size>0.3 0.3 0.3</size>
             <!--<radius>0.8</radius>
             <length>0.02</length>-->
           </box>
@@ -66,7 +66,7 @@
           </cylinder>
         </geometry>
       </collision>
-		</link>
+    </link>
 
     <!-- right big wheel -->
     <link name="right_big_wheel">
@@ -101,7 +101,7 @@
           </cylinder>
         </geometry>
       </collision>
-		</link>
+    </link>
 
 
     <!-- left small wheel -->
@@ -137,7 +137,7 @@
           </cylinder>
         </geometry>
       </collision>
-		</link>
+    </link>
 
     <!-- right small wheel -->
     <link name="right_small_wheel">
@@ -172,7 +172,7 @@
           </cylinder>
         </geometry>
       </collision>
-		</link>
+    </link>
 
 
 
