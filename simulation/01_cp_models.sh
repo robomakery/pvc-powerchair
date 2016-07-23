@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "copy models to your models directory"
 cp -rf ./models/* $HOME/.gazebo/models
 echo "done"
