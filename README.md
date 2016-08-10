@@ -8,6 +8,10 @@ Currently the documentation is located at:
 
 http://www.openwheelchair.org/Plans/
 
+There is a Google Group mailing list for development discussion:
+
+https://groups.google.com/forum/?hl=en#!forum/robomakery-pvc-chair
+
 A BOM for this version of the chair can be found here as a Google Sheet:
 
 https://docs.google.com/spreadsheets/d/1bKTSlYI-VXHVKByr3TpmT4WPJDfsZL3mFjEXyMhEeBg/edit?usp=sharing
