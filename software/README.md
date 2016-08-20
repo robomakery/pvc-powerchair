@@ -12,3 +12,11 @@ Tasks from pavement:
 i.e.:
 
     $ paver docker_build
+
+# Testing
+
+We are using the the [Python Behave](http://pythonhosted.org/behave/) BDD framework.  If you have the ROS system running you can do:
+
+    $ behave
+
+to run the features against the application.
