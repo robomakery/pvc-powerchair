@@ -8,4 +8,7 @@ Tasks from pavement:
   docker_rm_images     - Removes all images
   docker_run           - Runs the docker container
 ```
-    
+
+i.e.:
+
+    $ paver docker_build
