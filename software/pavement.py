@@ -31,3 +31,9 @@ def docker_rm_containers():
 def docker_rm_images():
     """Removes all images"""
     os.system("docker rmi $(docker images -q)")
+
+@task
+def ros_rviz():
+    """Runs rviz"""
+    os.system("roslaunch pvcchair_description pvcchair_rviz.launch")
+    
