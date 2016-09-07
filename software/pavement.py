@@ -1,4 +1,4 @@
-import os
+import subprocess, os
 
 from paver.easy import *
 from paver.setuputils import setup
@@ -35,5 +35,6 @@ def docker_rm_images():
 @task
 def ros_rviz():
     """Runs rviz"""
-    os.system("roslaunch pvcchair_description pvcchair_rviz.launch")
-    
+    os.system("sh ./ros/devel/setup.sh && roslaunch pvcchair_description pvcchair_rviz.launch")
+    pipe = subprocess.Popen(". ./ros/devel/setup.bash && roslaunch pvcchair_description pvcchair_rviz.launch", stdout=subprocess.PIPE, shell=True)
+    output = pipe.communicate()[0]
