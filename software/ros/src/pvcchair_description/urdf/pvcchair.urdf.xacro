@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<robot name="pvcchair" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <link name="base_footprint" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/base.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/seat.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/arms.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/back.urdf.xacro" />
+</robot>

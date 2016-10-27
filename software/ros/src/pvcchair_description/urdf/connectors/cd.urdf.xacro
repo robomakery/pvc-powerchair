@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot name="cd" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="cd-mesh">
+    <mesh filename="package://pvcchair_description/meshes/connectors/cd_2_way_elbow.dae" />
+  </xacro:property>
+
+  <xacro:macro name="cd" params="suffix">
+    <link name="cd_${suffix}">
+      <inertial>
+        <mass value="0.018266" />
+        <origin xyz="0.020108 0.000000 0.006349" />
+        <inertia ixx="0.000006" ixy= "0.000000" ixz= "0.000000"
+                                iyy= "0.000004" iyz="-0.000001"
+                                                izz= "0.000004" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 ${pi/2}" />
+        <geometry>
+          <xacro:insert_block name="cd-mesh" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 ${pi/2}" />
+        <geometry>
+          <xacro:insert_block name="cd-mesh" />
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+</robot>

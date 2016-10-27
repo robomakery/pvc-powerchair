@@ -11,9 +11,9 @@
   <xacro:property name="height3" value="1" /> <!-- Link 3 -->
   
   <!-- Import all Gazebo-customization elements, including Gazebo colors -->
-  <xacro:include filename="$(find pvcchair_description)/urdf/pvcchair.gazebo" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/old/pvcchair.gazebo" />
   <!-- Import Rviz colors -->
-  <xacro:include filename="$(find pvcchair_description)/urdf/materials.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/old/materials.xacro" />
 
   <!-- Used for fixing robot to Gazebo 'base_link' -->
   <link name="world" />
@@ -28,14 +28,14 @@
     <collision>
       <origin xyz="0 0 ${height1/2}" rpy="0 0 0"/>
       <geometry>
-	    <box size="${width} ${width} ${height1}"/>
+      <box size="${width} ${width} ${height1}"/>
       </geometry>
     </collision>
 
     <visual>
       <origin xyz="0 0 ${height1/2}" rpy="0 0 0"/>
       <geometry>
-	    <box size="${width} ${width} ${height1}"/>
+      <box size="${width} ${width} ${height1}"/>
       </geometry>
       <material name="orange"/>
     </visual>
@@ -44,9 +44,9 @@
       <origin xyz="0 0 ${height1/2}" rpy="0 0 0"/>
       <mass value="${mass}"/>
       <inertia
-	      ixx="${mass / 12.0 * (width*width + height1*height1)}" ixy="0.0" ixz="0.0"
-	      iyy="${mass / 12.0 * (height1*height1 + width*width)}" iyz="0.0"
-	      izz="${mass / 12.0 * (width*width + width*width)}"/>
+        ixx="${mass / 12.0 * (width*width + height1*height1)}" ixy="0.0" ixz="0.0"
+        iyy="${mass / 12.0 * (height1*height1 + width*width)}" iyz="0.0"
+        izz="${mass / 12.0 * (width*width + width*width)}"/>
     </inertial>
   </link>
   

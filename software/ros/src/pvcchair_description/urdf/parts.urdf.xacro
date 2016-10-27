@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<robot name="parts" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="pi" value="3.1415926535897931" />
+  <xacro:property name="back_angle" value="20" />  <!-- in degrees -->
+  <xacro:property name="rest_angle" value="48.8" />  <!-- in degrees -->
+  <xacro:property name="lock_angle" value="20.5" />  <!-- in degrees -->
+  <xacro:include filename="$(find pvcchair_description)/urdf/piping/piping.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/connectors/connectors.urdf.xacro" />
+</robot>

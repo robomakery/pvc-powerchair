@@ -1,0 +1,913 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 81
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+      Splitter Ratio: 0.5
+    Tree Height: 751
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.588679
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: ""
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 0.01
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.03
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 100
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        arms_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        back_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        base_footprint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ca_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ca_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ca_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ca_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ca_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ca_5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cb_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cb_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cb_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cb_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cc_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cc_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cc_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cc_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cc_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cc_5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cd_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cd_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cd_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cd_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cd_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cd_5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ce_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ce_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ce_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ce_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ce_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ce_5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cf_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cf_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cf_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cf_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cf_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cf_5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cf_6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cf_7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cf_8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p1_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p1_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p2_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p2_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p2_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p2_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p2_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p2_5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p2_6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p2_7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p2_8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p2_9:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3_5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p4_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p4_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p4_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p4_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p4_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p4_5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p4_6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p4_7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p4_8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p4_9:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p5_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p5_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p6_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p6_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p6_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p6_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p7_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p8_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p8_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p8_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p8_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p8_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p8_5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p8_6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p8_7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p9_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p9_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p9_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p9_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p9_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p9_5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p9_6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p9_7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p9_8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        seat_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: PVCChairModel
+      Robot Description: pvcchair_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        arms_link:
+          Value: true
+        back_link:
+          Value: true
+        base_footprint:
+          Value: true
+        base_link:
+          Value: true
+        ca_0:
+          Value: false
+        ca_1:
+          Value: false
+        ca_2:
+          Value: false
+        ca_3:
+          Value: false
+        ca_4:
+          Value: false
+        ca_5:
+          Value: false
+        cb_0:
+          Value: false
+        cb_1:
+          Value: false
+        cb_2:
+          Value: false
+        cb_3:
+          Value: false
+        cc_0:
+          Value: false
+        cc_1:
+          Value: false
+        cc_2:
+          Value: false
+        cc_3:
+          Value: false
+        cc_4:
+          Value: false
+        cc_5:
+          Value: false
+        cd_0:
+          Value: false
+        cd_1:
+          Value: false
+        cd_2:
+          Value: false
+        cd_3:
+          Value: false
+        cd_4:
+          Value: false
+        cd_5:
+          Value: false
+        ce_0:
+          Value: false
+        ce_1:
+          Value: false
+        ce_2:
+          Value: false
+        ce_3:
+          Value: false
+        ce_4:
+          Value: false
+        ce_5:
+          Value: false
+        cf_0:
+          Value: false
+        cf_1:
+          Value: false
+        cf_2:
+          Value: false
+        cf_3:
+          Value: false
+        cf_4:
+          Value: false
+        cf_5:
+          Value: false
+        cf_6:
+          Value: false
+        cf_7:
+          Value: false
+        cf_8:
+          Value: false
+        p1_0:
+          Value: false
+        p1_1:
+          Value: false
+        p2_0:
+          Value: false
+        p2_1:
+          Value: false
+        p2_2:
+          Value: false
+        p2_3:
+          Value: false
+        p2_4:
+          Value: false
+        p2_5:
+          Value: false
+        p2_6:
+          Value: false
+        p2_7:
+          Value: false
+        p2_8:
+          Value: false
+        p2_9:
+          Value: false
+        p3_0:
+          Value: false
+        p3_1:
+          Value: false
+        p3_2:
+          Value: false
+        p3_3:
+          Value: false
+        p3_4:
+          Value: false
+        p3_5:
+          Value: false
+        p4_0:
+          Value: false
+        p4_1:
+          Value: false
+        p4_2:
+          Value: false
+        p4_3:
+          Value: false
+        p4_4:
+          Value: false
+        p4_5:
+          Value: false
+        p4_6:
+          Value: false
+        p4_7:
+          Value: false
+        p4_8:
+          Value: false
+        p4_9:
+          Value: false
+        p5_0:
+          Value: false
+        p5_1:
+          Value: false
+        p6_0:
+          Value: false
+        p6_1:
+          Value: false
+        p6_2:
+          Value: false
+        p6_3:
+          Value: false
+        p7_0:
+          Value: false
+        p8_0:
+          Value: false
+        p8_1:
+          Value: false
+        p8_2:
+          Value: false
+        p8_3:
+          Value: false
+        p8_4:
+          Value: false
+        p8_5:
+          Value: false
+        p8_6:
+          Value: false
+        p8_7:
+          Value: false
+        p9_0:
+          Value: false
+        p9_1:
+          Value: false
+        p9_2:
+          Value: false
+        p9_3:
+          Value: false
+        p9_4:
+          Value: false
+        p9_5:
+          Value: false
+        p9_6:
+          Value: false
+        p9_7:
+          Value: false
+        p9_8:
+          Value: false
+        seat_link:
+          Value: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: false
+      Show Axes: true
+      Show Names: false
+      Tree:
+        base_footprint:
+          base_link:
+            p2_2:
+              cf_0:
+                p1_0:
+                  cb_0:
+                    p2_1:
+                      {}
+                    p3_0:
+                      {}
+                    p4_0:
+                      {}
+                    p4_2:
+                      cd_0:
+                        p2_0:
+                          {}
+                  cc_0:
+                    p2_3:
+                      {}
+                    p9_0:
+                      ce_0:
+                        p3_2:
+                          ca_0:
+                            p2_4:
+                              {}
+                            p9_4:
+                              {}
+                        p9_2:
+                          {}
+              cf_1:
+                p1_1:
+                  cb_1:
+                    p3_1:
+                      {}
+                    p4_1:
+                      {}
+                    p4_3:
+                      cd_1:
+                        {}
+                  cc_1:
+                    p9_1:
+                      ce_1:
+                        p3_3:
+                          ca_1:
+                            p9_5:
+                              {}
+                        p9_3:
+                          {}
+            seat_link:
+              arms_link:
+                back_link:
+                  p2_9:
+                    cf_6:
+                      p9_7:
+                        ce_4:
+                          p5_0:
+                            cd_4:
+                              p6_3:
+                                cf_8:
+                                  p7_0:
+                                    {}
+                          p6_2:
+                            {}
+                    cf_7:
+                      p9_8:
+                        ce_5:
+                          p5_1:
+                            cd_5:
+                              {}
+                ca_4:
+                  p4_8:
+                    ce_2:
+                      p8_4:
+                        cf_4:
+                          {}
+                  p8_6:
+                    cd_2:
+                      p6_0:
+                        {}
+                ca_5:
+                  p4_9:
+                    ce_3:
+                      p8_5:
+                        cf_5:
+                          {}
+                  p8_7:
+                    cd_3:
+                      p6_1:
+                        {}
+              p2_6:
+                ca_2:
+                  p4_4:
+                    cc_2:
+                      p2_5:
+                        {}
+                  p4_6:
+                    cb_2:
+                      p2_7:
+                        {}
+                      p3_4:
+                        cc_4:
+                          p2_8:
+                            cf_2:
+                              p9_6:
+                                cf_3:
+                                  {}
+                      p8_2:
+                        {}
+                  p8_0:
+                    {}
+                ca_3:
+                  p4_5:
+                    cc_3:
+                      {}
+                  p4_7:
+                    cb_3:
+                      p3_5:
+                        cc_5:
+                          {}
+                      p8_3:
+                        {}
+                  p8_1:
+                    {}
+      Update Interval: 0
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: base_footprint
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Topic: /initialpose
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 1.26278
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.06
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: -0.131205
+        Y: -0.128279
+        Z: 0.216692
+      Name: Current View
+      Near Clip Distance: 0.01
+      Pitch: 0.409799
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 0.925315
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1062
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd00000004000000000000016a00000381fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006700fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000004300000381000000e300fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f00000381fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000004300000381000000b300fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000006f80000003efc0100000002fb0000000800540069006d00650100000000000006f80000023a00fffffffb0000000800540069006d00650100000000000004500000000000000000000004730000038100000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1784
+  X: 0
+  Y: 25

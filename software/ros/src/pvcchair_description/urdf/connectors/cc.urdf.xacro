@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot name="cc" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="cc-mesh">
+    <mesh filename="package://pvcchair_description/meshes/connectors/cc_3_way_y_connect.dae" />
+  </xacro:property>
+
+  <xacro:macro name="cc" params="suffix">
+    <link name="cc_${suffix}">
+      <inertial>
+        <mass value="0.023174" />
+        <origin xyz="0.018544 -0.004892 0.004808" />
+        <inertia ixx="0.000007" ixy="-0.000001" ixz="-0.000001"
+                                iyy= "0.000007" iyz="-0.000001"
+                                                izz= "0.000007" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 ${pi/2}" />
+        <geometry>
+          <xacro:insert_block name="cc-mesh" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 ${pi/2}" />
+        <geometry>
+          <xacro:insert_block name="cc-mesh" />
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+</robot>

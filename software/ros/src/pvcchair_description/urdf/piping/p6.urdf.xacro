@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot name="p6" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="p6-mesh">
+    <mesh filename="package://pvcchair_description/meshes/piping/p6_back_rest_horz.dae" />
+  </xacro:property>
+  <xacro:property name="p6_length" value="0.146050" />
+
+  <xacro:macro name="p6" params="suffix">
+    <link name="p6_${suffix}">
+      <inertial>
+        <mass value="0.033018" />
+        <origin xyz="0 0 0" />
+        <inertia ixx="0.000060" ixy="0.000000" ixz="0.000000"
+                                iyy="0.000003" iyz="0.000000"
+                                               izz="0.000060" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
+        <geometry>
+          <xacro:insert_block name="p6-mesh" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
+        <geometry>
+          <xacro:insert_block name="p6-mesh" />
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+</robot>
