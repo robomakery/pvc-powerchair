@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot name="cc" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:property name="cc-mesh">
+  <xacro:property name="cc_mesh">
     <mesh filename="package://pvcchair_description/meshes/connectors/cc_3_way_y_connect.dae" />
   </xacro:property>
 
@@ -16,13 +16,13 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 ${pi/2}" />
         <geometry>
-          <xacro:insert_block name="cc-mesh" />
+          <xacro:insert_block name="cc_mesh" />
         </geometry>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 ${pi/2}" />
         <geometry>
-          <xacro:insert_block name="cc-mesh" />
+          <xacro:insert_block name="cc_mesh" />
         </geometry>
       </collision>
     </link>

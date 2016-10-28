@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <robot name="p2" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:property name="p2-mesh">
+  <xacro:property name="p2_mesh">
     <mesh filename="package://pvcchair_description/meshes/piping/p2_front_n_back_base.dae" />
   </xacro:property>
-  <xacro:property name="p2_length" value="0.241300" />
 
   <xacro:macro name="p2" params="suffix">
     <link name="p2_${suffix}">
@@ -17,13 +16,13 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
         <geometry>
-          <xacro:insert_block name="p2-mesh" />
+          <xacro:insert_block name="p2_mesh" />
         </geometry>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
         <geometry>
-          <xacro:insert_block name="p2-mesh" />
+          <xacro:insert_block name="p2_mesh" />
         </geometry>
       </collision>
     </link>

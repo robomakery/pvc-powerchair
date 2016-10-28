@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <robot name="p3" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:property name="p3-mesh">
+  <xacro:property name="p3_mesh">
     <mesh filename="package://pvcchair_description/meshes/piping/p3_left_n_right_back_upright.dae" />
   </xacro:property>
-  <xacro:property name="p3_length" value="0.101600" />
 
   <xacro:macro name="p3" params="suffix">
     <link name="p3_${suffix}">
@@ -17,13 +16,13 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
         <geometry>
-          <xacro:insert_block name="p3-mesh" />
+          <xacro:insert_block name="p3_mesh" />
         </geometry>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
         <geometry>
-          <xacro:insert_block name="p3-mesh" />
+          <xacro:insert_block name="p3_mesh" />
         </geometry>
       </collision>
     </link>

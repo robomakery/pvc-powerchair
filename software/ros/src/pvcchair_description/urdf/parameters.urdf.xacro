@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot name="parameters" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="pi" value="3.1415926535897931" />
+  <xacro:property name="p1_length" value="0.203200" />  <!-- in meters -->
+  <xacro:property name="p2_length" value="0.241300" />
+  <xacro:property name="p3_length" value="0.101600" />
+  <xacro:property name="p4_length" value="0.088900" />
+  <xacro:property name="p5_length" value="0.152400" />
+  <xacro:property name="p6_length" value="0.146050" />
+  <xacro:property name="p7_length" value="0.285750" />
+  <xacro:property name="p8_length" value="0.038100" />
+  <xacro:property name="p9_length" value="0.038100" />
+  <xacro:property name="c_joint_offset" value="0.0125" />
+  <xacro:property name="back_angle" value="20" />  <!-- in degrees -->
+  <xacro:property name="rest_angle" value="48.8" />
+  <xacro:property name="lock_angle" value="20.5" />
+</robot>

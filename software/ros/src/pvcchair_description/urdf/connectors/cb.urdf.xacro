@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot name="cb" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:property name="cb-mesh">
+  <xacro:property name="cb_mesh">
     <mesh filename="package://pvcchair_description/meshes/connectors/cb_5_way_t_connect.dae" />
   </xacro:property>
 
@@ -16,13 +16,13 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 ${-pi/2}" />
         <geometry>
-          <xacro:insert_block name="cb-mesh" />
+          <xacro:insert_block name="cb_mesh" />
         </geometry>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 ${-pi/2}" />
         <geometry>
-          <xacro:insert_block name="cb-mesh" />
+          <xacro:insert_block name="cb_mesh" />
         </geometry>
       </collision>
     </link>
