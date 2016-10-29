@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot name="p1-left-n-right-base" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="p1" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:property name="p1_mesh">
     <mesh filename="package://pvcchair_description/meshes/piping/p1_left_n_right_base.dae" />
   </xacro:property>

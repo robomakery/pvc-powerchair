@@ -4,7 +4,7 @@
   
   <link name="base_link" />
   <joint name="base_joint" type="fixed">
-    <origin xyz="0 0 0.12" rpy="0 0 0" />
+    <origin xyz="0 0 ${base_level}" rpy="0 0 0" />
     <parent link="base_footprint" />
     <child link="base_link" />
   </joint>
@@ -242,5 +242,73 @@
     <origin xyz="0 0 ${p9_length/2 + c_joint_offset}" rpy="0 ${-pi/2} 0" />
     <parent link="ca_1" />
     <child link="p9_5" />
+  </joint>
+
+  <!-- Gearbox Plates -->
+
+  <xacro:gearbox_plate suffix="right" />
+  <joint name="gearbox_plate_right_joint" type="fixed">
+    <origin xyz="${-gearbox_plate_offset} -0.015 ${-gearbox_plate_offset}" rpy="0 ${pi} 0" />
+    <parent link="cb_0" />
+    <child link="gearbox_plate_right" />
+  </joint>
+
+  <xacro:gearbox_plate suffix="left" />
+  <joint name="gearbox_plate_left_joint" type="fixed">
+    <origin xyz="${-gearbox_plate_offset} -0.015 ${gearbox_plate_offset}" rpy="0 0 ${pi}" />
+    <parent link="cb_1" />
+    <child link="gearbox_plate_left" />
+  </joint>
+
+  <!-- Wheels -->
+
+  <xacro:wheel suffix="right" />
+  <joint name="wheel_right_joint" type="continuous">
+    <axis xyz="0 0 -1" />
+    <origin xyz="0 -0.02 0" rpy="${pi/2} 0 0" />
+    <parent link="wheel_axle_right" />
+    <child link="wheel_right" />
+  </joint>
+
+  <xacro:wheel suffix="left" />
+  <joint name="wheel_left_joint" type="continuous">
+    <axis xyz="0 0 -1" />
+    <origin xyz="0 0.02 0" rpy="${pi/2} 0 0" />
+    <parent link="wheel_axle_left" />
+    <child link="wheel_left" />
+  </joint>
+
+  <!-- Casters -->
+
+  <link name="swivel_right" />
+  <joint name="swivel_right_joint" type="continuous">
+    <axis xyz="0 0 1" />
+    <origin xyz="0 ${swivel_offset} ${c_joint_offset}" rpy="${pi} 0 ${pi/2}" />
+    <parent link="ca_0" />
+    <child link="swivel_right" />
+  </joint>
+
+  <link name="swivel_left" />
+  <joint name="swivel_left_joint" type="continuous">
+    <axis xyz="0 0 1" />
+    <origin xyz="0 ${swivel_offset} ${-c_joint_offset}" rpy="0 0 ${pi/2}" />
+    <parent link="ca_1" />
+    <child link="swivel_left" />
+  </joint>
+
+  <xacro:caster suffix="right" />
+  <joint name="caster_right_joint" type="continuous">
+    <axis xyz="0 0 -1" />
+    <origin xyz="0 0 ${- p9_length - c_joint_offset - base_level + caster_radius}" rpy="${pi/2} 0 0" />
+    <parent link="swivel_right" />
+    <child link="caster_right" />
+  </joint>
+
+  <xacro:caster suffix="left" />
+  <joint name="caster_left_joint" type="continuous">
+    <axis xyz="0 0 -1" />
+    <origin xyz="0 0 ${- p9_length - c_joint_offset - base_level + caster_radius}" rpy="${pi/2} 0 0" />
+    <parent link="swivel_left" />
+    <child link="caster_left" />
   </joint>
 </robot>

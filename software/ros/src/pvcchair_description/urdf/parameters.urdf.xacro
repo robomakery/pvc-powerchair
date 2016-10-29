@@ -11,6 +11,11 @@
   <xacro:property name="p8_length" value="0.038100" />
   <xacro:property name="p9_length" value="0.038100" />
   <xacro:property name="c_joint_offset" value="0.0125" />
+  <xacro:property name="gearbox_plate_offset" value="0.01" />
+  <xacro:property name="wheel_radius" value="0.0762" />
+  <xacro:property name="caster_radius" value="0.0508" />
+  <xacro:property name="swivel_offset" value="0.02" />
+  <xacro:property name="base_level" value="0.12" />
   <xacro:property name="back_angle" value="20" />  <!-- in degrees -->
   <xacro:property name="rest_angle" value="48.8" />
   <xacro:property name="lock_angle" value="20.5" />

@@ -5,6 +5,8 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /Grid1
+        - /TF1
       Splitter Ratio: 0.5
     Tree Height: 751
   - Class: rviz/Selection
@@ -30,7 +32,7 @@ Visualization Manager:
   Class: ""
   Displays:
     - Alpha: 0.5
-      Cell Size: 0.01
+      Cell Size: 0.1
       Class: rviz/Grid
       Color: 160; 160; 164
       Enabled: true
@@ -44,7 +46,7 @@ Visualization Manager:
         Y: 0
         Z: 0
       Plane: XY
-      Plane Cell Count: 100
+      Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
       Value: true
     - Alpha: 1
@@ -103,6 +105,16 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        caster_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        caster_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         cb_0:
           Alpha: 1
           Show Axes: false
@@ -254,6 +266,16 @@ Visualization Manager:
           Show Trail: false
           Value: true
         cf_8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gearbox_plate_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gearbox_plate_right:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -522,6 +544,32 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+        swivel_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        swivel_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        wheel_axle_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        wheel_axle_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        wheel_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wheel_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Name: PVCChairModel
       Robot Description: pvcchair_description
       TF Prefix: ""
@@ -529,329 +577,19 @@ Visualization Manager:
       Value: true
       Visual Enabled: true
     - Class: rviz/TF
-      Enabled: true
+      Enabled: false
       Frame Timeout: 15
       Frames:
-        All Enabled: false
-        arms_link:
-          Value: true
-        back_link:
-          Value: true
-        base_footprint:
-          Value: true
-        base_link:
-          Value: true
-        ca_0:
-          Value: false
-        ca_1:
-          Value: false
-        ca_2:
-          Value: false
-        ca_3:
-          Value: false
-        ca_4:
-          Value: false
-        ca_5:
-          Value: false
-        cb_0:
-          Value: false
-        cb_1:
-          Value: false
-        cb_2:
-          Value: false
-        cb_3:
-          Value: false
-        cc_0:
-          Value: false
-        cc_1:
-          Value: false
-        cc_2:
-          Value: false
-        cc_3:
-          Value: false
-        cc_4:
-          Value: false
-        cc_5:
-          Value: false
-        cd_0:
-          Value: false
-        cd_1:
-          Value: false
-        cd_2:
-          Value: false
-        cd_3:
-          Value: false
-        cd_4:
-          Value: false
-        cd_5:
-          Value: false
-        ce_0:
-          Value: false
-        ce_1:
-          Value: false
-        ce_2:
-          Value: false
-        ce_3:
-          Value: false
-        ce_4:
-          Value: false
-        ce_5:
-          Value: false
-        cf_0:
-          Value: false
-        cf_1:
-          Value: false
-        cf_2:
-          Value: false
-        cf_3:
-          Value: false
-        cf_4:
-          Value: false
-        cf_5:
-          Value: false
-        cf_6:
-          Value: false
-        cf_7:
-          Value: false
-        cf_8:
-          Value: false
-        p1_0:
-          Value: false
-        p1_1:
-          Value: false
-        p2_0:
-          Value: false
-        p2_1:
-          Value: false
-        p2_2:
-          Value: false
-        p2_3:
-          Value: false
-        p2_4:
-          Value: false
-        p2_5:
-          Value: false
-        p2_6:
-          Value: false
-        p2_7:
-          Value: false
-        p2_8:
-          Value: false
-        p2_9:
-          Value: false
-        p3_0:
-          Value: false
-        p3_1:
-          Value: false
-        p3_2:
-          Value: false
-        p3_3:
-          Value: false
-        p3_4:
-          Value: false
-        p3_5:
-          Value: false
-        p4_0:
-          Value: false
-        p4_1:
-          Value: false
-        p4_2:
-          Value: false
-        p4_3:
-          Value: false
-        p4_4:
-          Value: false
-        p4_5:
-          Value: false
-        p4_6:
-          Value: false
-        p4_7:
-          Value: false
-        p4_8:
-          Value: false
-        p4_9:
-          Value: false
-        p5_0:
-          Value: false
-        p5_1:
-          Value: false
-        p6_0:
-          Value: false
-        p6_1:
-          Value: false
-        p6_2:
-          Value: false
-        p6_3:
-          Value: false
-        p7_0:
-          Value: false
-        p8_0:
-          Value: false
-        p8_1:
-          Value: false
-        p8_2:
-          Value: false
-        p8_3:
-          Value: false
-        p8_4:
-          Value: false
-        p8_5:
-          Value: false
-        p8_6:
-          Value: false
-        p8_7:
-          Value: false
-        p9_0:
-          Value: false
-        p9_1:
-          Value: false
-        p9_2:
-          Value: false
-        p9_3:
-          Value: false
-        p9_4:
-          Value: false
-        p9_5:
-          Value: false
-        p9_6:
-          Value: false
-        p9_7:
-          Value: false
-        p9_8:
-          Value: false
-        seat_link:
-          Value: true
+        All Enabled: true
       Marker Scale: 1
       Name: TF
       Show Arrows: false
       Show Axes: true
       Show Names: false
       Tree:
-        base_footprint:
-          base_link:
-            p2_2:
-              cf_0:
-                p1_0:
-                  cb_0:
-                    p2_1:
-                      {}
-                    p3_0:
-                      {}
-                    p4_0:
-                      {}
-                    p4_2:
-                      cd_0:
-                        p2_0:
-                          {}
-                  cc_0:
-                    p2_3:
-                      {}
-                    p9_0:
-                      ce_0:
-                        p3_2:
-                          ca_0:
-                            p2_4:
-                              {}
-                            p9_4:
-                              {}
-                        p9_2:
-                          {}
-              cf_1:
-                p1_1:
-                  cb_1:
-                    p3_1:
-                      {}
-                    p4_1:
-                      {}
-                    p4_3:
-                      cd_1:
-                        {}
-                  cc_1:
-                    p9_1:
-                      ce_1:
-                        p3_3:
-                          ca_1:
-                            p9_5:
-                              {}
-                        p9_3:
-                          {}
-            seat_link:
-              arms_link:
-                back_link:
-                  p2_9:
-                    cf_6:
-                      p9_7:
-                        ce_4:
-                          p5_0:
-                            cd_4:
-                              p6_3:
-                                cf_8:
-                                  p7_0:
-                                    {}
-                          p6_2:
-                            {}
-                    cf_7:
-                      p9_8:
-                        ce_5:
-                          p5_1:
-                            cd_5:
-                              {}
-                ca_4:
-                  p4_8:
-                    ce_2:
-                      p8_4:
-                        cf_4:
-                          {}
-                  p8_6:
-                    cd_2:
-                      p6_0:
-                        {}
-                ca_5:
-                  p4_9:
-                    ce_3:
-                      p8_5:
-                        cf_5:
-                          {}
-                  p8_7:
-                    cd_3:
-                      p6_1:
-                        {}
-              p2_6:
-                ca_2:
-                  p4_4:
-                    cc_2:
-                      p2_5:
-                        {}
-                  p4_6:
-                    cb_2:
-                      p2_7:
-                        {}
-                      p3_4:
-                        cc_4:
-                          p2_8:
-                            cf_2:
-                              p9_6:
-                                cf_3:
-                                  {}
-                      p8_2:
-                        {}
-                  p8_0:
-                    {}
-                ca_3:
-                  p4_5:
-                    cc_3:
-                      {}
-                  p4_7:
-                    cb_3:
-                      p3_5:
-                        cc_5:
-                          {}
-                      p8_3:
-                        {}
-                  p8_1:
-                    {}
+        {}
       Update Interval: 0
-      Value: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -876,22 +614,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.26278
+      Distance: 0.984154
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.131205
-        Y: -0.128279
-        Z: 0.216692
+        X: -0.120731
+        Y: -0.0922253
+        Z: 0.196368
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.409799
+      Pitch: 0.279799
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.925315
+      Yaw: 0.790361
     Saved: ~
 Window Geometry:
   Displays:

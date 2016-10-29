@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>pvcchair_description</name>
-  <version>0.2.0</version>
+  <version>0.3.0</version>
   <description>pvcchair_description - the software for the PVC Pediatric Powerchair.</description>
 
   <maintainer email="dylan@robomakery.com">Dylan Vaughn</maintainer>

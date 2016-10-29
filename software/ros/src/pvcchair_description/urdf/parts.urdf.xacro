@@ -3,4 +3,5 @@
   <xacro:include filename="$(find pvcchair_description)/urdf/parameters.urdf.xacro" />
   <xacro:include filename="$(find pvcchair_description)/urdf/piping/piping.urdf.xacro" />
   <xacro:include filename="$(find pvcchair_description)/urdf/connectors/connectors.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/wheels/parts.urdf.xacro" />
 </robot>

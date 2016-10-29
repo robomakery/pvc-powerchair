@@ -9,7 +9,7 @@
   <!-- starts joint state publisher that publishes the joint states -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
     <remap from="robot_description" to="$(arg robot_description)" />
-    <!-- <param name="use_gui" value="true"/> -->
+    <param name="use_gui" value="true"/>
   </node>
 
   <!-- starts robot state publisher that publishes the link transformations -->
