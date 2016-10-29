@@ -5,7 +5,6 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /Grid1
         - /TF1
       Splitter Ratio: 0.5
     Tree Height: 751
@@ -614,22 +613,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.984154
+      Distance: 0.956014
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.120731
-        Y: -0.0922253
-        Z: 0.196368
+        X: -0.124061
+        Y: -0.0829977
+        Z: 0.206016
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.279799
+      Pitch: 0.199799
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.790361
+      Yaw: 0.615361
     Saved: ~
 Window Geometry:
   Displays:
