@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot name="ce" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="ce_mesh">
+    <mesh filename="package://pvcchair_description/meshes/connectors/ce_3_way_t_connect.dae" />
+  </xacro:property>
+
+  <xacro:macro name="ce" params="suffix">
+    <link name="ce_${suffix}">
+      <inertial>
+        <mass value="0.023625" />
+        <origin xyz="0.002543 0.000000 -0.009049" />
+        <inertia ixx="0.000010" ixy="0.000000" ixz="0.000000"
+                                iyy="0.000008" iyz="0.000000"
+                                               izz="0.000005" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 ${-pi/2}" />
+        <geometry>
+          <xacro:insert_block name="ce_mesh" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 ${-pi/2}" />
+        <geometry>
+          <xacro:insert_block name="ce_mesh" />
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+</robot>

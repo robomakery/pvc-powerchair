@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot name="p7" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="p7_mesh">
+    <mesh filename="package://pvcchair_description/meshes/piping/p7_adjusting_pipe_horz.dae" />
+  </xacro:property>
+
+  <xacro:macro name="p7" params="suffix">
+    <link name="p7_${suffix}">
+      <inertial>
+        <mass value="0.064599" />
+        <origin xyz="0 0 0" />
+        <inertia ixx="0.000442" ixy="0.000000" ixz="0.000000"
+                                iyy="0.000006" iyz="0.000000"
+                                               izz="0.000442" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
+        <geometry>
+          <xacro:insert_block name="p7_mesh" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
+        <geometry>
+          <xacro:insert_block name="p7_mesh" />
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+</robot>

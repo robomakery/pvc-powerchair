@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot name="p2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="p2_mesh">
+    <mesh filename="package://pvcchair_description/meshes/piping/p2_front_n_back_base.dae" />
+  </xacro:property>
+
+  <xacro:macro name="p2" params="suffix">
+    <link name="p2_${suffix}">
+      <inertial>
+        <mass value="0.054551" />
+        <origin xyz="0 0 0" />
+        <inertia ixx="0.000267" ixy="0.000000" ixz="0.000000"
+                                iyy="0.000005" iyz="0.000000"
+                                               izz="0.000267" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
+        <geometry>
+          <xacro:insert_block name="p2_mesh" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
+        <geometry>
+          <xacro:insert_block name="p2_mesh" />
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+</robot>

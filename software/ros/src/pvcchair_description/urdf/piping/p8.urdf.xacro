@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot name="p8" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="p8_mesh">
+    <mesh filename="package://pvcchair_description/meshes/piping/p8_arm_rest_hgt_back_n_arms.dae" />
+  </xacro:property>
+
+  <xacro:macro name="p8" params="suffix">
+    <link name="p8_${suffix}">
+      <inertial>
+        <mass value="0.008613" />
+        <origin xyz="0 0 0" />
+        <inertia ixx="0.000001" ixy="0.000000" ixz="0.000000"
+                                iyy="0.000001" iyz="0.000000"
+                                               izz="0.000001" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
+        <geometry>
+          <xacro:insert_block name="p8_mesh" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
+        <geometry>
+          <xacro:insert_block name="p8_mesh" />
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+</robot>

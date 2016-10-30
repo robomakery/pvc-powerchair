@@ -1,0 +1,22 @@
+<launch>
+  <arg name="urdf_filename" default="pvcchair" />
+  <arg name="urdf_model" value="$(find pvcchair_description)/urdf/$(arg urdf_filename).urdf.xacro" />
+  <arg name="robot_description" default="pvcchair_description" />
+
+  <!-- loads urdf model to parameter server -->
+  <param name="pvcchair_description" command="$(find xacro)/xacro.py $(arg urdf_model)" />
+
+  <!-- starts joint state publisher that publishes the joint states -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <remap from="robot_description" to="$(arg robot_description)" />
+    <param name="use_gui" value="true"/>
+  </node>
+
+  <!-- starts robot state publisher that publishes the link transformations -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+    <remap from="robot_description" to="$(arg robot_description)" />
+  </node>
+
+  <!-- starts rviz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find pvcchair_description)/rviz/visualize_urdf.rviz" required="true" />
+</launch>

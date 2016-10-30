@@ -1,6 +1,6 @@
 <launch>
   <param name="robot_description"
-    command="$(find xacro)/xacro.py '$(find pvcchair_description)/urdf/pvcchair.xacro'" />
+    command="$(find xacro)/xacro.py '$(find pvcchair_description)/urdf/old/pvcchair.xacro'" />
 
   <!-- send fake joint values -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
@@ -11,6 +11,6 @@
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
 
   <!-- Show in Rviz   -->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find pvcchair_description)/launch/pvcchair.rviz"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find pvcchair_description)/rviz/pvcchair.rviz"/>
 
 </launch>
