@@ -1,190 +1,42 @@
 <?xml version="1.0"?>
 <robot name="seat" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:include filename="$(find pvcchair_description)/urdf/parts.urdf.xacro" />
-  
-  <link name="seat_link" />
-  <joint name="seat_joint" type="fixed">
-    <origin xyz="0 0 ${p3_length + 2*c_joint_offset}" rpy="0 0 0" />
-    <parent link="base_link" />
-    <child link="seat_link" />
-  </joint>
-  
-  <xacro:p2 suffix="6" />
-  <joint name="seat_p2_6_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="0 0 ${-pi/2}" />
-    <parent link="seat_link" />
-    <child link="p2_6" />
-  </joint>
+  <link name="seat_link">
+    <inertial>
+      <mass value="0.624033" />
+      <origin xyz="-0.071895 0.000000 0.001845" />
+      <inertia ixx="0.000006" ixy="0.000000" ixz="0.000000"
+                              iyy="0.000007" iyz="0.000000"
+                                             izz="0.000013" />
+    </inertial>
 
-  <!-- front section -->
-
-  <xacro:ca suffix="2" />
-  <joint name="ca_2_joint_0" type="fixed">  <!-- center hole -->
-    <origin xyz="${p2_length/2 + c_joint_offset} 0 0" rpy="0 ${-pi/2} ${pi/2}" />
-    <parent link="p2_6" />
-    <child link="ca_2" />
-  </joint>
-
-  <xacro:ca suffix="3" />
-  <joint name="ca_3_joint_1" type="fixed">  <!-- center hole -->
-    <origin xyz="${- p2_length/2 - c_joint_offset} 0 0" rpy="0 ${-pi/2} ${-pi/2}" />
-    <parent link="p2_6" />
-    <child link="ca_3" />
-  </joint>
-
-  <xacro:p4 suffix="4" />
-  <joint name="ca_2_joint_2" type="fixed">  <!-- right hole -->
-    <origin xyz="0 0 ${- p4_length/2 - c_joint_offset}" rpy="0 ${pi/2} 0" />
-    <parent link="ca_2" />
-    <child link="p4_4" />
-  </joint>
-
-  <xacro:p4 suffix="5" />
-  <joint name="ca_3_joint_2" type="fixed">  <!-- left hole -->
-    <origin xyz="0 0 ${p4_length/2 + c_joint_offset}" rpy="0 ${pi/2} 0" />
-    <parent link="ca_3" />
-    <child link="p4_5" />
-  </joint>
-
-  <xacro:p8 suffix="0" />
-  <joint name="ca_2_joint_1" type="fixed">  <!-- top hole -->
-    <origin xyz="${p8_length/2 + c_joint_offset} 0 0" rpy="0 0 0" />
-    <parent link="ca_2" />
-    <child link="p8_0" />
-  </joint>
-
-  <xacro:p8 suffix="1" />
-  <joint name="ca_3_joint_0" type="fixed">  <!-- top hole -->
-    <origin xyz="${p8_length/2 + c_joint_offset} 0 0" rpy="0 0 0" />
-    <parent link="ca_3" />
-    <child link="p8_1" />
-  </joint>
-
-  <xacro:cc suffix="2" />
-  <joint name="cc_2_joint_0" type="fixed">  <!-- left hole -->
-    <origin xyz="${p4_length/2 + c_joint_offset} 0 0" rpy="0 ${pi} 0" />
-    <parent link="p4_4" />
-    <child link="cc_2" />
-  </joint>
-
-  <xacro:cc suffix="3" />
-  <joint name="cc_3_joint_0" type="fixed">  <!-- right hole -->
-    <origin xyz="${- p4_length/2 - c_joint_offset} 0 0" rpy="${-pi/2} 0 0" />
-    <parent link="p4_5" />
-    <child link="cc_3" />
-  </joint>
-
-  <xacro:p2 suffix="5" />
-  <joint name="cc_2_joint_1" type="fixed">  <!-- right hole -->
-    <origin xyz="0 ${p2_length/2 + c_joint_offset} 0" rpy="0 0 ${pi/2}" />
-    <parent link="cc_2" />
-    <child link="p2_5" />
-  </joint>
-
-  <!-- back section -->
-
-  <xacro:p4 suffix="6" />
-  <joint name="ca_2_joint_3" type="fixed">  <!-- left hole -->
-    <origin xyz="0 0 ${p4_length/2 + c_joint_offset}" rpy="0 ${pi/2} 0" />
-    <parent link="ca_2" />
-    <child link="p4_6" />
-  </joint>
-
-  <xacro:p4 suffix="7" />
-  <joint name="ca_3_joint_3" type="fixed">  <!-- right hole -->
-    <origin xyz="0 0 ${- p4_length/2 - c_joint_offset}" rpy="0 ${pi/2} 0" />
-    <parent link="ca_3" />
-    <child link="p4_7" />
-  </joint>
-
-  <xacro:cb suffix="2" />
-  <joint name="cb_2_joint_0" type="fixed">  <!-- right hole -->
-    <origin xyz="${- p4_length/2 - c_joint_offset} 0 0" rpy="0 ${-pi/2} 0" />
-    <parent link="p4_6" />
-    <child link="cb_2" />
-  </joint>
-
-  <xacro:cb suffix="3" />
-  <joint name="cb_3_joint_2" type="fixed">  <!-- left hole -->
-    <origin xyz="${p4_length/2 + c_joint_offset} 0 0" rpy="0 ${-pi/2} 0" />
-    <parent link="p4_7" />
-    <child link="cb_3" />
-  </joint>
-
-  <xacro:p8 suffix="2" />
-  <joint name="cb_2_joint_3" type="fixed">  <!-- top hole -->
-    <origin xyz="${p8_length/2 + c_joint_offset} 0 0" rpy="0 0 0" />
-    <parent link="cb_2" />
-    <child link="p8_2" />
-  </joint>
-
-  <xacro:p8 suffix="3" />
-  <joint name="cb_3_joint_3" type="fixed">  <!-- top hole -->
-    <origin xyz="${p8_length/2 + c_joint_offset} 0 0" rpy="0 0 0" />
-    <parent link="cb_3" />
-    <child link="p8_3" />
-  </joint>
-
-  <xacro:p2 suffix="7" />
-  <joint name="cb_2_joint_1" type="fixed">  <!-- center hole -->
-    <origin xyz="0 ${p2_length/2 + c_joint_offset} 0" rpy="0 0 ${pi/2}" />
-    <parent link="cb_2" />
-    <child link="p2_7" />
-  </joint>
-
-  <xacro:p3 suffix="4" />
-  <joint name="cb_2_joint_2" type="fixed">  <!-- left hole -->
-    <origin xyz="0 0 ${p3_length/2 + c_joint_offset}" rpy="0 ${pi/2} 0" />
-    <parent link="cb_2" />
-    <child link="p3_4" />
-  </joint>
-
-  <xacro:p3 suffix="5" />
-  <joint name="cb_3_joint_0" type="fixed">  <!-- right hole -->
-    <origin xyz="0 0 ${- p3_length/2 - c_joint_offset}" rpy="0 ${pi/2} 0" />
-    <parent link="cb_3" />
-    <child link="p3_5" />
-  </joint>
-
-  <xacro:cc suffix="4" />
-  <joint name="cc_4_joint_1" type="fixed">  <!-- right hole -->
-    <origin xyz="${- p3_length/2 - c_joint_offset} 0 0" rpy="${-pi/2} 0 0" />
-    <parent link="p3_4" />
-    <child link="cc_4" />
-  </joint>
-
-  <xacro:cc suffix="5" />
-  <joint name="cc_5_joint_0" type="fixed">  <!-- left hole -->
-    <origin xyz="${p3_length/2 + c_joint_offset} 0 0" rpy="${-pi/2} ${pi/2} 0" />
-    <parent link="p3_5" />
-    <child link="cc_5" />
-  </joint>
-
-  <xacro:p2 suffix="8" />
-  <joint name="cc_4_joint_0" type="fixed">  <!-- right hole -->
-    <origin xyz="0 0 ${p2_length/2 + c_joint_offset}" rpy="0 ${pi/2} 0" />
-    <parent link="cc_4" />
-    <child link="p2_8" />
-  </joint>
-
-  <xacro:cf suffix="2" />
-  <joint name="cf_2_joint_0" type="fixed">  <!-- pass through hole -->
-    <origin xyz="0 0 0" rpy="${pi/2} ${pi/2+lock_angle*pi/180} ${pi/2}" />
-    <parent link="p2_8" />
-    <child link="cf_2" />
-  </joint>
-
-  <xacro:p9 suffix="6" />
-  <joint name="cf_2_joint_1" type="fixed">  <!-- center hole -->
-    <origin xyz="${p9_length/2 + c_joint_offset} 0 0" rpy="0 0 0" />
-    <parent link="cf_2" />
-    <child link="p9_6" />
-  </joint>
-
-  <xacro:cf suffix="3" />
-  <joint name="cf_3_joint_0" type="fixed">  <!-- pass through hole -->
-    <origin xyz="${p9_length/2 + c_joint_offset} 0 0" rpy="${pi/2} 0 ${pi}" />
-    <parent link="p9_6" />
-    <child link="cf_3" />
-  </joint>
+    <xacro:p2 xyz="0 0 0" rpy="0 ${pi/2} ${pi/2}" />
+    <!-- front section -->
+    <xacro:ca xyz="0 ${-p2_hlen-c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:ca xyz="0 ${+p2_hlen+c_offset} 0" rpy="0 ${pi/2} ${pi}" />
+    <xacro:p8 xyz="0 ${-p2_hlen-c_offset} ${+c_offset+p8_hlen}" rpy="0 0 0" />
+    <xacro:p8 xyz="0 ${+p2_hlen+c_offset} ${+c_offset+p8_hlen}" rpy="0 0 0" />
+    <xacro:p4 xyz="${+c_offset+p4_hlen} ${-p2_hlen-c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:p4 xyz="${+c_offset+p4_hlen} ${+p2_hlen+c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:cc xyz="${+c_offset+p4_len+c_offset} ${-p2_hlen-c_offset} 0" rpy="${pi/2} 0 ${pi}" />
+    <xacro:cc xyz="${+c_offset+p4_len+c_offset} ${+p2_hlen+c_offset} 0" rpy="${pi} 0 ${pi}" />
+    <xacro:p2 xyz="${+c_offset+p4_len+c_offset} 0 0" rpy="0 ${pi/2} ${pi/2}" />
+    <!-- back section -->
+    <xacro:p4 xyz="${-c_offset-p4_hlen} ${-p2_hlen-c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:p4 xyz="${-c_offset-p4_hlen} ${+p2_hlen+c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:cb xyz="${-c_offset-p4_len-c_offset} ${-p2_hlen-c_offset} 0" rpy="0 0 ${-pi/2}" />
+    <xacro:cb xyz="${-c_offset-p4_len-c_offset} ${+p2_hlen+c_offset} 0" rpy="0 0 ${pi/2}" />
+    <xacro:p2 xyz="${-c_offset-p4_len-c_offset} 0 0" rpy="0 ${pi/2} ${pi/2}" />
+    <xacro:p8 xyz="${-c_offset-p4_len-c_offset} ${-p2_hlen-c_offset} ${+c_offset+p8_hlen}" rpy="0 0 0" />
+    <xacro:p8 xyz="${-c_offset-p4_len-c_offset} ${+p2_hlen+c_offset} ${+c_offset+p8_hlen}" rpy="0 0 0" />
+    <xacro:p3 xyz="${-c_offset-p4_len-2*c_offset-p3_hlen} ${-p2_hlen-c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:p3 xyz="${-c_offset-p4_len-2*c_offset-p3_hlen} ${+p2_hlen+c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:cc xyz="${-c_offset-p4_len-2*c_offset-p3_len-c_offset} ${-p2_hlen-c_offset} 0" rpy="${pi} 0 0" />
+    <xacro:cc xyz="${-c_offset-p4_len-2*c_offset-p3_len-c_offset} ${+p2_hlen+c_offset} 0" rpy="${pi/2} 0 0" />
+    <xacro:p2 xyz="${-c_offset-p4_len-2*c_offset-p3_len-c_offset} 0 0" rpy="0 ${pi/2} ${pi/2}" />
+    <xacro:cf xyz="${-c_offset-p4_len-2*c_offset-p3_len-c_offset} 0 0" rpy="${pi/2} ${-pi/2+lock_angle_rad} 0" />
+    <xacro:property name="p9_tran_0" value="${+c_offset+p9_hlen}" />
+    <xacro:p9 xyz="${-c_offset-p4_len-2*c_offset-p3_len-c_offset-p9_tran_0*cos(lock_angle_rad)} 0 ${p9_tran_0*sin(lock_angle_rad)}" rpy="0 ${+pi/2+lock_angle_rad} 0" />
+    <xacro:property name="cf_tran_0" value="${+c_offset+p9_len+c_offset}" />
+    <xacro:cf xyz="${-c_offset-p4_len-2*c_offset-p3_len-c_offset-cf_tran_0*cos(lock_angle_rad)} 0 ${cf_tran_0*sin(lock_angle_rad)}" rpy="${-lock_angle_rad} 0 ${-pi/2}" />
+  </link>
 </robot>

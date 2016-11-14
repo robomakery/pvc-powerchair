@@ -4,27 +4,18 @@
     <mesh filename="package://pvcchair_description/meshes/connectors/cf_3_way_slip.dae" />
   </xacro:property>
 
-  <xacro:macro name="cf" params="suffix">
-    <link name="cf_${suffix}">
-      <inertial>
-        <mass value="0.011075" />
-        <origin xyz="0.010940 0.000000 -0.009049" />
-        <inertia ixx="0.000002" ixy="0.000000" ixz="0.000000"
-                                iyy="0.000001" iyz="0.000000"
-                                               izz="0.000003" />
-      </inertial>
-      <visual>
-        <origin xyz="0 0 0" rpy="0 0 ${-pi/2}" />
-        <geometry>
-          <xacro:insert_block name="cf_mesh" />
-        </geometry>
-      </visual>
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 ${-pi/2}" />
-        <geometry>
-          <xacro:insert_block name="cf_mesh" />
-        </geometry>
-      </collision>
-    </link>
+  <xacro:macro name="cf" params="xyz rpy">
+    <visual>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="cf_mesh" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="cf_mesh" />
+      </geometry>
+    </collision>
   </xacro:macro>
 </robot>

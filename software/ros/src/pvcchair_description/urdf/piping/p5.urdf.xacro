@@ -4,27 +4,18 @@
     <mesh filename="package://pvcchair_description/meshes/piping/p5_back_rest_vert.dae" />
   </xacro:property>
 
-  <xacro:macro name="p5" params="suffix">
-    <link name="p5_${suffix}">
-      <inertial>
-        <mass value="0.034453" />
-        <origin xyz="0 0 0" />
-        <inertia ixx="0.000068" ixy="0.000000" ixz="0.000000"
-                                iyy="0.000003" iyz="0.000000"
-                                               izz="0.000068" />
-      </inertial>
-      <visual>
-        <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
-        <geometry>
-          <xacro:insert_block name="p5_mesh" />
-        </geometry>
-      </visual>
-      <collision>
-        <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
-        <geometry>
-          <xacro:insert_block name="p5_mesh" />
-        </geometry>
-      </collision>
-    </link>
+  <xacro:macro name="p5" params="xyz rpy">
+    <visual>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="p5_mesh" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="p5_mesh" />
+      </geometry>
+    </collision>
   </xacro:macro>
 </robot>

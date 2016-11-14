@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot name="motion" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- Gearbox Plates -->
+  <xacro:gearbox_plate suffix="right" />
+  <xacro:gearbox_plate suffix="left" />
+  
+  <!-- Wheels -->
+  <xacro:wheel suffix="right" />
+  <xacro:wheel suffix="left" />
+
+  <!-- Casters -->
+  <link name="swivel_right" />
+  <link name="swivel_left" />
+  <xacro:caster suffix="right" />
+  <xacro:caster suffix="left" />
+</robot>

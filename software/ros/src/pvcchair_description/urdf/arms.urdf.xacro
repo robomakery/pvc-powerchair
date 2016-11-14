@@ -1,123 +1,29 @@
 <?xml version="1.0"?>
 <robot name="arms" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:include filename="$(find pvcchair_description)/urdf/parts.urdf.xacro" />
-  
-  <link name="arms_link" />
-  <joint name="arms_joint" type="fixed">
-    <origin xyz="${- p4_length - 2*c_joint_offset} 0 0" rpy="0 0 0" />
-    <parent link="seat_link" />
-    <child link="arms_link" />
-  </joint>
-  
-  <xacro:ca suffix="4" />
-  <joint name="ca_4_joint_3" type="fixed">  <!-- bottom hole -->
-    <origin xyz="0 ${- p2_length/2 - c_joint_offset} ${p8_length + 2*c_joint_offset}" rpy="0 0 0" />
-    <parent link="arms_link" />
-    <child link="ca_4" />
-  </joint>
+  <link name="arms_link">
+    <inertial>
+      <mass value="0.302884" />
+      <origin xyz="0.059653 -0.000001 0.028246" />
+      <inertia ixx="0.000004" ixy="0.000000" ixz="0.000000"
+                              iyy="0.000001" iyz="0.000000"
+                                             izz="0.000005" />
+    </inertial>
 
-  <xacro:ca suffix="5" />
-  <joint name="ca_5_joint_3" type="fixed">  <!-- bottom hole -->
-    <origin xyz="0 ${p2_length/2 + c_joint_offset} ${p8_length + 2*c_joint_offset}" rpy="0 0 ${-pi/2}" />
-    <parent link="arms_link" />
-    <child link="ca_5" />
-  </joint>
-
-  <xacro:p4 suffix="8" />
-  <joint name="ca_4_joint_0" type="fixed">  <!-- right hole -->
-    <origin xyz="${p4_length/2 + c_joint_offset} 0 0" rpy="${pi/2} 0 0" />
-    <parent link="ca_4" />
-    <child link="p4_8" />
-  </joint>
-
-  <xacro:p4 suffix="9" />
-  <joint name="ca_5_joint_0" type="fixed">  <!-- left hole -->
-    <origin xyz="0 ${p4_length/2 + c_joint_offset} 0" rpy="0 0 ${pi/2}" />
-    <parent link="ca_5" />
-    <child link="p4_9" />
-  </joint>
-
-  <xacro:ce suffix="2" />
-  <joint name="ce_2_joint_1" type="fixed">  <!-- center hole -->
-    <origin xyz="${p4_length/2 + c_joint_offset} 0 0" rpy="${pi/2} ${pi} 0" />
-    <parent link="p4_8" />
-    <child link="ce_2" />
-  </joint>
-
-  <xacro:ce suffix="3" />
-  <joint name="ce_3_joint_1" type="fixed">  <!-- center hole -->
-    <origin xyz="${p4_length/2 + c_joint_offset} 0 0" rpy="0 ${pi} 0" />
-    <parent link="p4_9" />
-    <child link="ce_3" />
-  </joint>
-
-  <xacro:p8 suffix="4" />
-  <joint name="ce_2_joint_0" type="fixed">  <!-- center hole -->
-    <origin xyz="0 0 ${- p8_length/2 - c_joint_offset}" rpy="0 ${pi/2} 0" />
-    <parent link="ce_2" />
-    <child link="p8_4" />
-  </joint>
-
-  <xacro:p8 suffix="5" />
-  <joint name="ce_3_joint_0" type="fixed">  <!-- center hole -->
-    <origin xyz="0 0 ${- p8_length/2 - c_joint_offset}" rpy="0 ${pi/2} 0" />
-    <parent link="ce_3" />
-    <child link="p8_5" />
-  </joint>
-
-  <xacro:cf suffix="4" />
-  <joint name="cf_4_joint_1" type="fixed">  <!-- center hole -->
-    <origin xyz="${p8_length/2 + c_joint_offset} 0 0" rpy="0 0 ${pi}" />
-    <parent link="p8_4" />
-    <child link="cf_4" />
-  </joint>
-
-  <xacro:cf suffix="5" />
-  <joint name="cf_5_joint_1" type="fixed">  <!-- center hole -->
-    <origin xyz="${p8_length/2 + c_joint_offset} 0 0" rpy="0 0 ${pi}" />
-    <parent link="p8_5" />
-    <child link="cf_5" />
-  </joint>
-
-  <xacro:p8 suffix="6" />
-  <joint name="ca_4_joint_2" type="fixed">  <!-- top hole -->
-    <origin xyz="0 0 ${p8_length/2 + c_joint_offset}" rpy="0 ${pi/2} 0" />
-    <parent link="ca_4" />
-    <child link="p8_6" />
-  </joint>
-
-  <xacro:p8 suffix="7" />
-  <joint name="ca_5_joint_2" type="fixed">  <!-- top hole -->
-    <origin xyz="0 0 ${p8_length/2 + c_joint_offset}" rpy="0 ${pi/2} 0" />
-    <parent link="ca_5" />
-    <child link="p8_7" />
-  </joint>
-
-  <xacro:cd suffix="2" />
-  <joint name="cd_2_joint_1" type="fixed">  <!-- bottom hole -->
-    <origin xyz="${- p8_length/2 - c_joint_offset} 0 0" rpy="0 0 0" />
-    <parent link="p8_6" />
-    <child link="cd_2" />
-  </joint>
-
-  <xacro:cd suffix="3" />
-  <joint name="cd_3_joint_1" type="fixed">  <!-- bottom hole -->
-    <origin xyz="${- p8_length/2 - c_joint_offset} 0 0" rpy="${-pi/2} 0 0" />
-    <parent link="p8_7" />
-    <child link="cd_3" />
-  </joint>
-
-  <xacro:p6 suffix="0" />
-  <joint name="cd_2_joint_0" type="fixed">  <!-- center hole -->
-    <origin xyz="0 0 ${p6_length/2 + c_joint_offset}" rpy="0 ${pi/2} 0" />
-    <parent link="cd_2" />
-    <child link="p6_0" />
-  </joint>
-
-  <xacro:p6 suffix="1" />
-  <joint name="cd_3_joint_0" type="fixed">  <!-- center hole -->
-    <origin xyz="0 0 ${p6_length/2 + c_joint_offset}" rpy="0 ${pi/2} 0" />
-    <parent link="cd_3" />
-    <child link="p6_1" />
-  </joint>
+    <xacro:ca xyz="0 ${-p2_hlen-c_offset} 0" rpy="0 0 ${-pi/2}" />
+    <xacro:ca xyz="0 ${+p2_hlen+c_offset} 0" rpy="0 0 ${pi}" />
+    <xacro:p4 xyz="${+c_offset+p4_hlen} ${-p2_hlen-c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:p4 xyz="${+c_offset+p4_hlen} ${+p2_hlen+c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:ce xyz="${+c_offset+p4_len+c_offset} ${-p2_hlen-c_offset} 0" rpy="0 0 ${pi/2}" />
+    <xacro:ce xyz="${+c_offset+p4_len+c_offset} ${+p2_hlen+c_offset} 0" rpy="0 0 ${pi/2}" />
+    <xacro:p8 xyz="0 ${-p2_hlen-c_offset} ${+c_offset+p8_hlen}" rpy="0 0 0" />
+    <xacro:p8 xyz="0 ${+p2_hlen+c_offset} ${+c_offset+p8_hlen}" rpy="0 0 0" />
+    <xacro:p8 xyz="${+c_offset+p4_len+c_offset} ${-p2_hlen-c_offset} ${+c_offset+p8_hlen}" rpy="0 0 0" />
+    <xacro:p8 xyz="${+c_offset+p4_len+c_offset} ${+p2_hlen+c_offset} ${+c_offset+p8_hlen}" rpy="0 0 0" />
+    <xacro:cd xyz="0 ${-p2_hlen-c_offset} ${c_offset+p8_len+c_offset}" rpy="${pi/2} 0 ${pi/2}" />
+    <xacro:cd xyz="0 ${+p2_hlen+c_offset} ${c_offset+p8_len+c_offset}" rpy="${pi/2} 0 ${pi/2}" />
+    <xacro:cf xyz="${+c_offset+p4_len+c_offset} ${-p2_hlen-c_offset} ${c_offset+p8_len+c_offset}" rpy="${-pi/2} 0 ${pi/2}" />
+    <xacro:cf xyz="${+c_offset+p4_len+c_offset} ${+p2_hlen+c_offset} ${c_offset+p8_len+c_offset}" rpy="${-pi/2} 0 ${pi/2}" />
+    <xacro:p6 xyz="${c_offset+p6_hlen} ${-p2_hlen-c_offset} ${c_offset+p8_len+c_offset}" rpy="0 ${pi/2} 0" />
+    <xacro:p6 xyz="${c_offset+p6_hlen} ${+p2_hlen+c_offset} ${c_offset+p8_len+c_offset}" rpy="0 ${pi/2} 0" />
+  </link>
 </robot>
