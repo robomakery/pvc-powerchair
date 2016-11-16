@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<robot name="wheel_parts" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find pvcchair_description)/urdf/motion/gearbox_plate.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/motion/wheel.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/motion/caster.urdf.xacro" />
+</robot>

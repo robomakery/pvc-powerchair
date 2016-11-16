@@ -4,27 +4,18 @@
     <mesh filename="package://pvcchair_description/meshes/piping/p4_footrest_base.dae" />
   </xacro:property>
 
-  <xacro:macro name="p4" params="suffix">
-    <link name="p4_${suffix}">
-      <inertial>
-        <mass value="0.020098" />
-        <origin xyz="0 0 0" />
-        <inertia ixx="0.000014" ixy="0.000000" ixz="0.000000"
-                                iyy="0.000002" iyz="0.000000"
-                                               izz="0.000014" />
-      </inertial>
-      <visual>
-        <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
-        <geometry>
-          <xacro:insert_block name="p4_mesh" />
-        </geometry>
-      </visual>
-      <collision>
-        <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
-        <geometry>
-          <xacro:insert_block name="p4_mesh" />
-        </geometry>
-      </collision>
-    </link>
+  <xacro:macro name="p4" params="xyz rpy">
+    <visual>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="p4_mesh" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="p4_mesh" />
+      </geometry>
+    </collision>
   </xacro:macro>
 </robot>

@@ -2,6 +2,12 @@
  Changelog for pvcchair_description
 ====================================
 
+0.4.0
+------
+* Redefined piping and connectors to allow use within a single link.
+* Restructured main parts so that each defines a single link.
+* Restructured xacro includes to be compatible with in order processing.
+
 0.3.0
 ------
 * Added urdf models for the gearbox plates, wheels and casters.

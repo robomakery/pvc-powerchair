@@ -4,27 +4,18 @@
     <mesh filename="package://pvcchair_description/meshes/connectors/ca_4_way_t_connect.dae" />
   </xacro:property>
 
-  <xacro:macro name="ca" params="suffix">
-    <link name="ca_${suffix}">
-      <inertial>
-        <mass value="0.0028134" />
-        <origin xyz="0.033355 0.003866 -0.002262" />
-        <inertia ixx="0.000011" ixy="0.000000" ixz="0.000000"
-                                iyy="0.000011" iyz="0.000000"
-                                               izz="0.000008" />
-      </inertial>
-      <visual>
-        <origin xyz="0 0 0" rpy="0 0 ${-pi/2}" />
-        <geometry>
-          <xacro:insert_block name="ca_mesh" />
-        </geometry>
-      </visual>
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 ${-pi/2}" />
-        <geometry>
-          <xacro:insert_block name="ca_mesh" />
-        </geometry>
-      </collision>
-    </link>
+  <xacro:macro name="ca" params="xyz rpy">
+    <visual>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="ca_mesh" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="ca_mesh" />
+      </geometry>
+    </collision>
   </xacro:macro>
 </robot>
