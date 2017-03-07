@@ -20,3 +20,12 @@ We are using the the [Python Behave](http://pythonhosted.org/behave/) BDD framew
     $ behave
 
 to run the features against the application.
+
+# Running simulation
+
+You can see the URDF model in rviz with:
+
+    $ cd software/ros
+    $ catkin build
+    $ source devel/setup.bash
+    $ roslaunch pvcchair_description visualize_urdf.launch

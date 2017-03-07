@@ -4,7 +4,7 @@ PVC based pediatric powerchair initial developed at BYU and continued by the [Op
 
 ## Documentation
 
-Currently the documentation is located at:
+The original build documentation is located at:
 
 http://www.openwheelchair.org/Plans/
 
@@ -12,11 +12,11 @@ There is a Google Group mailing list for development discussion:
 
 https://groups.google.com/forum/?hl=en#!forum/robomakery-pvc-chair
 
-A BOM for this version of the chair can be found here as a Google Sheet:
+A BOM for version 1 of the chair can be found here as a Google Sheet:
 
 https://docs.google.com/spreadsheets/d/1bKTSlYI-VXHVKByr3TpmT4WPJDfsZL3mFjEXyMhEeBg/edit?usp=sharing
 
-Documentation for Robomakery modifications can be found in the [source](docs/index.md).
+Documentation for Robomakery modifications can be found in the [source](docs/README.md).
 
 ## License Information
 
