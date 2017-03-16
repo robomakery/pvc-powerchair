@@ -36,9 +36,9 @@ Drive Train Total,,,,,,,,$83.90
 ELECTRONICS,,,,,,,,
 2 Axis Joystick,$19.99,2,RB-Sct-283,Robotshop,www.robotshop.com,,,$39.98
 Arduino UNO,,,,,,,,
-H-Bridge,$9.95,2,DRV8701,MassMind.org,www.massmind.org/techref/io/motor/DRV8701s.htm,,,Donated
-Arduino UNO BOB Shield Adapter,$8.00,1,4Axis5,MassMind.org,www.massmind.org/techref/microchip/bob.htm,,,Donated
-Cables,$3.00,2,4Axis5_c11M,MassMind.org,www.massmind.org/techref/ecomprice.asp?p=416020,,,Donated
+H-Bridge,$9.95,2,DRV8701,MassMind.org,massmind.org/io/motor/DRV8701s.htm,,,Donated
+BOB Shield Adapter,$8.00,1,4Axis5,MassMind.org,massmind.org/microchip/bob.htm,,,Donated
+Cables,$3.00,2,4Axis5_c11M,MassMind.org,ecomorder.com/416020,,,Donated
 Power converter,,,,,,,,
 Battery,,,,,,,,
 Battery Charger,,,,,,,,
