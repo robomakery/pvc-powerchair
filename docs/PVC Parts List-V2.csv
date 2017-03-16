@@ -1,0 +1,51 @@
+﻿Part,Price,QTY,Part #,Retailer,Web Page,"Date
+Ordered","Date
+Received",Sub-Total
+PVC,,,,,,,,
+½ in Schedule 40 PVC,$6.20,7,P012FGP-OR-5,FORUMUFIT,www.forumufit.com,03/08/17,Exp: 3/20/2017,$43.40
+4-Way Tee Connect ,$1.95,6,F0124WT-OR,FORUMUFIT,www.forumufit.com,03/08/17,Exp: 3/20/2017,$11.70
+5-Way Cross Connect,$3.39,4,F0125WC-OR,FORUMUFIT,www.forumufit.com,03/08/17,Exp: 3/20/2017,$13.56
+3-Way Elbow Connect,$1.43,6,F0123WE-WH,FORUMUFIT,www.forumufit.com,03/08/17,Exp: 3/20/2017,$8.58
+90 Degree Connect,$1.45,6,F01290E-OR,FORUMUFIT,www.forumufit.com,03/08/17,Exp: 3/20/2017,$8.70
+Tee Connect,$1.45,6,F012TEE-OR,FORUMUFIT,www.forumufit.com,03/08/17,Exp: 3/20/2017,$8.70
+Slip Sling Tee Connect,$2.35,9,F012STE-OR,FORUMUFIT,www.forumufit.com,03/08/17,Exp: 3/20/2017,$21.15
+Shipping,,,,,,,,$18.99
+Fastener Pack,$14.95,0,FASTENER-PACK,Open Wheelchair,www.openwheelchair.org,,,
+Gear Box Plate,$14.95,0,GEARBOX-PLATE,Open Wheelchair,www.openwheelchair.org,,,$0.00
+Shipping,,,,,,,,$0.00
+,,,,,,,,
+PVC Total,,,,,,,,$134.78
+,,,,,,,,
+Frame,,,,,,,,
+Seatbelt,$12.50,1,45928,1-800-WHEELCHAIR.COM,www.wheelchair.com,,,$12.50
+Shipping,,,,,,,,$4.00
+Casters,$7.50,2,PRES5024ZN-TPR,A1-Casters,www.a1casters.com,,,$15.00
+Shipping,,,,,,,,
+,,,,,,,,
+Drive Train Total,,,,,,,,$31.50
+,,,,,,,,
+DRIVETRAIN,,,,,,,,
+"Actobotics 8mm Bore, 0.77”",$4.99,2,RB-Sct-628,robotshop,www.robotshop.com,,,$9.98
+"Actobotics 1.50"" x 0.770"" ",$4.99,2,RB-Sct-376 ,robotshop,www.robotshop.com,,,$9.98
+"Actobotics 6"" Heavy Duty ",$9.99,2,RB-Sct-437,robotshop,www.robotshop.com,,,$19.98
+RS-450 Motor,$6.25,2,RB-Ban-68,robotshop,www.robotshop.com,,,$12.50
+Takanawa 555 Gearbox,$15.73,2,2015021601,Banggood,www.banggood.com,03/08/17,Exp: 4/18/2017,$31.46
+,,,,,,,,
+Drive Train Total,,,,,,,,$83.90
+,,,,,,,,
+ELECTRONICS,,,,,,,,
+2 Axis Joystick,19.99,2,RB-Sct-283,Robotshop,www.robotshop.com,,,$39.98
+Arduino UNO,,,,,,,,
+H-Bridge,,,,,,,,
+Power converter,,,,,,,,
+Battery,,,,,,,,
+Battery Charger,,,,,,,,
+Connectors,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Drive Train Total,,,,,,,,$39.98
+,,,,,,,,
+Grand Total,,,,,,,,$290.16
