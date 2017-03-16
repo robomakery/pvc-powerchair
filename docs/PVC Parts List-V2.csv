@@ -34,9 +34,11 @@ Takanawa 555 Gearbox,$15.73,2,2015021601,Banggood,www.banggood.com,03/08/17,Exp:
 Drive Train Total,,,,,,,,$83.90
 ,,,,,,,,
 ELECTRONICS,,,,,,,,
-2 Axis Joystick,19.99,2,RB-Sct-283,Robotshop,www.robotshop.com,,,$39.98
+2 Axis Joystick,$19.99,2,RB-Sct-283,Robotshop,www.robotshop.com,,,$39.98
 Arduino UNO,,,,,,,,
-H-Bridge,,,,,,,,
+H-Bridge,$9.95,2,DRV8701,MassMind.org,http://techref.massmind.org/techref/io/motor/DRV8701s.htm,,,Donated
+Arduino UNO BOB Shield Adapter,$8.00,1,4Axis5,MassMind.org,http://techref.massmind.org/techref/microchip/bob.htm,,,Donated
+Cables,$3.00,2,4Axis5_c11M,MassMind.org,http://www.massmind.org/techref/ecomprice.asp?p=416020,,,Donated
 Power converter,,,,,,,,
 Battery,,,,,,,,
 Battery Charger,,,,,,,,
