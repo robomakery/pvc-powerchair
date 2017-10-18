@@ -3,7 +3,6 @@
 #include <Arduino.h>
 // https://github.com/olikraus/u8g2/wiki/u8x8reference
 #include <U8g2lib.h>
-#include <SPI.h>
 #include <Wire.h>
 // https://www.dimensionengineering.com/info/arduino
 #include <SabertoothSimplified.h>
@@ -17,72 +16,82 @@ SabertoothSimplified ST;
 // https://www.amazon.com/gp/customer-reviews/RE5PIJFQ7K685/ref=cm_cr_getr_d_rvw_ttl?ie=UTF8&ASIN=B01HEBIJKK
 U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE); // OLEDs without Reset of the Display
 
-char cols[15];
-char rows[15];
+const int batteryPin = A0;
 
-const int battPin = A0;
-const int threshold = 10;
-float R1 = 30000.0;
-float R2 = 7500.0;
-
-const int joyUD = A2;
+const int joyFB = A2;
 const int joyLR = A3;
 
 void setup()
 {
   SabertoothTXPinSerial.begin(9600);
+  ST.motor(1, 0); // Stop.
+  ST.motor(2, 0); // Stop.
+
   u8x8.begin();
   u8x8.setFont(u8x8_font_chroma48medium8_r);
-  sprintf(cols, "%d", u8x8.getCols());
-  sprintf(rows, "%d", u8x8.getRows());
-  Serial.println(strcat("Cols: ", cols));
-  Serial.println(strcat("Rows: ", rows));
+  u8x8.clearDisplay();
+  u8x8.drawString(0,0,"PVC Chair v2.0.0");
 }
-
 
 void loop()
 {
-  u8x8.drawString(0,0,"Hello World!");
+  char buff[16];
 
-  // Battery Voltage input and calculations
-  int rawBatt = analogRead(battPin);
-  float vout = (rawBatt * 5.0) / 1024.0; // see text
-  float vin = vout / (R2 / (R1 + R2));
-  int battPct = (vin / 12.4) * 100;
-  char batteryMsg[50];
-  sprintf(batteryMsg, "Batt. Volt: %d", vin);
-  u8x8.drawString(0,1,batteryMsg);
+  // Battery Voltage
+  // http://www.skillbank.co.uk/arduino/measure.htm
+  // batteryPin gives value between 0 - 1023 that scales to 0 - 5V from the voltage divider
+  // voltage divider divides source voltage by 5
+  int batterySensorValue = analogRead(batteryPin);
+  float voltage = (batterySensorValue * 5.0 * 5.0) / 1023.0;
+
+  sprintf(buff, "Sensor : %7d", batterySensorValue);
+  u8x8.setCursor(0,2);
+  u8x8.print(buff);
+
+  char voltage_buff[7];
+  dtostrf(voltage, 4, 1, voltage_buff);
+  sprintf(buff, "Voltage: %7s", voltage_buff);
+  u8x8.setCursor(0,3);
+  u8x8.print(buff);
+
+  // https://sciencing.com/determine-ah-12volt-battery-7733095.html
+  int batteryPercentage = (int) ((voltage / 12.6) * 100);
+  sprintf(buff, "Batt. %%: %6d%%", batteryPercentage);
+  u8x8.setCursor(0,4);
+  u8x8.print(buff);
     
   // Collect raw analog data (range: 0-1023)
-  int valUD = analogRead(joyUD);
+  int valFB = analogRead(joyFB);
   int valLR = analogRead(joyLR);
 
-  char updown[50];
-  sprintf(updown, "Val UD: %d", valUD);
-  u8x8.drawString(0,4,updown);
+  sprintf(buff, "Val F/B: %7d", valFB);
+  u8x8.setCursor(0,5);
+  u8x8.print(buff);
 
-  char leftright[50];
-  sprintf(leftright, "Val LR: %d", valLR);
-  u8x8.drawString(0,5,leftright);
+  sprintf(buff, "Val L/R: %7d", valLR);
+  u8x8.setCursor(0,6);
+  u8x8.print(buff);
 
-  //ST.motor(1, 0);    // Stop.
-  //ST.motor(2, 0);    // Stop.
+  /*
+  ST.motor(1, 0);    // Stop.
+  ST.motor(2, 0);    // Stop.
 
-  // ST.motor(1, 127);  // Go forward at full power.
-  // delay(2000);       // Wait 2 seconds.
-  // ST.motor(1, 0);    // Stop.
-  // delay(2000);       // Wait 2 seconds.
-  // ST.motor(1, -127); // Reverse at full power.
-  // delay(2000);       // Wait 2 seconds.
-  // ST.motor(1, 0);    // Stop.
-  // delay(2000);
+  ST.motor(1, 127);  // Go forward at full power.
+  delay(2000);       // Wait 2 seconds.
+  ST.motor(1, 0);    // Stop.
+  delay(2000);       // Wait 2 seconds.
+  ST.motor(1, -127); // Reverse at full power.
+  delay(2000);       // Wait 2 seconds.
+  ST.motor(1, 0);    // Stop.
+  delay(2000);
 
-  // ST.motor(2, 127);  // Go forward at full power.
-  // delay(2000);       // Wait 2 seconds.
-  // ST.motor(2, 0);    // Stop.
-  // delay(2000);       // Wait 2 seconds.
-  // ST.motor(2, -127); // Reverse at full power.
-  // delay(2000);       // Wait 2 seconds.
-  // ST.motor(2, 0);    // Stop.
-  // delay(2000);
+  ST.motor(2, 127);  // Go forward at full power.
+  delay(2000);       // Wait 2 seconds.
+  ST.motor(2, 0);    // Stop.
+  delay(2000);       // Wait 2 seconds.
+  ST.motor(2, -127); // Reverse at full power.
+  delay(2000);       // Wait 2 seconds.
+  ST.motor(2, 0);    // Stop.
+  delay(2000);
+  */
 }
