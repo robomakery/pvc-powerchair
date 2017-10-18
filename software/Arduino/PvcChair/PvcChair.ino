@@ -33,13 +33,19 @@ void setup()
   u8x8.drawString(0,0,"PVC Chair v2.0.0");
 }
 
+void translateJoystickToMotorCommands(int upperLeftToLowerRight, int lowerLeftToUpperRight, int &motor1Command, int &motor2Command)
+{
+  motor1Command = 100;
+  motor2Command = 100;
+}
+
 void loop()
 {
   char buff[16];
-
+  
   // Battery Voltage
   // http://www.skillbank.co.uk/arduino/measure.htm
-  // batteryPin gives value between 0 - 1023 that scales to 0 - 5V from the voltage divider
+  // batteryPin is between 0-1023 that scales to 0-5V from voltage divider
   // voltage divider divides source voltage by 5
   int batterySensorValue = analogRead(batteryPin);
   float voltage = (batterySensorValue * 5.0 * 5.0) / 1023.0;
@@ -53,7 +59,7 @@ void loop()
   sprintf(buff, "Voltage: %7s", voltage_buff);
   u8x8.setCursor(0,3);
   u8x8.print(buff);
-
+  
   // https://sciencing.com/determine-ah-12volt-battery-7733095.html
   int batteryPercentage = (int) ((voltage / 12.6) * 100);
   sprintf(buff, "Batt. %%: %6d%%", batteryPercentage);
@@ -71,6 +77,13 @@ void loop()
   sprintf(buff, "Val L/R: %7d", valLR);
   u8x8.setCursor(0,6);
   u8x8.print(buff);
+
+  int motor1Command;
+  int motor2Command;
+  translateJoystickToMotorCommands(valFB, valLR, motor1Command, motor2Command);
+
+  ST.motor(1, motor1Command);
+  ST.motor(2, motor2Command);
 
   /*
   ST.motor(1, 0);    // Stop.
