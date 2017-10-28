@@ -15,3 +15,4 @@ run-tests:
 	g++ -c test/test_motor_control.cpp -o test/build/test_motor_control.o
 	g++ test/build/MotorControl.o test/build/test_main.o test/build/test_motor_control.o -o test/build/catch
 	./test/build/catch
+	rm -rf test/build
