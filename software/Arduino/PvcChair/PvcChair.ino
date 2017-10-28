@@ -19,8 +19,14 @@ U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset
 
 const int batteryPin = A0;
 
-const int joyFB = A2;
-const int joyLR = A3;
+const int joystickUpperLeftToLowerRightPin = A2;
+const int joystickLowerLeftToUpperRightPin = A3;
+
+int joystickUpperLeftToLowerRightValue;
+int joystickLowerLeftToUpperRightValue;
+int threshold = 10;
+
+MotorControl controller;
 
 void setup()
 {
@@ -32,6 +38,13 @@ void setup()
   u8x8.setFont(u8x8_font_chroma48medium8_r);
   u8x8.clearDisplay();
   u8x8.drawString(0,0,"PVC Chair v2.0.0");
+
+  // get initial settings for calibration
+  joystickUpperLeftToLowerRightValue = analogRead(joystickUpperLeftToLowerRightPin);
+  joystickLowerLeftToUpperRightValue = analogRead(joystickLowerLeftToUpperRightPin);
+
+  // use initial values as zeros in MotorControl object
+  controller.initialize(joystickUpperLeftToLowerRightValue, joystickLowerLeftToUpperRightValue, threshold);
 }
 
 void loop()
@@ -62,20 +75,20 @@ void loop()
   u8x8.print(buff);
     
   // Collect raw analog data (range: 0-1023)
-  int valFB = analogRead(joyFB);
-  int valLR = analogRead(joyLR);
+  joystickUpperLeftToLowerRightValue = analogRead(joystickUpperLeftToLowerRightPin);
+  joystickLowerLeftToUpperRightValue = analogRead(joystickLowerLeftToUpperRightPin);
 
-  sprintf(buff, "Val F/B: %7d", valFB);
+  sprintf(buff, "Val ULLR: %6d", joystickUpperLeftToLowerRightValue);
   u8x8.setCursor(0,5);
   u8x8.print(buff);
 
-  sprintf(buff, "Val L/R: %7d", valLR);
+  sprintf(buff, "Val LLUR: %6d", joystickLowerLeftToUpperRightValue);
   u8x8.setCursor(0,6);
   u8x8.print(buff);
 
   int motor1Command;
   int motor2Command;
-  translateJoystickToMotorCommands(valFB, valLR, motor1Command, motor2Command);
+  controller.translateJoystickToMotorCommands(joystickUpperLeftToLowerRightValue, joystickLowerLeftToUpperRightValue, motor1Command, motor2Command);
 
   ST.motor(1, motor1Command);
   ST.motor(2, motor2Command);
