@@ -34,12 +34,6 @@ void setup()
   u8x8.drawString(0,0,"PVC Chair v2.0.0");
 }
 
-void translateJoystickToMotorCommands(int upperLeftToLowerRight, int lowerLeftToUpperRight, int &motor1Command, int &motor2Command)
-{
-  motor1Command = 100;
-  motor2Command = 100;
-}
-
 void loop()
 {
   char buff[16];
@@ -82,8 +76,6 @@ void loop()
   int motor1Command;
   int motor2Command;
   translateJoystickToMotorCommands(valFB, valLR, motor1Command, motor2Command);
-
-  int motor3Command = isNegative(0);
 
   ST.motor(1, motor1Command);
   ST.motor(2, motor2Command);
