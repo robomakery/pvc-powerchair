@@ -13,6 +13,5 @@ run-tests:
 	g++ -c MotorControl.cpp -o test/build/MotorControl.o
 	g++ -c test/test_main.cpp -o test/build/test_main.o
 	g++ -c test/test_motor_control.cpp -o test/build/test_motor_control.o
-	g++ -c test/test_factorial.cpp -o test/build/test_factorial.o
-	g++ test/build/MotorControl.o test/build/test_main.o test/build/test_motor_control.o test/build/test_factorial.o -o test/build/catch
+	g++ test/build/MotorControl.o test/build/test_main.o test/build/test_motor_control.o -o test/build/catch
 	./test/build/catch
