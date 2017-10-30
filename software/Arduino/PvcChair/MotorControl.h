@@ -3,16 +3,18 @@
 
 class MotorControl
 {
-  int ullr;
-  int llur;
+  int centerX;
+  int centerY;
   int t;
 
 public:
   MotorControl();
+  void initialize(int initialX, int initialY, int threshold);
+  void translateJoystickToMotorCommands(int x, int y, int &motor1Command, int &motor2Command);
 
-  void initialize(int initialULLR, int initialLLUR, int threshold);
+private:
+  long mymap(long, long, long, long, long);
 
-  void translateJoystickToMotorCommands(int upperLeftToLowerRight, int lowerLeftToUpperRight, int &motor1Command, int &motor2Command);
 };
 
 #endif // H_MOTOR_CONTROL

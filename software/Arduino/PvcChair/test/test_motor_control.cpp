@@ -1,13 +1,25 @@
 #include "catch.hpp"
 #include "../MotorControl.h"
 
-TEST_CASE( "translateJoystickToMotorCommands returns 100" ) {
+TEST_CASE( "MotorControl", "[motor_control]" ) {
   MotorControl controller = MotorControl();
-  controller.initialize(0, 0, 10);
+  controller.initialize(512, 512, 10); // halfway points on sensors; 10 is threshold
 
   int motorCommand1;
   int motorCommand2;
-  controller.translateJoystickToMotorCommands(0, 0, motorCommand1, motorCommand2);
-  REQUIRE( motorCommand1 == 100 );
-  REQUIRE( motorCommand2 == 100 );
+  SECTION( "neutral under threshold" ) {
+    controller.translateJoystickToMotorCommands(520, 510, motorCommand1, motorCommand2);
+    REQUIRE( motorCommand1 == 0 );
+    REQUIRE( motorCommand2 == 0 );
+  }
+  SECTION( "Full Forward" ) {
+    controller.translateJoystickToMotorCommands(520, 1023, motorCommand1, motorCommand2);
+    REQUIRE( motorCommand1 >= 125 );
+    REQUIRE( motorCommand2 >= 125 );
+  }
+  SECTION( "Full Reverse" ) {
+    controller.translateJoystickToMotorCommands(520, 0, motorCommand1, motorCommand2);
+    REQUIRE( motorCommand1 <= -125 );
+    REQUIRE( motorCommand2 <= -125 );
+  }
 }
