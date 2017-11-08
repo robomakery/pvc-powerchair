@@ -30,7 +30,7 @@ void MotorControl::translateJoystickToMotorCommands(int x, int y, int &motor1Com
     //
 
     // INPUTS
-    int nJoyX = mymap(x, 0, 1023, -128, 127); // Joystick X input                     (-128..+127)
+    int nJoyX = mymap(x, 1023, 0, -128, 127); // Joystick X input                     (-128..+127)
     int nJoyY = mymap(y, 0, 1023, -128, 127); // Joystick Y input                     (-128..+127)
 
     // OUTPUTS
