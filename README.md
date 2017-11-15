@@ -18,6 +18,10 @@ https://docs.google.com/spreadsheets/d/1bKTSlYI-VXHVKByr3TpmT4WPJDfsZL3mFjEXyMhE
 
 Documentation for Robomakery modifications can be found in the [source](docs/README.md).
 
+## Versions
+
+Next Version: [version 3](docs/v3/notes.md)
+
 ## License Information
 
 [Software is licensed under GNU General Public License V3](software/LICENSE)
