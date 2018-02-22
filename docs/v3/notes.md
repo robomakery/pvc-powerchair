@@ -7,4 +7,3 @@ v3 goals
 * Update frame to metal tubing
 * Integrate ODROID / ROS
 * Redesign electronics box
-* Integrate ODROID / ROS
