@@ -17,6 +17,12 @@ Updates:
 * [Component Diagram](pvc-chair-component-diagram.png)
 * [BOM](PVC-Parts-List-V2.xls)
 
+### Contributors
+
+* Dylan Vaughn
+* Steven Berneberg
+* Aki Kono
+
 ### Gallery
 
 PVC Powerchair v2 test drive
