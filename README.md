@@ -96,7 +96,7 @@ Prototype Completion Date: TBD
 
 Version 1
 
-![PVC Powerchair v1 with tester](images/pvc-chair-v1.jpg)
+![PVC Powerchair v1 with tester](docs/v1/images/pvc-chair-v1.jpg)
 
 Version 2
 
