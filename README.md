@@ -2,21 +2,17 @@
 
 PVC based pediatric powerchair initial developed at BYU and continued by the [Open Wheelchair Foundation](http://openwheelchair.org/).
 
-## Documentation
+## Getting Involved
 
-The original build documentation is located at:
+We welcome new contributors!
 
-http://www.openwheelchair.org/Plans/
-
-There is a Google Group mailing list for development discussion:
+First, there is a Google Group mailing list for development discussion:
 
 https://groups.google.com/forum/?hl=en#!forum/robomakery-pvc-chair
 
-A BOM for version 1 of the chair can be found here as a Google Sheet:
+Please join that group and introduce yourself.  We also have bi-weekly online planning meetings via Zoom.
 
-https://docs.google.com/spreadsheets/d/1bKTSlYI-VXHVKByr3TpmT4WPJDfsZL3mFjEXyMhEeBg/edit?usp=sharing
-
-Documentation for Robomakery modifications can be found in the [source](docs/README.md).
+If you are in the San Diego area, we also meet to discuss this project on the first Tuesday of every month as part of the [San Diego Robotics Club](https://www.meetup.com/roboticsclub/).
 
 ## Versions
 
