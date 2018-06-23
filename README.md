@@ -39,7 +39,7 @@ Updates:
 * Arduino instead of custom boards
 * Sabertooth Motor Controller
 * OLED Battery Display
-* Plug-in Battery Charging 
+* Plug-in Battery Charging
 
 [read more](docs/v2)
 
@@ -74,21 +74,6 @@ Updates:
 [Software is licensed under GNU General Public License V3](software/LICENSE)
 
 [Hardware is licensed under CERN Open Hardware Licence v1.2](hardware/LICENSE)
-
-## Contributors
-
-### V2
-
-* Dylan Vaughn
-* Aki Kono
-* Steven Berneberg
-* Hamid Badiozamani
-
-### V3
-
-### V4
-
-
 
 ## Gallery
 
