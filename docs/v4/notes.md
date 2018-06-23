@@ -2,5 +2,4 @@
 v4 goals
 --------
 
-* Rocker-Bogie Suspension
-* Self-leveling seat
+* Update frame to metal tubing
