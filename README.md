@@ -20,13 +20,75 @@ Documentation for Robomakery modifications can be found in the [source](docs/REA
 
 ## Versions
 
-Next Version: [version 3](docs/v3/notes.md)
+### Version 1
+
+Theme: Original design build
+
+Updates:
+
+* Minor changes to original design
+
+[read more](docs/v1)
+
+### Version 2
+
+Theme: Move to COTS electronics
+
+Updates:
+
+* Arduino instead of custom boards
+* Sabertooth Motor Controller
+* OLED Battery Display
+* Plug-in Battery Charging 
+
+[read more](docs/v2)
+
+### Version 3
+
+Theme: UCSD ECE 191 Winter / Spring Projects
+
+Updates:
+
+* Brushless Hub Motors with Hall Sensors
+* LiFePo4 Battery
+* Rear-wheel drive
+
+[read more](docs/v3)
+
+### Version 4
+
+Theme: Metal Frame, oDrive, Initial ROS
+
+Updates:
+
+* oDrive Motor Controller
+* oDrive Brushless Motors + encoders + gearbox
+* oDroid ROS Control
+* Metal Frame
+* Front-wheel drive
+
+[read more](docs/v4)
 
 ## License Information
 
 [Software is licensed under GNU General Public License V3](software/LICENSE)
 
 [Hardware is licensed under CERN Open Hardware Licence v1.2](hardware/LICENSE)
+
+## Contributors
+
+### V2
+
+* Dylan Vaughn
+* Aki Kono
+* Steven Berneberg
+* Hamid Badiozamani
+
+### V3
+
+### V4
+
+
 
 ## Gallery
 
