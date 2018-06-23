@@ -98,6 +98,6 @@ Version 1
 
 ![PVC Powerchair v1 with tester](docs/v1/images/pvc-chair-v1.jpg)
 
-Version 2
+Version 2 (click on image to see video)
 
 [![PVC Powerchair v2 test drive](https://img.youtube.com/vi/sLA0mYiXbEk/0.jpg)](https://www.youtube.com/watch?v=sLA0mYiXbEk)
