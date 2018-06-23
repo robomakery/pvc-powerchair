@@ -28,6 +28,8 @@ Updates:
 
 * Minor changes to original design
 
+Prototype Completion Date: 2016-04-27
+
 [read more](docs/v1)
 
 ### Version 2
@@ -41,6 +43,8 @@ Updates:
 * OLED Battery Display
 * Plug-in Battery Charging
 
+Prototype Completion Date: 2017-11-04
+
 [read more](docs/v2)
 
 ### Version 3
@@ -52,6 +56,8 @@ Updates:
 * Brushless Hub Motors with Hall Sensors
 * LiFePo4 Battery
 * Rear-wheel drive
+
+Prototype Completion Date: 2018-06-15
 
 [read more](docs/v3)
 
@@ -66,6 +72,8 @@ Updates:
 * oDroid ROS Control
 * Metal Frame
 * Front-wheel drive
+
+Prototype Completion Date: Build In Progress
 
 [read more](docs/v4)
 
