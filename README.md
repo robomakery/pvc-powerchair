@@ -6,7 +6,7 @@ This project tracks the enhancements to the chair that are being driven by [Robo
 
 ## Project Summary
 
-[Short Google Slides Presentation](https://docs.google.com/presentation/d/15qEuZ3zkQeehqRNR6Qjr2HcOfHyarlDE67ISACsir1c/edit?usp=sharing)
+[Short Google Slides Presentation](https://docs.google.com/presentation/d/e/2PACX-1vQH72_SPbROlJtIxm5qiG1kyvUSaIGlaVXuoVhn0pRb-agA25kUbpgHu_BZxM33IaVWwLDGMfL6djqC/pub?start=false&loop=false&delayms=3000)
 
 ## Getting Involved
 
