@@ -32,7 +32,7 @@ Updates:
 
 Prototype Completion Date: 2016-04-27
 
-[read more](docs/v1)
+[read more](v1)
 
 ### Version 2
 
@@ -47,7 +47,7 @@ Updates:
 
 Prototype Completion Date: 2017-11-04
 
-[read more](docs/v2)
+[read more](v2)
 
 ### Version 3
 
@@ -61,7 +61,7 @@ Updates:
 
 Prototype Completion Date: 2018-06-15
 
-[read more](docs/v3)
+[read more](v3)
 
 ### Version 4
 
@@ -77,7 +77,7 @@ Updates:
 
 Prototype Completion Date: Build In Progress
 
-[read more](docs/v4)
+[read more](v4)
 
 ### Version 5
 
@@ -90,7 +90,7 @@ Updates:
 
 Prototype Completion Date: TBD
 
-[read more](docs/v5)
+[read more](v5)
 
 ## License Information
 
@@ -102,7 +102,7 @@ Prototype Completion Date: TBD
 
 Version 1
 
-![PVC Powerchair v1 with tester](docs/v1/images/pvc-chair-v1.jpg)
+![PVC Powerchair v1 with tester](v1/images/pvc-chair-v1.jpg)
 
 Version 2 (click on image to see video)
 
