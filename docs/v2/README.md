@@ -14,8 +14,8 @@ Updates:
 
 ### Docs
 
-* [Component Diagram](pvc-chair-component-diagram.png)
-* [BOM](PVC-Parts-List-V2.xls)
+* [Component Diagram](docs/pvc-chair-component-diagram.png)
+* [BOM](docs/PVC-Parts-List-V2.xls)
 
 ### Contributors
 

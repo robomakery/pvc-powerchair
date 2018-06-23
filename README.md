@@ -94,9 +94,9 @@ Prototype Completion Date: TBD
 
 ## License Information
 
-[Software is licensed under GNU General Public License V3](software/LICENSE)
+[Software is licensed under GNU General Public License V3](SOFTWARE_LICENSE)
 
-[Hardware is licensed under CERN Open Hardware Licence v1.2](hardware/LICENSE)
+[Hardware is licensed under CERN Open Hardware Licence v1.2](HARDWARE_LICENSE)
 
 ## Gallery
 
