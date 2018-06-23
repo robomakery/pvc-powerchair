@@ -77,6 +77,19 @@ Prototype Completion Date: Build In Progress
 
 [read more](docs/v4)
 
+### Version 5
+
+Theme: Rocker-Bogie Experiement
+
+Updates:
+
+* Rocker-Bogie Suspension
+* Self-leveling seat
+
+Prototype Completion Date: TBD
+
+[read more](docs/v5)
+
 ## License Information
 
 [Software is licensed under GNU General Public License V3](software/LICENSE)
@@ -85,4 +98,10 @@ Prototype Completion Date: Build In Progress
 
 ## Gallery
 
-![PVC Powerchair with tester](images/pvc-chair.jpg)
+Version 1
+
+![PVC Powerchair v1 with tester](images/pvc-chair-v1.jpg)
+
+Version 2
+
+[![PVC Powerchair v2 test drive](https://img.youtube.com/vi/sLA0mYiXbEk/0.jpg)](https://www.youtube.com/watch?v=sLA0mYiXbEk)

@@ -1,7 +1,7 @@
 
 ## PVC Chair Version 2
 
-Prototype completed: 2017-11-04
+Status: prototype completed on 2017-11-04
 
 Theme: Move to COTS electronics
 
