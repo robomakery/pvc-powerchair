@@ -12,6 +12,11 @@ Updates:
 * OLED Battery Display
 * Plug-in Battery Charging
 
+### Docs
+
+* [Component Diagram](pvc-chair-component-diagram.png)
+* [BOM](PVC Parts List-V2.xls)
+
 ### Gallery
 
 PVC Powerchair v2 test drive
