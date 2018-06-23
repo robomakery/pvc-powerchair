@@ -17,4 +17,6 @@ http://www.openwheelchair.org/Plans/
 
 ### Gallery
 
+PVC Powerchair v1 with tester
+
 ![PVC Powerchair v1 with tester](images/pvc-chair-v1.jpg)
