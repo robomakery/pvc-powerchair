@@ -15,8 +15,8 @@ Updates:
 
 Project Mentors
 
-* Dylan Vaughn (project sponsor)
-* Jack Silberman (project mentor)
+* Dylan Vaughn
+* Jack Silberman
 
 UCSD ECE 191 Project Members
 
