@@ -1,7 +1,7 @@
 
 ## PVC Chair Version 5
 
-Status: Researching design
+Status: researching
 
 Theme: Rocker-Bogie Experiement
 
