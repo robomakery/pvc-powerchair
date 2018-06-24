@@ -72,7 +72,7 @@ Updates:
 * oDrive Motor Controller
 * oDrive Brushless Motors + encoders + gearbox
 * oDroid ROS Control
-* Metal Frame
+* Metal Frame w/ MakerPipe
 * Front-wheel drive
 
 Prototype Completion Date: Build In Progress
