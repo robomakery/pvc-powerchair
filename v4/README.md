@@ -3,9 +3,7 @@
 
 Status: design in progress
 
-Theme: Metal Frame, oDrive, Initial ROS
-
-Updates:
+Theme: Metal Frame, oDrive, Initial ROS integration
 
 Updates:
 
