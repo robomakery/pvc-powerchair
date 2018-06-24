@@ -22,46 +22,18 @@ If you are in the San Diego area, we also meet to discuss this project on the fi
 
 ## Versions
 
-### Version 1
+### Version 5
 
-Theme: Original design build
-
-Updates:
-
-* Minor changes to original design
-
-Prototype Completion Date: 2016-04-27
-
-[read more](v1)
-
-### Version 2
-
-Theme: Move to COTS electronics
+Theme: Rocker-Bogie Experiment
 
 Updates:
 
-* Arduino instead of custom boards
-* Sabertooth Motor Controller
-* OLED Battery Display
-* Plug-in Battery Charging
+* Rocker-Bogie Suspension
+* Self-leveling seat
 
-Prototype Completion Date: 2017-11-04
+Prototype Completion Date: TBD
 
-[read more](v2)
-
-### Version 3
-
-Theme: UCSD ECE 191 Winter / Spring Projects
-
-Updates:
-
-* Brushless Hub Motors with Hall Sensors
-* LiFePo4 Battery
-* Rear-wheel drive
-
-Prototype Completion Date: 2018-06-15
-
-[read more](v3)
+[read more](v5)
 
 ### Version 4
 
@@ -79,39 +51,59 @@ Prototype Completion Date: Build In Progress
 
 [read more](v4)
 
-### Version 5
+### Version 3
 
-Theme: Rocker-Bogie Experiement
+Theme: UCSD ECE 191 Winter / Spring Projects
 
 Updates:
 
-* Rocker-Bogie Suspension
-* Self-leveling seat
+* Brushless Hub Motors with Hall Sensors
+* LiFePo4 Battery
+* Rear-wheel drive
 
-Prototype Completion Date: TBD
-
-[read more](v5)
-
-## License Information
-
-[Software is licensed under GNU General Public License V3](SOFTWARE_LICENSE)
-
-[Hardware is licensed under CERN Open Hardware Licence v1.2](HARDWARE_LICENSE)
-
-## Gallery
-
-Version 1
-
-![PVC Powerchair v1 with tester](v1/images/pvc-chair-v1.jpg)
-
-Version 2 (click on image to see video)
-
-[![PVC Powerchair v2 test drive](https://img.youtube.com/vi/sLA0mYiXbEk/0.jpg)](https://www.youtube.com/watch?v=sLA0mYiXbEk)
-
-Version 3
+Prototype Completion Date: 2018-06-15
 
 ![PVC Powerchair v3 1](v3/images/pvc-chair-v3-1.jpg)
 
 ![PVC Powerchair v3 2](v3/images/pvc-chair-v3-2.jpg)
 
 ![PVC Powerchair v3 3](v3/images/pvc-chair-v3-3.jpg)
+
+[read more](v3)
+
+### Version 2
+
+Theme: Move to COTS electronics
+
+Updates:
+
+* Arduino instead of custom boards
+* Sabertooth Motor Controller
+* OLED Battery Display
+* Plug-in Battery Charging
+
+Prototype Completion Date: 2017-11-04
+
+[![PVC Powerchair v2 test drive](https://img.youtube.com/vi/sLA0mYiXbEk/0.jpg)](https://www.youtube.com/watch?v=sLA0mYiXbEk)
+
+[read more](v2)
+
+### Version 1
+
+Theme: Original design build
+
+Updates:
+
+* Minor changes to original design
+
+Prototype Completion Date: 2016-04-27
+
+![PVC Powerchair v1 with tester](v1/images/pvc-chair-v1.jpg)
+
+[read more](v1)
+
+## License Information
+
+[Software is licensed under GNU General Public License V3](SOFTWARE_LICENSE)
+
+[Hardware is licensed under CERN Open Hardware Licence v1.2](HARDWARE_LICENSE)
