@@ -3,7 +3,15 @@ BOM
 
 *Maker Pipe*
 
-* [T connector](https://www.makerpipe.com/shop/maker-pipe-conduit-t-connector) (20 pieces)
-* [Outer 90 degree connector](https://www.makerpipe.com/shop/90-degree-connector-pre-sale) (8 pieces)
-* [Inside 90 degree connector](https://www.makerpipe.com/shop/90-degree-connector-pre-sale) (16 pieces)
-* [180 degree connector](https://www.makerpipe.com/shop/180-degree-connector) (4 pieces)
+* 20 * [T connector](https://www.makerpipe.com/shop/maker-pipe-conduit-t-connector)
+* 8 * [Outer 90 degree connector](https://www.makerpipe.com/shop/90-degree-connector-pre-sale)
+* 16 * [Inside 90 degree connector](https://www.makerpipe.com/shop/90-degree-connector-pre-sale)
+* 4 * [180 degree connector](https://www.makerpipe.com/shop/180-degree-connector)
+
+*Drive Train*
+
+* 2 * [BLDC motor](https://odriverobotics.com/shop/odrive-custom-motor-d5065)
+* 2 * [Quadrature encoder](https://odriverobotics.com/shop/cui-amt-102)
+* 1 * [oDrive v3.4 Motor Controller](https://odriverobotics.com/shop/odrive-v35)
+* 2 * [Motor Enclosure](https://cad.onshape.com/documents/6668fd76e2dbada55127ed36/w/1e8250b1f83ac970e8ac258d/e/d9d08ef906d47e24e628fb72)
+* 2 * [Gearbox](https://www.aliexpress.com/item/High-Torque-Ratio-36-1-Planetary-Gear-Reducer-For-NEMA23-Stepper-Motor-High-Precision-Low-Noise/32764813940.html?spm=a2g0s.9042311.0.0.jpiybo)
