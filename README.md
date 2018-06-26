@@ -49,6 +49,8 @@ Updates:
 
 Prototype Completion Date: Build In Progress
 
+![PVC Powerchair v4 frame](images/pvc-chair-v4-design.png)
+
 [read more](v4)
 
 ### Version 3

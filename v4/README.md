@@ -26,3 +26,9 @@ Updates:
 * Steven Berneberg
 * Hamid Badiozamani
 * Collins Mwangi
+
+### Gallery
+
+PVC Version 4
+
+![PVC Powerchair v4 frame](images/pvc-chair-v4-design.png)
