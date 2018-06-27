@@ -3,10 +3,9 @@ BOM
 
 *Maker Pipe*
 
-* 20 * [T connector](https://www.makerpipe.com/shop/maker-pipe-conduit-t-connector)
-* 8 * [Outer 90 degree connector](https://www.makerpipe.com/shop/90-degree-connector-pre-sale)
-* 16 * [Inside 90 degree connector](https://www.makerpipe.com/shop/90-degree-connector-pre-sale)
-* 4 * [180 degree connector](https://www.makerpipe.com/shop/180-degree-connector)
+* 10 * [T connector](https://www.makerpipe.com/shop/maker-pipe-conduit-t-connector)
+* 4 * [4 Way connector](https://www.makerpipe.com/shop/four-way-connector-4mgmh)
+* 6 * [90 degree connector](https://www.makerpipe.com/shop/90-degree-connector-pre-sale)
 
 *Drive Train*
 
