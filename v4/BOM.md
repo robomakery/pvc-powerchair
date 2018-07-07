@@ -43,10 +43,21 @@ Drive Train
 -----------
 
 * 2 * [BLDC motor](https://odriverobotics.com/shop/odrive-custom-motor-d5065) - $69.00/each
-* 2 * [Quadrature encoder](https://odriverobotics.com/shop/cui-amt-102)
-* 1 * [oDrive v3.4 Motor Controller](https://odriverobotics.com/shop/odrive-v35)
-* 2 * [Motor Enclosure](https://cad.onshape.com/documents/6668fd76e2dbada55127ed36/w/1e8250b1f83ac970e8ac258d/e/d9d08ef906d47e24e628fb72)
-* 2 * [Planetary Gearbox](https://www.aliexpress.com/item/High-Torque-Ratio-36-1-Planetary-Gear-Reducer-For-NEMA23-Stepper-Motor-High-Precision-Low-Noise/32764813940.html?spm=a2g0s.9042311.0.0.jpiybo)
+* 2 * [Quadrature encoder](https://odriverobotics.com/shop/cui-amt-102) - $39.00/each
+* 1 * [oDrive v3.4 Motor Controller](https://odriverobotics.com/shop/odrive-v35) - $119.00/each
+* 2 * [Motor Enclosure](https://cad.onshape.com/documents/6668fd76e2dbada55127ed36/w/1e8250b1f83ac970e8ac258d/e/d9d08ef906d47e24e628fb72) - $30.00/each (ESTIMATE)
+* 2 * [Planetary Gearbox](https://www.aliexpress.com/item/High-Torque-Ratio-36-1-Planetary-Gear-Reducer-For-NEMA23-Stepper-Motor-High-Precision-Low-Noise/32764813940.html?spm=a2g0s.9042311.0.0.jpiybo) - $51.30/each
+
+```
+(+
+ (* 2 69)
+ (* 2 39)
+ (* 1 119)
+ (* 2 30)
+ (* 2 51.30))
+```
+
+$497.60
 
 *Motor Cover to Motor Enclosure*
 
