@@ -1,16 +1,59 @@
 BOM
 ===
 
+Frame
+-----
+
+*Electrical Metal Tubing*
+
+* 3 * [10ft 3/4 inch EMT Tubing](https://www.homedepot.com/p/3-4-in-EMT-Conduit-101550/100400406) - $5.90/each
+
 *Maker Pipe*
 
-* 10 * [T connector](https://www.makerpipe.com/shop/maker-pipe-conduit-t-connector)
-* 2 * [4 Way connector](https://www.makerpipe.com/shop/four-way-connector-4mgmh)
-* 8 * [90 degree connector](https://www.makerpipe.com/shop/90-degree-connector-pre-sale)
+* 10 * [T connector](https://www.makerpipe.com/shop/maker-pipe-conduit-t-connector) - $2.75/each
+* 2 * [4 Way connector](https://www.makerpipe.com/shop/four-way-connector-4mgmh) - $6.75/each
+* 8 * [90 degree connector](https://www.makerpipe.com/shop/90-degree-connector-pre-sale) - $5.25/each
 
-*Drive Train*
+*Tools Required*
+
+* 1 * [pipe bender](https://www.homedepot.com/p/Ideal-3-4-in-EMT-Aluminum-Bender-Head-with-Handle-74-047/100341460) - $38.80/each
+
+Drive Train
+-----------
 
 * 2 * [BLDC motor](https://odriverobotics.com/shop/odrive-custom-motor-d5065)
 * 2 * [Quadrature encoder](https://odriverobotics.com/shop/cui-amt-102)
 * 1 * [oDrive v3.4 Motor Controller](https://odriverobotics.com/shop/odrive-v35)
 * 2 * [Motor Enclosure](https://cad.onshape.com/documents/6668fd76e2dbada55127ed36/w/1e8250b1f83ac970e8ac258d/e/d9d08ef906d47e24e628fb72)
-* 2 * [Gearbox](https://www.aliexpress.com/item/High-Torque-Ratio-36-1-Planetary-Gear-Reducer-For-NEMA23-Stepper-Motor-High-Precision-Low-Noise/32764813940.html?spm=a2g0s.9042311.0.0.jpiybo)
+* 2 * [Planetary Gearbox](https://www.aliexpress.com/item/High-Torque-Ratio-36-1-Planetary-Gear-Reducer-For-NEMA23-Stepper-Motor-High-Precision-Low-Noise/32764813940.html?spm=a2g0s.9042311.0.0.jpiybo)
+
+*Motor Cover to Motor Enclosure*
+
+* 4 * M3-0.5x8 socket cap screw
+* 4 * M3 washer
+
+_Drill and tap into motor enclosure_
+
+* #40 tap drill
+* M3-0.5 tap
+
+*Motor Cover to Planetary Gearbox body*
+
+* 4 * M5-0.8x8 socket cap screw
+* 4 * M3 washer
+
+*Motor to Motor cover*
+
+* 4 * M4-0.7x8 socket cap screw
+* 4 * M4 washer
+
+Seat
+----
+
+* 2 * yard outdoor fabric (fabric for this prototype purchased at [Threads](https://www.yelp.com/biz/threads-san-diego) for $17 / yard
+* 1 * sheet of thin plywood
+* 20 * staples
+
+*Tools*
+
+* Staple gun
