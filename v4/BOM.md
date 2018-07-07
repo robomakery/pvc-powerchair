@@ -14,14 +14,33 @@ Frame
 * 2 * [4 Way connector](https://www.makerpipe.com/shop/four-way-connector-4mgmh) - $6.75/each
 * 8 * [90 degree connector](https://www.makerpipe.com/shop/90-degree-connector-pre-sale) - $5.25/each
 
+*Parts Subtotal*
+
+```
+(+
+ (* 3 5.90)
+ (* 10 2.75)
+ (* 2 6.75)
+ (* 8 5.25))
+100.70
+```
+
 *Tools Required*
 
 * 1 * [pipe bender](https://www.homedepot.com/p/Ideal-3-4-in-EMT-Aluminum-Bender-Head-with-Handle-74-047/100341460) - $38.80/each
 
+*Tools Subtotal*
+
+```
+(+
+ (* 1 38.80))
+$38.80
+```
+
 Drive Train
 -----------
 
-* 2 * [BLDC motor](https://odriverobotics.com/shop/odrive-custom-motor-d5065)
+* 2 * [BLDC motor](https://odriverobotics.com/shop/odrive-custom-motor-d5065) - $69.00/each
 * 2 * [Quadrature encoder](https://odriverobotics.com/shop/cui-amt-102)
 * 1 * [oDrive v3.4 Motor Controller](https://odriverobotics.com/shop/odrive-v35)
 * 2 * [Motor Enclosure](https://cad.onshape.com/documents/6668fd76e2dbada55127ed36/w/1e8250b1f83ac970e8ac258d/e/d9d08ef906d47e24e628fb72)
