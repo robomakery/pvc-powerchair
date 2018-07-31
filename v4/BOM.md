@@ -89,7 +89,7 @@ Drive Train
  (* 74 1))
 ```
 
-$497.60
+$497.60 + $434 = $931.6
 
 *Motor Cover to Motor Enclosure*
 
