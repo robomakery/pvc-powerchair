@@ -39,6 +39,11 @@ $100.70
 
 $38.80
 
+Battery
+-------
+
+* 1 * [LiFePo 24V 10Ah battery + charger](https://www.bioennopower.com/collections/24v-series-lifepo4-lithium-iron-phosphate-batteries/products/24v-10ah-lfp-battery-abs-blf-2410as) - $229.99/each
+
 Drive Train
 -----------
 
