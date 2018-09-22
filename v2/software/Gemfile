@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
 
 group :development do
-  gem 'guard', require: false
+  gem 'guard', '>= 2.14.2', require: false
 end
