@@ -134,8 +134,8 @@ void loop()
 	xPosition = analogRead(xPin);
 	yPosition = analogRead(yPin);
 
-	coord_y = map(yPosition,0,1024,-1024,1024);         //  Up: 0 Down: 1024
-	coord_x = map(xPosition,0,1024,-1024,1024);         //  Left: 0 Right: 1024
+	coord_y = map(yPosition,0,1024,-256,256);         //  Up: 0 Down: 1024
+	coord_x = map(xPosition,0,1024,-256,256);         //  Left: 0 Right: 1024
 
 	Serial.print("Motor X: ");
 	Serial.print(coord_x);
