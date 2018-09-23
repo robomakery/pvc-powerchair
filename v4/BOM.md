@@ -119,7 +119,7 @@ _Drill and tap into motor enclosure_
 Seat
 ----
 
-* 2 * yard outdoor fabric (fabric for this prototype purchased at [Threads](https://www.yelp.com/biz/threads-san-diego) for $17 / yard
+* 2 * yard outdoor fabric (fabric for this prototype purchased at [Threads](https://www.yelp.com/biz/threads-san-diego) for $17 / yard)
 * 1 * sheet of thin plywood
 * 20 * staples
 
