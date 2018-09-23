@@ -134,8 +134,11 @@ void loop()
 	xPosition = analogRead(xPin);
 	yPosition = analogRead(yPin);
 
-	coord_y = map(yPosition,0,1024,-256,256);         //  Up: 0 Down: 1024
-	coord_x = map(xPosition,0,1024,-256,256);         //  Left: 0 Right: 1024
+	// Downscaled power values from joystick. The motor controller takes
+	// values between 0 and 256 and we're downscaling to 128 for now.
+	//
+	coord_y = map(yPosition,0,1024,-128,128);         //  Up: 0 Down: 1024
+	coord_x = map(xPosition,0,1024,-128,128);         //  Left: 0 Right: 1024
 
 	Serial.print("Motor X: ");
 	Serial.print(coord_x);
