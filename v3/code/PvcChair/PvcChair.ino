@@ -8,10 +8,13 @@
 	A4  SDA (if no SDA pin) - white
 	A5  SCL (if not SCL pin) - blue
 
-	D5	Left motor
-	D7	Right motor
-	D9	Left speed
-	D10	Right speed
+    D4  EL Left motor (e-stop - green wire)
+	D12	ZF Left motor (direction - yellow wire)
+	D9	VR Left speed (orange wire)
+
+    D6  EL Right motor (e-stop - grey wire)
+	D7	ZF Right motor (direction - blue wire)
+	D10	VR Right speed (purple wire)
 */
 
 #include <Wire.h>
@@ -33,16 +36,19 @@ int voltagePin = A2;
 
 
 // MOTOR DIRECTION CONTROLS
-int left_motor = 5;
-int right_motor = 7;
+int leftMotor = 12;
+int rightMotor = 7;
 
 // MOTOR SPEED CONTROL
 int coord_y = 0; 
 int coord_x = 0; 
 
 
-int left_speed = 9;		// PWM Pins for sending to Driver Pin
-int right_speed = 10;		// Note, make a low-pass filter to flaten out the signal
+int leftSpeed = 9;		// PWM Pins for sending to Driver Pin
+int rightSpeed = 10;		// Note, make a low-pass filter to flaten out the signal
+
+int leftEnabled = 4;
+int rightEnabled = 6;
 
 void updateDisplay(int xPos, int yPos, float batteryPercentage)
 {
@@ -101,8 +107,8 @@ void motorBackward(int dir,int mot_spd, int spd)
 
 void motorStop()
 {
-	analogWrite(left_speed, 0);
-	analogWrite(right_speed, 0);
+	analogWrite(leftSpeed, 0);
+	analogWrite(rightSpeed, 0);
 }
 
 void setup()
@@ -113,13 +119,20 @@ void setup()
 	pinMode(xPin, INPUT);
 	pinMode(yPin, INPUT);
 
+	// Activate Joystick pins
+	pinMode(leftEnabled, OUTPUT);
+	pinMode(rightEnabled, OUTPUT);
+
+	digitalWrite(leftEnabled,HIGH);
+	digitalWrite(rightEnabled,HIGH);
+
 	// Set up Direction outputs for the motor driver inputs
-	pinMode(left_motor, OUTPUT);
-	pinMode(right_motor, OUTPUT);
+	pinMode(leftMotor, OUTPUT);
+	pinMode(rightMotor, OUTPUT);
 	
 	// Set up Speed outputs for Motor Driver
-	pinMode(left_speed, OUTPUT);
-	pinMode(right_speed, OUTPUT);
+	pinMode(leftSpeed, OUTPUT);
+	pinMode(rightSpeed, OUTPUT);
 
 	pinMode(voltagePin, INPUT);
 	oledDisplay.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize with the I2C addr 0x3C (for the 128x32)
@@ -157,26 +170,26 @@ void loop()
 	else if (xPosition < 530 && xPosition > 470 && yPosition < 500)
 	{
 		// Backward
-		motorBackward(left_motor,left_speed,abs(coord_y));
-		motorBackward(right_motor,right_speed,abs(coord_y)); 
+		motorBackward(leftMotor,leftSpeed,abs(coord_y));
+		motorBackward(rightMotor,rightSpeed,abs(coord_y)); 
 	} 
 	else if (xPosition < 530 && xPosition > 470 && yPosition > 500)
 	{
 		// Forward
-		motorForward(left_motor,left_speed,abs(coord_y));
-		motorForward(right_motor,right_speed,abs(coord_y));   
+		motorForward(leftMotor,leftSpeed,abs(coord_y));
+		motorForward(rightMotor,rightSpeed,abs(coord_y));   
 	}
 	else if (yPosition < 530 && yPosition > 470 && xPosition > 500)
 	{   
 		// Turn right
-		motorForward(left_motor,left_speed,abs(coord_x));
-		motorBackward(right_motor,right_speed,abs(coord_x));
+		motorForward(leftMotor,leftSpeed,abs(coord_x));
+		motorBackward(rightMotor,rightSpeed,abs(coord_x));
 	}
 	else if (yPosition < 530 && yPosition > 470 && xPosition < 500)
 	{
 		// Turn left
-		motorBackward(left_motor,left_speed,abs(coord_x));
-		motorForward(right_motor,right_speed,abs(coord_x));
+		motorBackward(leftMotor,leftSpeed,abs(coord_x));
+		motorForward(rightMotor,rightSpeed,abs(coord_x));
 	}
 
 	// Compute voltage from the resistor value
