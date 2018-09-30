@@ -34,7 +34,6 @@ int xPin = A1;
 int yPin = A0;
 int voltagePin = A2;
 
-
 // MOTOR DIRECTION CONTROLS
 int leftMotor = 12;
 int rightMotor = 7;
@@ -43,12 +42,24 @@ int rightMotor = 7;
 int coord_y = 0; 
 int coord_x = 0; 
 
-
-int leftSpeed = 9;		// PWM Pins for sending to Driver Pin
-int rightSpeed = 10;		// Note, make a low-pass filter to flaten out the signal
+int leftSpeed = 9;	 // PWM Pins for sending to Driver Pin
+int rightSpeed = 10; // Note, make a low-pass filter to flaten out the signal
 
 int leftEnabled = 4;
 int rightEnabled = 6;
+
+String formatDouble(double val, int dec, int dig )
+{
+	int addpad = 0;
+	char sbuf[20];
+	String fdata = (dtostrf(val, dec, dig, sbuf));
+	int slen = fdata.length();
+	for ( addpad = 1; addpad <= dec + dig - slen; addpad++) {
+	  fdata = " " + fdata;
+	}
+	return (fdata);
+
+}
 
 void updateDisplay(int xPos, int yPos, float batteryPercentage)
 {
@@ -78,19 +89,6 @@ void updateDisplay(int xPos, int yPos, float batteryPercentage)
 	oledDisplay.display();
 }
 
-String formatDouble(double val, int dec, int dig )
-{
-	int addpad = 0;
-	char sbuf[20];
-	String fdata = (dtostrf(val, dec, dig, sbuf));
-	int slen = fdata.length();
-	for ( addpad = 1; addpad <= dec + dig - slen; addpad++) {
-	  fdata = " " + fdata;
-	}
-	return (fdata);
-
-}
-
 void motorForward(int dir, int mot_spd, int spd)
 {
 	//mot_spd = control which motor to move: left or right
@@ -103,7 +101,6 @@ void motorBackward(int dir,int mot_spd, int spd)
 	digitalWrite(dir, HIGH);
 	analogWrite(mot_spd, spd);
 }
-
 
 void motorStop()
 {
@@ -148,10 +145,9 @@ void loop()
 	yPosition = analogRead(yPin);
 
 	// Downscaled power values from joystick. The motor controller takes
-	// values between 0 and 256 and we're downscaling to 128 for now.
-	//
-	coord_y = map(yPosition,0,1024,-128,128);         //  Up: 0 Down: 1024
-	coord_x = map(xPosition,0,1024,-128,128);         //  Left: 0 Right: 1024
+	// values between 0 and 256 and we're downscaling to 32 for now.
+	coord_y = map(yPosition,0,1024,-64,64);         //  Up: 0 Down: 1024
+	coord_x = map(xPosition,0,1024,-64,64);         //  Left: 0 Right: 1024
 
 	Serial.print("Motor X: ");
 	Serial.print(coord_x);
