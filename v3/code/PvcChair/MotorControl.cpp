@@ -77,8 +77,8 @@ void MotorControl::translateJoystickToMotorCommands(int x, int y, int &motor1Com
     nMotMixL = (1.0-fPivScale)*nMotPremixL + fPivScale*( nPivSpeed);
     nMotMixR = (1.0-fPivScale)*nMotPremixR + fPivScale*(-nPivSpeed);
 
-    motor1Command = mymap(nMotMixL, -128, 127, -127, 127);
-    motor2Command = mymap(nMotMixR, -128, 127, -127, 127);
+    motor1Command = mymap(nMotMixL, -128, 127, -32, 32);
+    motor2Command = mymap(nMotMixR, -128, 127, -32, 32);
   }
 }
 

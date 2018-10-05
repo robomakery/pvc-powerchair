@@ -14,12 +14,12 @@ TEST_CASE( "MotorControl", "[motor_control]" ) {
   }
   SECTION( "Full Forward" ) {
     controller.translateJoystickToMotorCommands(520, 1023, motorCommand1, motorCommand2);
-    REQUIRE( motorCommand1 >= 125 );
-    REQUIRE( motorCommand2 >= 125 );
+    REQUIRE( motorCommand1 >= 120 );
+    REQUIRE( motorCommand2 >= 120 );
   }
   SECTION( "Full Reverse" ) {
     controller.translateJoystickToMotorCommands(520, 0, motorCommand1, motorCommand2);
-    REQUIRE( motorCommand1 <= -125 );
-    REQUIRE( motorCommand2 <= -125 );
+    REQUIRE( motorCommand1 <= -120 );
+    REQUIRE( motorCommand2 <= -120 );
   }
 }
