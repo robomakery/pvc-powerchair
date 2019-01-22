@@ -15,7 +15,7 @@ Updates:
 
 ### Docs
 
-[BOM](BOM.md)
+[BOM](design/PVC_CHAIR_V4_BOM_20181205_005.xls)
 
 [OnShape CAD Model](https://cad.onshape.com/documents/9732789dff1ad6d245e6f6cd/w/41a982015f5ddfd27778e331/e/463536132cf1bdc68d806583)
 
