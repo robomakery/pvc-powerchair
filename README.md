@@ -20,6 +20,11 @@ Please join that group and introduce yourself.  We also have bi-weekly online pl
 
 If you are in the San Diego area, we also meet to discuss this project on the first Tuesday of every month as part of the [San Diego Robotics Club](https://www.meetup.com/roboticsclub/).
 
+## Tools
+
+* [FreeCAD](https://www.freecadweb.org/)
+* [ROS](http://www.ros.org/)
+
 ## Versions
 
 ### Version Currently Under Development:
