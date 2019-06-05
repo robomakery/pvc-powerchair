@@ -49,7 +49,7 @@ Updates:
 
 Prototype Completion Date: Build In Progress
 
-![PVC Powerchair v4 frame](v4/images/pvc-chair-v4-design.png)
+![PVC Powerchair v4 frame](archive/v4/images/pvc-chair-v4-design.png)
 
 [read more](v4)
 
@@ -65,11 +65,11 @@ Updates:
 
 Prototype Completion Date: 2018-06-15
 
-![PVC Powerchair v3 1](v3/images/pvc-chair-v3-1.jpg)
+![PVC Powerchair v3 1](archive/v3/images/pvc-chair-v3-1.jpg)
 
-![PVC Powerchair v3 2](v3/images/pvc-chair-v3-2.jpg)
+![PVC Powerchair v3 2](archive/v3/images/pvc-chair-v3-2.jpg)
 
-![PVC Powerchair v3 3](v3/images/pvc-chair-v3-3.jpg)
+![PVC Powerchair v3 3](archive/v3/images/pvc-chair-v3-3.jpg)
 
 [read more](v3)
 
@@ -100,7 +100,7 @@ Updates:
 
 Prototype Completion Date: 2016-04-27
 
-![PVC Powerchair v1 with tester](v1/images/pvc-chair-v1.jpg)
+![PVC Powerchair v1 with tester](archive/v1/images/pvc-chair-v1.jpg)
 
 [read more](v1)
 
