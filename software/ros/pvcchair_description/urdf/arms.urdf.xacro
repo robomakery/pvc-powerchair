@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<robot name="arms" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <link name="arms_link">
+    <inertial>
+      <mass value="0.302884" />
+      <origin xyz="0.059653 -0.000001 0.028246" />
+      <inertia ixx="0.000004" ixy="0.000000" ixz="0.000000"
+                              iyy="0.000001" iyz="0.000000"
+                                             izz="0.000005" />
+    </inertial>
+
+    <xacro:ca xyz="0 ${-p2_hlen-c_offset} 0" rpy="0 0 ${-pi/2}" />
+    <xacro:ca xyz="0 ${+p2_hlen+c_offset} 0" rpy="0 0 ${pi}" />
+    <xacro:p4 xyz="${+c_offset+p4_hlen} ${-p2_hlen-c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:p4 xyz="${+c_offset+p4_hlen} ${+p2_hlen+c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:ce xyz="${+c_offset+p4_len+c_offset} ${-p2_hlen-c_offset} 0" rpy="0 0 ${pi/2}" />
+    <xacro:ce xyz="${+c_offset+p4_len+c_offset} ${+p2_hlen+c_offset} 0" rpy="0 0 ${pi/2}" />
+    <xacro:p8 xyz="0 ${-p2_hlen-c_offset} ${+c_offset+p8_hlen}" rpy="0 0 0" />
+    <xacro:p8 xyz="0 ${+p2_hlen+c_offset} ${+c_offset+p8_hlen}" rpy="0 0 0" />
+    <xacro:p8 xyz="${+c_offset+p4_len+c_offset} ${-p2_hlen-c_offset} ${+c_offset+p8_hlen}" rpy="0 0 0" />
+    <xacro:p8 xyz="${+c_offset+p4_len+c_offset} ${+p2_hlen+c_offset} ${+c_offset+p8_hlen}" rpy="0 0 0" />
+    <xacro:cd xyz="0 ${-p2_hlen-c_offset} ${c_offset+p8_len+c_offset}" rpy="${pi/2} 0 ${pi/2}" />
+    <xacro:cd xyz="0 ${+p2_hlen+c_offset} ${c_offset+p8_len+c_offset}" rpy="${pi/2} 0 ${pi/2}" />
+    <xacro:cf xyz="${+c_offset+p4_len+c_offset} ${-p2_hlen-c_offset} ${c_offset+p8_len+c_offset}" rpy="${-pi/2} 0 ${pi/2}" />
+    <xacro:cf xyz="${+c_offset+p4_len+c_offset} ${+p2_hlen+c_offset} ${c_offset+p8_len+c_offset}" rpy="${-pi/2} 0 ${pi/2}" />
+    <xacro:p6 xyz="${c_offset+p6_hlen} ${-p2_hlen-c_offset} ${c_offset+p8_len+c_offset}" rpy="0 ${pi/2} 0" />
+    <xacro:p6 xyz="${c_offset+p6_hlen} ${+p2_hlen+c_offset} ${c_offset+p8_len+c_offset}" rpy="0 ${pi/2} 0" />
+  </link>
+</robot>

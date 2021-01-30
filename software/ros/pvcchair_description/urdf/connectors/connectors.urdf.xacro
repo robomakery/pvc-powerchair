@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<robot name="connectors" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find pvcchair_description)/urdf/connectors/ca.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/connectors/cb.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/connectors/cc.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/connectors/cd.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/connectors/ce.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/connectors/cf.urdf.xacro" />
+</robot>

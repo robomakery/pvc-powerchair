@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name="p8" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="p8_mesh">
+    <mesh filename="package://pvcchair_description/meshes/piping/p8_arm_rest_hgt_back_n_arms.dae" />
+  </xacro:property>
+
+  <xacro:macro name="p8" params="xyz rpy">
+    <visual>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="p8_mesh" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="p8_mesh" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+</robot>

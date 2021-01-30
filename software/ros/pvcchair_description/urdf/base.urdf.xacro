@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<robot name="base" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <link name="base_link">
+    <inertial>
+      <mass value="0.86244" />
+      <origin xyz="-0.002543 0.000001 0.020084" />
+      <inertia ixx="0.000010" ixy="0.000000" ixz="0.000002"
+                              iyy="0.000016" iyz="0.000000"
+                                             izz="0.000024" />
+    </inertial>
+
+    <xacro:p2 xyz="0 0 0" rpy="0 ${pi/2} ${pi/2}" />
+    <!-- front section -->
+    <xacro:cf xyz="0 ${-p2_hlen-c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:cf xyz="0 ${+p2_hlen+c_offset} 0" rpy="0 ${pi/2} ${pi}" />
+    <xacro:p1 xyz="0 ${-p2_hlen-c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:p1 xyz="0 ${+p2_hlen+c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:cb xyz="${+p1_hlen+c_offset} ${-p2_hlen-c_offset} 0" rpy="0 0 ${-pi/2}" />
+    <xacro:cb xyz="${+p1_hlen+c_offset} ${+p2_hlen+c_offset} 0" rpy="0 0 ${pi/2}" />
+    <xacro:p2 xyz="${+p1_hlen+c_offset} 0 0" rpy="0 ${pi/2} ${pi/2}" />
+    <xacro:p3 xyz="${+p1_hlen+c_offset} ${-p2_hlen-c_offset} ${+p3_hlen+c_offset}" rpy="0 0 0" />
+    <xacro:p3 xyz="${+p1_hlen+c_offset} ${+p2_hlen+c_offset} ${+p3_hlen+c_offset}" rpy="0 0 0" />
+    <xacro:p4 xyz="${+p1_hlen+c_offset} ${-p2_hlen-c_offset} ${-p4_hlen-c_offset}" rpy="0 0 0" />
+    <xacro:p4 xyz="${+p1_hlen+c_offset} ${+p2_hlen+c_offset} ${-p4_hlen-c_offset}" rpy="0 0 0" />
+    <xacro:p4 xyz="${+p1_hlen+2*c_offset+p4_hlen} ${-p2_hlen-c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:p4 xyz="${+p1_hlen+2*c_offset+p4_hlen} ${+p2_hlen+c_offset} 0" rpy="0 ${pi/2} 0" />
+    <xacro:cd xyz="${+p1_hlen+2*c_offset+p4_len+c_offset} ${-p2_hlen-c_offset} 0" rpy="0 ${-pi/2} ${-pi/2}" />
+    <xacro:cd xyz="${+p1_hlen+2*c_offset+p4_len+c_offset} ${+p2_hlen+c_offset} 0" rpy="0 ${pi/2} ${-pi/2}" />
+    <xacro:p2 xyz="${+p1_hlen+2*c_offset+p4_len+c_offset} 0 0" rpy="0 ${pi/2} ${pi/2}" />
+    <!-- back section -->
+    <xacro:cc xyz="${-p1_hlen-c_offset} ${-p2_hlen-c_offset} 0" rpy="0 0 ${pi/2}" />
+    <xacro:cc xyz="${-p1_hlen-c_offset} ${+p2_hlen+c_offset} 0" rpy="0 0 0" />
+    <xacro:p2 xyz="${-p1_hlen-c_offset} 0 0" rpy="0 ${pi/2} ${pi/2}" />
+    <xacro:p9 xyz="${-p1_hlen-c_offset} ${-p2_hlen-c_offset} ${+p9_hlen+c_offset}" rpy="0 0 0" />
+    <xacro:p9 xyz="${-p1_hlen-c_offset} ${+p2_hlen+c_offset} ${+p9_hlen+c_offset}" rpy="0 0 0" />
+    <xacro:ce xyz="${-p1_hlen-c_offset} ${-p2_hlen-c_offset} ${+c_offset+p9_len+c_offset}" rpy="0 0 ${pi/2}" />
+    <xacro:ce xyz="${-p1_hlen-c_offset} ${+p2_hlen+c_offset} ${+c_offset+p9_len+c_offset}" rpy="0 0 ${pi/2}" />
+    <xacro:p9 xyz="${-p1_hlen-c_offset} ${-p2_hlen-c_offset} ${+c_offset+p9_len+2*c_offset+p9_hlen}" rpy="0 0 0" />
+    <xacro:p9 xyz="${-p1_hlen-c_offset} ${+p2_hlen+c_offset} ${+c_offset+p9_len+2*c_offset+p9_hlen}" rpy="0 0 0" />
+    <xacro:p3 xyz="${-p1_hlen-2*c_offset-p3_hlen} ${-p2_hlen-c_offset} ${+c_offset+p9_len+c_offset}" rpy="0 ${pi/2} 0" />
+    <xacro:p3 xyz="${-p1_hlen-2*c_offset-p3_hlen} ${+p2_hlen+c_offset} ${+c_offset+p9_len+c_offset}" rpy="0 ${pi/2} 0" />
+    <xacro:ca xyz="${-p1_hlen-2*c_offset-p3_len-c_offset} ${-p2_hlen-c_offset} ${+c_offset+p9_len+c_offset}" rpy="0 0 ${-pi/2}" />
+    <xacro:ca xyz="${-p1_hlen-2*c_offset-p3_len-c_offset} ${+p2_hlen+c_offset} ${+c_offset+p9_len+c_offset}" rpy="0 0 ${pi}" />
+    <xacro:p2 xyz="${-p1_hlen-2*c_offset-p3_len-c_offset} 0 ${+c_offset+p9_len+c_offset}" rpy="0 ${pi/2} ${pi/2}" />
+    <xacro:p9 xyz="${-p1_hlen-2*c_offset-p3_len-c_offset} ${-p2_hlen-c_offset} ${+c_offset+p9_len+2*c_offset+p9_hlen}" rpy="0 0 0" />
+    <xacro:p9 xyz="${-p1_hlen-2*c_offset-p3_len-c_offset} ${+p2_hlen+c_offset} ${+c_offset+p9_len+2*c_offset+p9_hlen}" rpy="0 0 0" />
+  </link>
+</robot>

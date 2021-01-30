@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<robot name="piping" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find pvcchair_description)/urdf/piping/p1.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/piping/p2.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/piping/p3.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/piping/p4.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/piping/p5.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/piping/p6.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/piping/p7.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/piping/p8.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/piping/p9.urdf.xacro" />
+</robot>

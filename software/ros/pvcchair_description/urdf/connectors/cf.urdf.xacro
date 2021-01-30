@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name="cf" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="cf_mesh">
+    <mesh filename="package://pvcchair_description/meshes/connectors/cf_3_way_slip.dae" />
+  </xacro:property>
+
+  <xacro:macro name="cf" params="xyz rpy">
+    <visual>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="cf_mesh" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="cf_mesh" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+</robot>

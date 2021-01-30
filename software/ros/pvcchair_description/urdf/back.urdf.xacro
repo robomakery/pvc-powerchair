@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot name="back" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <link name="back_link">
+    <inertial>
+      <mass value="0.388326" />
+      <origin xyz="-0.033398 -0.000000 0.106887" />
+      <inertia ixx="0.000004" ixy="0.000000" ixz="0.000000"
+                              iyy="0.000003" iyz="0.000000"
+                                             izz="0.000002" />
+    </inertial>
+
+    <xacro:p2 xyz="0 0 0" rpy="0 ${pi/2} ${pi/2}" />
+    <xacro:cf xyz="0 ${-p6_hlen-c_offset} 0" rpy="${pi/2} ${-back_angle_rad} 0" />
+    <xacro:cf xyz="0 ${+p6_hlen+c_offset} 0" rpy="${pi/2} ${-back_angle_rad} 0" />
+    <xacro:property name="p9_tran_1" value="${+c_offset+p9_hlen}" />
+    <xacro:p9 xyz="${-p9_tran_1*sin(back_angle_rad)} ${-p6_hlen-c_offset} ${p9_tran_1*cos(back_angle_rad)}" rpy="0 ${-back_angle_rad} 0" />
+    <xacro:p9 xyz="${-p9_tran_1*sin(back_angle_rad)} ${+p6_hlen+c_offset} ${p9_tran_1*cos(back_angle_rad)}" rpy="0 ${-back_angle_rad} 0" />
+    <xacro:property name="ce_tran_1" value="${+c_offset+p9_len+c_offset}" />
+    <xacro:ce xyz="${-ce_tran_1*sin(back_angle_rad)} ${-p6_hlen-c_offset} ${ce_tran_1*cos(back_angle_rad)}" rpy="0 ${-back_angle_rad} 0" />
+    <xacro:ce xyz="${-ce_tran_1*sin(back_angle_rad)} ${+p6_hlen+c_offset} ${ce_tran_1*cos(back_angle_rad)}" rpy="0 ${back_angle_rad} ${pi}" />
+    <xacro:p6 xyz="${-ce_tran_1*sin(back_angle_rad)} 0 ${ce_tran_1*cos(back_angle_rad)}" rpy="0 ${pi/2} ${pi/2}" />
+    <xacro:property name="p5_tran_1" value="${+c_offset+p9_len+2*c_offset+p5_hlen}" />
+    <xacro:p5 xyz="${-p5_tran_1*sin(back_angle_rad)} ${-p6_hlen-c_offset} ${p5_tran_1*cos(back_angle_rad)}" rpy="0 ${-back_angle_rad} 0" />
+    <xacro:p5 xyz="${-p5_tran_1*sin(back_angle_rad)} ${+p6_hlen+c_offset} ${p5_tran_1*cos(back_angle_rad)}" rpy="0 ${-back_angle_rad} 0" />
+    <xacro:property name="cd_tran_1" value="${+c_offset+p9_len+2*c_offset+p5_len+c_offset}" />
+    <xacro:cd xyz="${-cd_tran_1*sin(back_angle_rad)} ${-p6_hlen-c_offset} ${cd_tran_1*cos(back_angle_rad)}" rpy="${pi} ${-back_angle_rad} 0" />
+    <xacro:cd xyz="${-cd_tran_1*sin(back_angle_rad)} ${+p6_hlen+c_offset} ${cd_tran_1*cos(back_angle_rad)}" rpy="${pi/2} ${-back_angle_rad} 0" />
+    <xacro:property name="p6_tran_1" value="${+c_offset+p9_len+2*c_offset+p5_len+c_offset}" />
+    <xacro:p6 xyz="${-p6_tran_1*sin(back_angle_rad)} 0 ${p6_tran_1*cos(back_angle_rad)}" rpy="0 ${pi/2} ${pi/2}" />
+    <xacro:cf xyz="${-p6_tran_1*sin(back_angle_rad)} 0 ${p6_tran_1*cos(back_angle_rad)}" rpy="${pi/2} ${-pi/2-back_angle_rad-rest_angle_rad} 0" />
+    <xacro:property name="p7_tran_1" value="${+c_offset+p9_len+2*c_offset+p5_len+c_offset}" />
+    <xacro:property name="p7_tran_2" value="${c_offset+p7_hlen}" />
+    <xacro:property name="rest_angle_1" value="${back_angle_rad+rest_angle_rad}" />
+    <xacro:p7 xyz="${-p7_tran_1*sin(back_angle_rad)-p7_tran_2*cos(rest_angle_1)} 0 ${p7_tran_1*cos(back_angle_rad)-p7_tran_2*sin(rest_angle_1)}" rpy="0 ${pi/2-back_angle_rad-rest_angle_rad} 0" />
+  </link>
+</robot>

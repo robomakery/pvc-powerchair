@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name="p4" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="p4_mesh">
+    <mesh filename="package://pvcchair_description/meshes/piping/p4_footrest_base.dae" />
+  </xacro:property>
+
+  <xacro:macro name="p4" params="xyz rpy">
+    <visual>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="p4_mesh" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="p4_mesh" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+</robot>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name="ca" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="ca_mesh">
+    <mesh filename="package://pvcchair_description/meshes/connectors/ca_4_way_t_connect.dae" />
+  </xacro:property>
+
+  <xacro:macro name="ca" params="xyz rpy">
+    <visual>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="ca_mesh" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="ca_mesh" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+</robot>
