@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<robot name="caster" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- <xacro:property name="gearbox_plate_mesh">
+    <mesh filename="package://pvcchair_description/meshes/caster.dae" />
+  </xacro:property> -->
+
+  <xacro:macro name="caster" params="suffix">
+    <link name="caster_${suffix}">
+      <inertial>
+        <mass value="0.040000" />
+        <origin xyz="0 0 0" />
+        <inertia ixx="0.000060" ixy="0.000000" ixz="0.000000"
+                                iyy="0.000060" iyz="0.000000"
+                                               izz="0.000116" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="${pi/2} 0 0" />
+        <geometry>
+          <cylinder radius="${caster_radius}" length="0.0254" />
+        </geometry>
+        <material name="Black">
+          <color rgba="0 0 0 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="${pi/2} 0 0" />
+        <geometry>
+          <cylinder radius="${caster_radius}" length="0.0254" />
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+</robot>

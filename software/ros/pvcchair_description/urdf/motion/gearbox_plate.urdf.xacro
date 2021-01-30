@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<robot name="gearbox_plate" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="gearbox_plate_mesh">
+    <mesh filename="package://pvcchair_description/meshes/gearbox_plate.dae" />
+  </xacro:property>
+
+  <xacro:macro name="gearbox_plate" params="suffix">
+    <link name="gearbox_plate_${suffix}">
+      <inertial>
+        <mass value="0.080099" />
+        <origin xyz="-0.072510 0.001500 0.049147" />
+        <inertia ixx="0.000051" ixy="0.000000" ixz="0.000017"
+                                iyy="0.000150" iyz="0.000000"
+                                               izz="0.000099" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <xacro:insert_block name="gearbox_plate_mesh" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <xacro:insert_block name="gearbox_plate_mesh" />
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wheel_axle_${suffix}" />
+    <joint name="plate_wheel_${suffix}_joint" type="fixed">
+      <origin xyz="-0.052 0 -0.054" rpy="0 0 0" />
+      <parent link="gearbox_plate_${suffix}" />
+      <child link="wheel_axle_${suffix}" />
+    </joint>
+  </xacro:macro>
+</robot>

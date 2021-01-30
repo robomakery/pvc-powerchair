@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name="p5" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="p5_mesh">
+    <mesh filename="package://pvcchair_description/meshes/piping/p5_back_rest_vert.dae" />
+  </xacro:property>
+
+  <xacro:macro name="p5" params="xyz rpy">
+    <visual>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="p5_mesh" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="p5_mesh" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+</robot>

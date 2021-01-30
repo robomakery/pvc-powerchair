@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name="p9" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="p9_mesh">
+    <mesh filename="package://pvcchair_description/meshes/piping/p9_connects_all.dae" />
+  </xacro:property>
+
+  <xacro:macro name="p9" params="xyz rpy">
+    <visual>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="p9_mesh" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="p9_mesh" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+</robot>

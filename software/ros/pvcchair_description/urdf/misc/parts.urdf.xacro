@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot name="parts" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find pvcchair_description)/urdf/misc/parameters.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/piping/piping.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/connectors/connectors.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/motion/motion_parts.urdf.xacro" />
+</robot>

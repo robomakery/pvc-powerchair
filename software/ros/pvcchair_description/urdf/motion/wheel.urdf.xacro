@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<robot name="wheel" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- <xacro:property name="gearbox_plate_mesh">
+    <mesh filename="package://pvcchair_description/meshes/wheel.dae" />
+  </xacro:property> -->
+
+  <xacro:macro name="wheel" params="suffix">
+    <link name="wheel_${suffix}">
+      <inertial>
+        <mass value="0.020000" />
+        <origin xyz="0 0 0" />
+        <inertia ixx="0.000030" ixy="0.000000" ixz="0.000000"
+                                iyy="0.000030" iyz="0.000000"
+                                               izz="0.000058" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="${pi/2} 0 0" />
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="0.0254" />
+        </geometry>
+        <material name="Black">
+          <color rgba="0 0 0 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="${pi/2} 0 0" />
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="0.0254" />
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+</robot>

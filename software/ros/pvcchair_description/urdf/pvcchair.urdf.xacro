@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<robot name="pvcchair" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <link name="base_footprint" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/misc/parts.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/base.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/seat.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/arms.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/back.urdf.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/motion.urdf.xacro" />
+
+  <joint name="base_joint" type="fixed">
+    <origin xyz="0 0 ${base_level}" rpy="0 0 0" />
+    <parent link="base_footprint" />
+    <child link="base_link" />
+  </joint>
+
+  <joint name="seat_joint" type="fixed">
+    <origin xyz="0 0 ${p3_len+2*c_offset}" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="seat_link" />
+  </joint>
+
+  <joint name="arms_joint" type="fixed">
+    <origin xyz="${-p4_len-2*c_offset} 0 ${p8_len+2*c_offset}" rpy="0 0 0" />
+    <parent link="seat_link" />
+    <child link="arms_link" />
+  </joint>
+
+  <joint name="back_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="arms_link" />
+    <child link="back_link" />
+  </joint>
+
+  <joint name="gearbox_plate_right_joint" type="fixed">
+    <origin xyz="${+p1_hlen+c_offset+gearbox_plate_offset} ${-p2_hlen-c_offset-0.015} ${+gearbox_plate_offset}" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="gearbox_plate_right" />
+  </joint>
+
+  <joint name="gearbox_plate_left_joint" type="fixed">
+    <origin xyz="${+p1_hlen+c_offset+gearbox_plate_offset} ${+p2_hlen+c_offset+0.015} ${+gearbox_plate_offset}" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="gearbox_plate_left" />
+  </joint>
+
+  <joint name="wheel_right_joint" type="continuous">
+    <axis xyz="0 1 0" />
+    <origin xyz="0 -0.02 0" rpy="0 0 0" />
+    <parent link="wheel_axle_right" />
+    <child link="wheel_right" />
+  </joint>
+
+  <joint name="wheel_left_joint" type="continuous">
+    <axis xyz="0 1 0" />
+    <origin xyz="0 +0.02 0" rpy="0 0 0" />
+    <parent link="wheel_axle_left" />
+    <child link="wheel_left" />
+  </joint>
+
+  <joint name="swivel_right_joint" type="continuous">
+    <axis xyz="0 0 1" />
+    <origin xyz="${-p1_hlen-2*c_offset-p3_len-c_offset+swivel_offset} ${-p2_hlen-c_offset} ${+c_offset+p9_len}" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="swivel_right" />
+  </joint>
+
+  <joint name="swivel_left_joint" type="continuous">
+    <axis xyz="0 0 1" />
+    <origin xyz="${-p1_hlen-2*c_offset-p3_len-c_offset+swivel_offset} ${+p2_hlen+c_offset} ${+c_offset+p9_len}" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="swivel_left" />
+  </joint>
+
+  <joint name="caster_right_joint" type="continuous">
+    <axis xyz="0 1 0" />
+    <origin xyz="${-caster_radius+0.005} 0 ${-c_offset-p9_len-base_level+caster_radius}" rpy="0 0 0" />
+    <parent link="swivel_right" />
+    <child link="caster_right" />
+  </joint>
+
+  <joint name="caster_left_joint" type="continuous">
+    <axis xyz="0 1 0" />
+    <origin xyz="${-caster_radius+0.005} 0 ${-c_offset-p9_len-base_level+caster_radius}" rpy="0 0 0" />
+    <parent link="swivel_left" />
+    <child link="caster_left" />
+  </joint>
+</robot>

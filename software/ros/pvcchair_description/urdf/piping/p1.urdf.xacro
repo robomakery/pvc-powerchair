@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name="p1" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="p1_mesh">
+    <mesh filename="package://pvcchair_description/meshes/piping/p1_left_n_right_base.dae" />
+  </xacro:property>
+
+  <xacro:macro name="p1" params="xyz rpy">
+    <visual>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="p1_mesh" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <xacro:insert_block name="p1_mesh" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+</robot>
