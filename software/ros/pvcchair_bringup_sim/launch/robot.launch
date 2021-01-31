@@ -6,7 +6,7 @@
   <arg name="y" default="0.0" />
   <arg name="yaw" default="0.0" />
   <arg name="rviz" default="true" />
-  <arg name="rviz_config" default="$(find pvcchair_bringup)/rviz/bringup.rviz" />
+  <arg name="rviz_config" default="$(find pvcchair_bringup_sim)/rviz/robot.rviz" />
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(arg world_name)" />
@@ -17,7 +17,7 @@
     <arg name="debug" value="false" />
   </include>
 
-  <include file="$(find pvcchair_bringup)/launch/includes/spawn_robot.xml">
+  <include file="$(find pvcchair_bringup_sim)/launch/includes/spawn_robot.xml">
     <arg name="robot_name" value="$(arg robot_name)" />
     <arg name="xacro_filename" value="$(arg xacro_filename)" />
     <arg name="x" value="$(arg x)" />

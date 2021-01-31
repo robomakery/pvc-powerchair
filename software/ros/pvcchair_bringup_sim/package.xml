@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>pvcchair_bringup</name>
-  <version>0.4.0</version>
+  <name>pvcchair_bringup_sim</name>
+  <version>0.0.0</version>
   <description>Launch files for the PVC Pediatric Powerchair</description>
 
   <author email="nlamprian@gmail.com">Nick Lamprianidis</author>

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(pvcchair_bringup)
+project(pvcchair_bringup_sim)
 
 find_package(catkin REQUIRED)
 
