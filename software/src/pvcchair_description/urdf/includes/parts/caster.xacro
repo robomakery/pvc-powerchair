@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<robot name="caster" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find pvcchair_description)/urdf/includes/parameters.xacro" />
+
+  <xacro:macro name="caster" params="suffix parent xyz">
+    <link name="swivel_${suffix}_link">
+      <inertial>
+        <mass value="0.2" />
+        <origin xyz="0 0 0" />
+        <inertia ixx="0.000333" ixy="0.000000" ixz="0.000000"
+                                iyy="0.000333" iyz="0.000000"
+                                               izz="0.000333" />
+      </inertial>
+    </link>
+    <joint name="swivel_${suffix}" type="continuous">
+      <axis xyz="0 0 1" />
+      <origin xyz="${xyz}" rpy="0 0 0" />
+      <parent link="${parent}" />
+      <child link="swivel_${suffix}_link" />
+    </joint>
+
+    <link name="caster_${suffix}_link">
+      <inertial>
+        <mass value="0.040000" />
+        <origin xyz="0 0 0" />
+        <inertia ixx="0.000060" ixy="0.000000" ixz="0.000000"
+                                iyy="0.000060" iyz="0.000000"
+                                               izz="0.000116" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="${pi/2} 0 0" />
+        <geometry>
+          <cylinder radius="${caster_radius}" length="0.0254" />
+        </geometry>
+        <material name="black">
+          <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="${pi/2} 0 0" />
+        <geometry>
+          <cylinder radius="${caster_radius}" length="0.0254" />
+        </geometry>
+      </collision>
+    </link>
+    <joint name="caster_${suffix}" type="continuous">
+      <axis xyz="0 1 0" />
+      <origin xyz="${-caster_radius+0.005} 0 ${-c_offset-p9_len-base_level+caster_radius}" rpy="0 0 0" />
+      <parent link="swivel_${suffix}_link" />
+      <child link="caster_${suffix}_link" />
+    </joint>
+  </xacro:macro>
+
+</robot>
