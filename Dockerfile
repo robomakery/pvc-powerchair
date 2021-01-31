@@ -34,21 +34,12 @@ RUN pip3 install -U setuptools
 RUN pip3 install colcon-ros-bundle
 
 WORKDIR /code
-#SHELL ["/bin/bash", "-c"]
-# RUN cd robot_ws && source /opt/ros/noetic/setup.bash && catkin_make
-#RUN ["/bin/bash", "-c", "source ~/../opt/ros/noetic/setup.bash"]
-#RUN ["/bin/bash", "-c", "source ~/../code/robot_ws/devel/setup.bash"]
-# RUN /bin/bash -c "source /opt/ros/noetic/setup.bash && source /code/robot_ws/devel/setup.bash"
-
-# # build custom ROS packages
-# WORKDIR /catkin_ws
 
 # https://docs.docker.com/engine/faq/#why-is-debian_frontendnoninteractive-discouraged-in-dockerfiles
 ENV DEBIAN_FRONTEND=newt
 
-# initialize ROS (master uri, environments, etc.)
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-# # default command
-# CMD ["bash"]
+# default command
+CMD ["bash"]
