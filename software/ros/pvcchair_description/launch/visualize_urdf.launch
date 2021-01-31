@@ -1,5 +1,5 @@
 <launch>
-  <arg name="xacro_filename" value="$(find pvcchair_description)/urdf/pvcchair.urdf.xacro" />
+  <arg name="xacro_filename" value="$(find pvcchair_description)/urdf/pvcchair.xacro" />
 
   <param name="robot_description" command="xacro $(arg xacro_filename)" />
 
@@ -7,5 +7,5 @@
 
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find pvcchair_description)/rviz/pvcchair.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find pvcchair_description)/rviz/visualize_urdf.rviz" />
 </launch>

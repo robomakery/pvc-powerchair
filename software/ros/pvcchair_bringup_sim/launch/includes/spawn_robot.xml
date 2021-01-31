@@ -1,6 +1,6 @@
 <launch>
   <arg name="robot_name" default="pvcchair" />
-  <arg name="xacro_filename" default="$(find pvcchair_description)/urdf/pvcchair.urdf.xacro" />
+  <arg name="xacro_filename" default="$(find pvcchair_description)/urdf/pvcchair.xacro" />
   <arg name="x" default="0.0" />
   <arg name="y" default="0.0" />
   <arg name="yaw" default="0.0" />

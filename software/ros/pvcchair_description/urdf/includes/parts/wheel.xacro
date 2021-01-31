@@ -1,11 +1,10 @@
 <?xml version="1.0"?>
 <robot name="wheel" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <!-- <xacro:property name="gearbox_plate_mesh">
-    <mesh filename="package://pvcchair_description/meshes/wheel.dae" />
-  </xacro:property> -->
 
-  <xacro:macro name="wheel" params="suffix">
-    <link name="wheel_${suffix}">
+  <xacro:include filename="$(find pvcchair_description)/urdf/includes/parameters.xacro" />
+
+  <xacro:macro name="wheel" params="suffix parent xyz">
+    <link name="wheel_${suffix}_link">
       <inertial>
         <mass value="0.020000" />
         <origin xyz="0 0 0" />
@@ -18,8 +17,8 @@
         <geometry>
           <cylinder radius="${wheel_radius}" length="0.0254" />
         </geometry>
-        <material name="Black">
-          <color rgba="0 0 0 1"/>
+        <material name="black">
+          <color rgba="0 0 0 1" />
         </material>
       </visual>
       <collision>
@@ -29,5 +28,12 @@
         </geometry>
       </collision>
     </link>
+    <joint name="wheel_${suffix}" type="continuous">
+      <axis xyz="0 1 0" />
+      <origin xyz="${xyz}" rpy="0 0 0" />
+      <parent link="${parent}" />
+      <child link="wheel_${suffix}_link" />
+    </joint>
   </xacro:macro>
+
 </robot>

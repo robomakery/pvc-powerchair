@@ -1,11 +1,8 @@
 <?xml version="1.0"?>
 <robot name="gearbox_plate" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:property name="gearbox_plate_mesh">
-    <mesh filename="package://pvcchair_description/meshes/gearbox_plate.dae" />
-  </xacro:property>
 
-  <xacro:macro name="gearbox_plate" params="suffix">
-    <link name="gearbox_plate_${suffix}">
+  <xacro:macro name="gearbox_plate" params="suffix parent xyz">
+    <link name="gearbox_plate_${suffix}_link">
       <inertial>
         <mass value="0.080099" />
         <origin xyz="-0.072510 0.001500 0.049147" />
@@ -16,22 +13,21 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <xacro:insert_block name="gearbox_plate_mesh" />
+          <mesh filename="package://pvcchair_description/meshes/gearbox_plate.dae" />
         </geometry>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <xacro:insert_block name="gearbox_plate_mesh" />
+          <mesh filename="package://pvcchair_description/meshes/gearbox_plate.dae" />
         </geometry>
       </collision>
     </link>
-
-    <link name="wheel_axle_${suffix}" />
-    <joint name="plate_wheel_${suffix}_joint" type="fixed">
-      <origin xyz="-0.052 0 -0.054" rpy="0 0 0" />
-      <parent link="gearbox_plate_${suffix}" />
-      <child link="wheel_axle_${suffix}" />
+    <joint name="gearbox_plate_${suffix}_joint" type="fixed">
+      <origin xyz="${xyz}" rpy="0 0 0" />
+      <parent link="${parent}" />
+      <child link="gearbox_plate_${suffix}_link" />
     </joint>
   </xacro:macro>
+
 </robot>

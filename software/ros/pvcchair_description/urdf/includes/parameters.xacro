@@ -18,7 +18,7 @@
   <xacro:property name="back_angle_deg" value="20" />
   <xacro:property name="rest_angle_deg" value="48.8" />
   <xacro:property name="lock_angle_deg" value="20.5" />
-  <!-- Derivative Quantities -->  
+  <!-- Derivative Quantities -->
   <xacro:property name="p1_hlen" value="${p1_len/2}" />
   <xacro:property name="p2_hlen" value="${p2_len/2}" />
   <xacro:property name="p3_hlen" value="${p3_len/2}" />

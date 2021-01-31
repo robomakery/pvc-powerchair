@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<robot name="connectors" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="connector" params="xyz rpy mesh_filename">
+    <visual>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <mesh filename="package://pvcchair_description/meshes/${mesh_filename}" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <geometry>
+        <mesh filename="package://pvcchair_description/meshes/${mesh_filename}" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+
+  <xacro:macro name="ca" params="xyz rpy">
+    <xacro:connector xyz="${xyz}" rpy="${rpy}" mesh_filename="connectors/ca_4_way_t_connect.dae" />
+  </xacro:macro>
+
+  <xacro:macro name="cb" params="xyz rpy">
+    <xacro:connector xyz="${xyz}" rpy="${rpy}" mesh_filename="connectors/cb_5_way_t_connect.dae" />
+  </xacro:macro>
+
+  <xacro:macro name="cc" params="xyz rpy">
+    <xacro:connector xyz="${xyz}" rpy="${rpy}" mesh_filename="connectors/cc_3_way_y_connect.dae" />
+  </xacro:macro>
+
+  <xacro:macro name="cd" params="xyz rpy">
+    <xacro:connector xyz="${xyz}" rpy="${rpy}" mesh_filename="connectors/cd_2_way_elbow.dae" />
+  </xacro:macro>
+
+  <xacro:macro name="ce" params="xyz rpy">
+    <xacro:connector xyz="${xyz}" rpy="${rpy}" mesh_filename="connectors/ce_3_way_t_connect.dae" />
+  </xacro:macro>
+
+  <xacro:macro name="cf" params="xyz rpy">
+    <xacro:connector xyz="${xyz}" rpy="${rpy}" mesh_filename="connectors/cf_3_way_slip.dae" />
+  </xacro:macro>
+
+</robot>
