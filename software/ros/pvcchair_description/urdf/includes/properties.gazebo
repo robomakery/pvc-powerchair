@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<robot name="parameters" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Materials -->
+
+  <xacro:macro name="link_material" params="link material">
+    <gazebo reference="${link}">
+      <material>${material}</material>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:link_material link="base_link" material="Gazebo/Blue" />
+  <xacro:link_material link="seat_link" material="Gazebo/Blue" />
+  <xacro:link_material link="arms_link" material="Gazebo/Blue" />
+  <xacro:link_material link="back_link" material="Gazebo/Blue" />
+  <xacro:link_material link="wheel_right_link" material="Gazebo/Black" />
+  <xacro:link_material link="wheel_left_link" material="Gazebo/Black" />
+  <xacro:link_material link="caster_right_link" material="Gazebo/Black" />
+  <xacro:link_material link="caster_left_link" material="Gazebo/Black" />
+
+  <!-- Link Properties -->
+
+  <xacro:macro name="wheel_params" params="link">
+    <gazebo reference="${link}">
+      <mu1>1000000.0</mu1>
+      <mu2>1000000.0</mu2>
+      <fdir1>0 0 0</fdir1>
+      <kp>10000000.0</kp>
+      <kd>1.0</kd>
+      <maxVel>0.1</maxVel>
+      <minDepth>0.001</minDepth>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:wheel_params link="wheel_right_link" />
+  <xacro:wheel_params link="wheel_left_link" />
+  <xacro:wheel_params link="caster_right_link" />
+  <xacro:wheel_params link="caster_left_link" />
+
+  <!-- Transmissions -->
+
+  <xacro:macro name="joint_transmission" params="joint">
+    <transmission name="${joint}_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${joint}">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${joint}_motor">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+  </xacro:macro>
+
+  <xacro:joint_transmission joint="swivel_right" />
+  <xacro:joint_transmission joint="swivel_left" />
+  <xacro:joint_transmission joint="caster_right" />
+  <xacro:joint_transmission joint="caster_left" />
+
+</robot>

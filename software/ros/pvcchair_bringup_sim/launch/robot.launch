@@ -1,7 +1,8 @@
 <launch>
   <arg name="world_name" default="worlds/empty.world" />
   <arg name="robot_name" default="pvcchair" />
-  <arg name="xacro_filename" default="$(find pvcchair_description)/urdf/pvcchair.xacro" />
+  <arg name="xacro_filename" default="$(find pvcchair_description)/urdf/pvcchair.gazebo" />
+  <arg name="controllers_filename" default="$(find pvcchair_bringup_sim)/config/controllers.yaml" />
   <arg name="x" default="0.0" />
   <arg name="y" default="0.0" />
   <arg name="yaw" default="0.0" />
@@ -20,6 +21,7 @@
   <include file="$(find pvcchair_bringup_sim)/launch/includes/spawn_robot.xml">
     <arg name="robot_name" value="$(arg robot_name)" />
     <arg name="xacro_filename" value="$(arg xacro_filename)" />
+    <arg name="controllers_filename" value="$(arg controllers_filename)" />
     <arg name="x" value="$(arg x)" />
     <arg name="y" value="$(arg y)" />
     <arg name="yaw" value="$(arg yaw)" />

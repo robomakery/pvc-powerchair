@@ -4,7 +4,15 @@
   <xacro:include filename="$(find pvcchair_description)/urdf/includes/parameters.xacro" />
 
   <xacro:macro name="caster" params="suffix parent xyz">
-    <link name="swivel_${suffix}_link" />
+    <link name="swivel_${suffix}_link">
+      <inertial>
+        <mass value="0.2" />
+        <origin xyz="0 0 0" />
+        <inertia ixx="0.000333" ixy="0.000000" ixz="0.000000"
+                                iyy="0.000333" iyz="0.000000"
+                                               izz="0.000333" />
+      </inertial>
+    </link>
     <joint name="swivel_${suffix}" type="continuous">
       <axis xyz="0 0 1" />
       <origin xyz="${xyz}" rpy="0 0 0" />

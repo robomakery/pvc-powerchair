@@ -4,7 +4,7 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded: ~
-      Splitter Ratio: 0.5
+      Splitter Ratio: 0.5055555701255798
     Tree Height: 762
   - Class: rviz/Selection
     Name: Selection
@@ -79,22 +79,22 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        caster_left:
+        caster_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        caster_right:
+        caster_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        gearbox_plate_left:
+        gearbox_plate_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        gearbox_plate_right:
+        gearbox_plate_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -104,28 +104,20 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        swivel_left:
+        swivel_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        swivel_right:
+        swivel_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        wheel_axle_left:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        wheel_axle_right:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        wheel_left:
+        wheel_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        wheel_right:
+        wheel_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -149,27 +141,25 @@ Visualization Manager:
           Value: true
         base_link:
           Value: true
-        caster_left:
+        caster_left_link:
           Value: true
-        caster_right:
+        caster_right_link:
           Value: true
-        gearbox_plate_left:
+        gearbox_plate_left_link:
           Value: true
-        gearbox_plate_right:
+        gearbox_plate_right_link:
+          Value: true
+        odom:
           Value: true
         seat_link:
           Value: true
-        swivel_left:
+        swivel_left_link:
           Value: true
-        swivel_right:
+        swivel_right_link:
           Value: true
-        wheel_axle_left:
+        wheel_left_link:
           Value: true
-        wheel_axle_right:
-          Value: true
-        wheel_left:
-          Value: true
-        wheel_right:
+        wheel_right_link:
           Value: true
       Marker Alpha: 1
       Marker Scale: 0.4000000059604645
@@ -178,33 +168,26 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        base_footprint:
-          base_link:
-            gearbox_plate_left:
-              wheel_axle_left:
-                wheel_left:
+        odom:
+          base_footprint:
+            base_link:
+              gearbox_plate_left_link:
+                wheel_left_link:
                   {}
-            gearbox_plate_right:
-              wheel_axle_right:
-                wheel_right:
+              gearbox_plate_right_link:
+                wheel_right_link:
                   {}
-            seat_link:
-              arms_link:
-                back_link:
-                  {}
-            swivel_left:
-              caster_left:
-                {}
-            swivel_right:
-              caster_right:
-                {}
+              seat_link:
+                arms_link:
+                  back_link:
+                    {}
       Update Interval: 0
       Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: base_footprint
+    Fixed Frame: odom
     Frame Rate: 30
   Name: root
   Tools:
@@ -228,7 +211,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.9560139775276184
+      Distance: 4.666721343994141
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -236,17 +219,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -0.04267461225390434
-        Y: -0.022996431216597557
-        Z: 0.2402113974094391
+        X: -0.2822050154209137
+        Y: -0.36038702726364136
+        Z: -0.010139613412320614
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.15479902923107147
+      Pitch: 0.4247989058494568
       Target Frame: <Fixed Frame>
-      Yaw: 0.6753555536270142
+      Yaw: 0.46535617113113403
     Saved: ~
 Window Geometry:
   Displays:

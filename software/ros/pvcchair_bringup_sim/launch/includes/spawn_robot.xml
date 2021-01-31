@@ -1,13 +1,18 @@
 <launch>
   <arg name="robot_name" default="pvcchair" />
   <arg name="xacro_filename" default="$(find pvcchair_description)/urdf/pvcchair.xacro" />
+  <arg name="controllers_filename" default="$(find pvcchair_bringup_sim)/config/controllers.yaml" />
   <arg name="x" default="0.0" />
   <arg name="y" default="0.0" />
   <arg name="yaw" default="0.0" />
 
   <param name="robot_description" command="xacro $(arg xacro_filename)" />
 
+  <rosparam file="$(arg controllers_filename)" />
+
   <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model $(arg robot_name) -x $(arg x) -y $(arg y) -Y $(arg yaw) -param robot_description" />
+
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen" args="joint_state_controller" />
 
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 </launch>
