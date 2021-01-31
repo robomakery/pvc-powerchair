@@ -8,9 +8,12 @@ bash: build
 build:
 	docker build --network=host -t devenv:latest .
 
+compile: build
+	docker run $(GENERAL_OPTIONS) devenv:latest bash -c "cd /code/software && catkin_make"
+
 roscore: build
-	docker run $(GENERAL_OPTIONS) devenv:latest bash -c "cd /code/software && source /opt/ros/noetic/setup.bash && catkin_make && source /code/software/devel/setup.bash && roscore"
+	docker run $(GENERAL_OPTIONS) devenv:latest bash -c "roscore"
 
 bringup: build
 	xhost +local:docker
-	docker run $(GENERAL_OPTIONS) $(GUI_OPTIONS) devenv:latest bash -c "cd /code/software && source /opt/ros/noetic/setup.bash && catkin_make && source /code/software/devel/setup.bash && roslaunch pvcchair_bringup bringup_sim.launch"
+	docker run $(GENERAL_OPTIONS) $(GUI_OPTIONS) devenv:latest bash -c "roslaunch pvcchair_bringup bringup_sim.launch"
