@@ -29,10 +29,6 @@ RUN apt-get update && apt-get install -y      \
         && rm -rf /var/lib/apt/lists/*
 RUN rosdep update
 
-# colcon
-RUN pip3 install -U setuptools
-RUN pip3 install colcon-ros-bundle
-
 WORKDIR /code
 
 # https://docs.docker.com/engine/faq/#why-is-debian_frontendnoninteractive-discouraged-in-dockerfiles

@@ -8,4 +8,3 @@ if [ -f "/code/software/devel/setup.bash" ]; then
     source "/code/software/devel/setup.bash"
 fi
 exec "$@"
-
