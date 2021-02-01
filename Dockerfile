@@ -24,13 +24,12 @@ RUN apt-get update && apt-get install -y     \
         python3-pip                          \
         python3-vcstool                      \
         ros-noetic-desktop-full              \
-        ros-noetic-gazebo-plugins            \
-        ros-noetic-joint-state-publisher-gui \
-        ros-noetic-key-teleop                \
+        ros-noetic-gazebo-ros-control        \
+        ros-noetic-teleop-tools              \
         && rm -rf /var/lib/apt/lists/*
 RUN rosdep update
 
-WORKDIR /code
+WORKDIR /software
 
 # https://docs.docker.com/engine/faq/#why-is-debian_frontendnoninteractive-discouraged-in-dockerfiles
 ENV DEBIAN_FRONTEND=newt

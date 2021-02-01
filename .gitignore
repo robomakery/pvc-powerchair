@@ -20,3 +20,7 @@ build_isolated/
 devel_isolated/
 
 software/src/CMakeLists.txt
+software/.catkin_workspace
+
+software/install/
+software/log/

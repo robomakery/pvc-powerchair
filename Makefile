@@ -1,5 +1,5 @@
 GUI_OPTIONS=--env=DISPLAY --env=QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix
-GENERAL_OPTIONS=-it --rm --privileged --net=host --volume $(PWD):/code
+GENERAL_OPTIONS=-it --rm --privileged --net=host --volume $(PWD)/software:/software
 
 bash: build
 	xhost +local:docker
@@ -9,7 +9,7 @@ build:
 	docker build --network=host -t devenv:latest .
 
 compile: build
-	docker run $(GENERAL_OPTIONS) devenv:latest bash -c "cd /code/software && catkin_make"
+	docker run $(GENERAL_OPTIONS) devenv:latest bash -c "catkin_make"
 
 roscore: build
 	docker run $(GENERAL_OPTIONS) devenv:latest bash -c "roscore"

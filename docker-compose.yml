@@ -3,7 +3,7 @@ services:
   devenv:
     build: .
     volumes:
-    - .:/code
+    - software:/software
     - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - AWS_ACCESS_KEY_ID
@@ -11,4 +11,3 @@ services:
       - AWS_REGION
       - AWS_SECRET_ACCESS_KEY
       - AWS_SESSION_TOKEN
-    working_dir: /code
