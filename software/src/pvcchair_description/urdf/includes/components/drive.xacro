@@ -9,20 +9,20 @@
     <xacro:wheel
       suffix="right"
       parent="${parent}"
-      xyz="${p1_hlen+c_offset-0.042} ${-p2_hlen-c_offset-0.035} ${-base_level+wheel_radius}" />
+      xyz="${p1_hlen+c_offset+front_wheels_offset[0]} ${-p2_hlen-c_offset-front_wheels_offset[1]} ${-base_level+wheel_radius}" />
     <xacro:wheel
       suffix="left"
       parent="${parent}"
-      xyz="${p1_hlen+c_offset-0.042} ${+p2_hlen+c_offset+0.035} ${-base_level+wheel_radius}" />
+      xyz="${p1_hlen+c_offset+front_wheels_offset[0]} ${+p2_hlen+c_offset+front_wheels_offset[1]} ${-base_level+wheel_radius}" />
 
     <xacro:caster
       suffix="right"
       parent="${parent}"
-      xyz="${-p1_hlen-2*c_offset-p3_len-c_offset+swivel_offset} ${-p2_hlen-c_offset} ${c_offset+p9_len}" />
+      xyz="${-p1_hlen-2*c_offset-p3_len-c_offset+rear_wheels_offset[0]} ${-p2_hlen-c_offset-rear_wheels_offset[1]} ${c_offset+p9_len}" />
     <xacro:caster
       suffix="left"
       parent="${parent}"
-      xyz="${-p1_hlen-2*c_offset-p3_len-c_offset+swivel_offset} ${+p2_hlen+c_offset} ${c_offset+p9_len}" />
+      xyz="${-p1_hlen-2*c_offset-p3_len-c_offset+rear_wheels_offset[0]} ${+p2_hlen+c_offset+rear_wheels_offset[1]} ${c_offset+p9_len}" />
   </xacro:macro>
 
 </robot>
