@@ -9,11 +9,11 @@
     <xacro:wheel
       suffix="right"
       parent="${parent}"
-      xyz="${p1_hlen+c_offset-0.042} ${-p2_hlen-c_offset-0.015-0.02} -0.044" />
+      xyz="${p1_hlen+c_offset-0.042} ${-p2_hlen-c_offset-0.035} ${-base_level+wheel_radius}" />
     <xacro:wheel
       suffix="left"
       parent="${parent}"
-      xyz="${p1_hlen+c_offset-0.042} ${+p2_hlen+c_offset+0.015+0.02} -0.044" />
+      xyz="${p1_hlen+c_offset-0.042} ${+p2_hlen+c_offset+0.035} ${-base_level+wheel_radius}" />
 
     <xacro:caster
       suffix="right"
