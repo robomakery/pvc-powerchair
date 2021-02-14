@@ -2,27 +2,31 @@
 <robot name="motion" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <xacro:include filename="$(find pvcchair_description)/urdf/includes/parameters.xacro" />
-  <xacro:include filename="$(find pvcchair_description)/urdf/includes/parts/caster.xacro" />
-  <xacro:include filename="$(find pvcchair_description)/urdf/includes/parts/wheel.xacro" />
+  <xacro:include filename="$(find pvcchair_description)/urdf/includes/parts/swerve_wheel.xacro" />
 
   <xacro:macro name="drive" params="parent">
-    <xacro:wheel
-      suffix="right"
+    <xacro:swerve_wheel
+      prefix="fr"
       parent="${parent}"
-      xyz="${p1_hlen+c_offset+front_wheels_offset[0]} ${-p2_hlen-c_offset-front_wheels_offset[1]} ${-base_level+wheel_radius}" />
-    <xacro:wheel
-      suffix="left"
+      x="${p1_hlen+c_offset+front_wheels_offset[0]}"
+      y="${-p2_hlen-c_offset-front_wheels_offset[1]}"
+      yaw="${radians(180)}" />
+    <xacro:swerve_wheel
+      prefix="fl"
       parent="${parent}"
-      xyz="${p1_hlen+c_offset+front_wheels_offset[0]} ${+p2_hlen+c_offset+front_wheels_offset[1]} ${-base_level+wheel_radius}" />
-
-    <xacro:caster
-      suffix="right"
+      x="${p1_hlen+c_offset+front_wheels_offset[0]}"
+      y="${+p2_hlen+c_offset+front_wheels_offset[1]}" />
+    <xacro:swerve_wheel
+      prefix="br"
       parent="${parent}"
-      xyz="${-p1_hlen-2*c_offset-p3_len-c_offset+rear_wheels_offset[0]} ${-p2_hlen-c_offset-rear_wheels_offset[1]} ${c_offset+p9_len}" />
-    <xacro:caster
-      suffix="left"
+      x="${-p1_hlen-2*c_offset-p3_len-c_offset+rear_wheels_offset[0]}"
+      y="${-p2_hlen-c_offset-front_wheels_offset[1]}"
+      yaw="${radians(180)}" />
+    <xacro:swerve_wheel
+      prefix="bl"
       parent="${parent}"
-      xyz="${-p1_hlen-2*c_offset-p3_len-c_offset+rear_wheels_offset[0]} ${+p2_hlen+c_offset+rear_wheels_offset[1]} ${c_offset+p9_len}" />
+      x="${-p1_hlen-2*c_offset-p3_len-c_offset+rear_wheels_offset[0]}"
+      y="${+p2_hlen+c_offset+front_wheels_offset[1]}" />
   </xacro:macro>
 
 </robot>

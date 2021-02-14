@@ -12,10 +12,9 @@
   <xacro:property name="p9_len" value="${scale*0.038100}" />
   <xacro:property name="c_offset" value="0.0127" />
   <xacro:property name="wheel_radius" value="0.07" />
-  <xacro:property name="caster_radius" value="0.0508" />
-  <xacro:property name="front_wheels_offset" value="${[-0.042, 0.035]}" />
-  <xacro:property name="rear_wheels_offset" value="${[0.02, 0.0]}" />
-  <xacro:property name="base_level" value="0.16" />
+  <xacro:property name="front_wheels_offset" value="${[0, 0.04]}" />
+  <xacro:property name="rear_wheels_offset" value="${[0, 0.04]}" />
+  <xacro:property name="base_level" value="0.19" />
   <xacro:property name="back_angle_deg" value="20" />
   <xacro:property name="rest_angle_deg" value="48.8" />
   <xacro:property name="lock_angle_deg" value="20.5" />
