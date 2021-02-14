@@ -1,55 +1,58 @@
 <?xml version="1.0"?>
 <robot name="pipes" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:macro name="pipe" params="xyz rpy mesh_filename">
+  <xacro:macro name="pipe" params="xyz rpy len">
     <visual>
       <origin xyz="${xyz}" rpy="${rpy}" />
       <geometry>
-        <mesh filename="package://pvcchair_description/meshes/${mesh_filename}" />
+        <cylinder radius="0.010668" length="${len}" />
       </geometry>
+      <material name="blue">
+        <color rgba="0 0 0.8 1" />
+      </material>
     </visual>
     <collision>
       <origin xyz="${xyz}" rpy="${rpy}" />
       <geometry>
-        <mesh filename="package://pvcchair_description/meshes/${mesh_filename}" />
+        <cylinder radius="0.010668" length="${len}" />
       </geometry>
     </collision>
   </xacro:macro>
 
   <xacro:macro name="p1" params="xyz rpy">
-    <xacro:pipe xyz="${xyz}" rpy="${rpy}" mesh_filename="pipes/p1_left_n_right_base.dae" />
+    <xacro:pipe xyz="${xyz}" rpy="${rpy}" len="${p1_len}" />
   </xacro:macro>
 
   <xacro:macro name="p2" params="xyz rpy">
-    <xacro:pipe xyz="${xyz}" rpy="${rpy}" mesh_filename="pipes/p2_front_n_back_base.dae" />
+    <xacro:pipe xyz="${xyz}" rpy="${rpy}" len="${p2_len}" />
   </xacro:macro>
 
   <xacro:macro name="p3" params="xyz rpy">
-    <xacro:pipe xyz="${xyz}" rpy="${rpy}" mesh_filename="pipes/p3_left_n_right_back_upright.dae" />
+    <xacro:pipe xyz="${xyz}" rpy="${rpy}" len="${p3_len}" />
   </xacro:macro>
 
   <xacro:macro name="p4" params="xyz rpy">
-    <xacro:pipe xyz="${xyz}" rpy="${rpy}" mesh_filename="pipes/p4_footrest_base.dae" />
+    <xacro:pipe xyz="${xyz}" rpy="${rpy}" len="${p4_len}" />
   </xacro:macro>
 
   <xacro:macro name="p5" params="xyz rpy">
-    <xacro:pipe xyz="${xyz}" rpy="${rpy}" mesh_filename="pipes/p5_back_rest_vert.dae" />
+    <xacro:pipe xyz="${xyz}" rpy="${rpy}" len="${p5_len}" />
   </xacro:macro>
 
   <xacro:macro name="p6" params="xyz rpy">
-    <xacro:pipe xyz="${xyz}" rpy="${rpy}" mesh_filename="pipes/p6_back_rest_horz.dae" />
+    <xacro:pipe xyz="${xyz}" rpy="${rpy}" len="${p6_len}" />
   </xacro:macro>
 
   <xacro:macro name="p7" params="xyz rpy">
-    <xacro:pipe xyz="${xyz}" rpy="${rpy}" mesh_filename="pipes/p7_adjusting_pipe_horz.dae" />
+    <xacro:pipe xyz="${xyz}" rpy="${rpy}" len="${p7_len}" />
   </xacro:macro>
 
   <xacro:macro name="p8" params="xyz rpy">
-    <xacro:pipe xyz="${xyz}" rpy="${rpy}" mesh_filename="pipes/p8_arm_rest_hgt_back_n_arms.dae" />
+    <xacro:pipe xyz="${xyz}" rpy="${rpy}" len="${p8_len}" />
   </xacro:macro>
 
   <xacro:macro name="p9" params="xyz rpy">
-    <xacro:pipe xyz="${xyz}" rpy="${rpy}" mesh_filename="pipes/p9_connects_all.dae" />
+    <xacro:pipe xyz="${xyz}" rpy="${rpy}" len="${p9_len}" />
   </xacro:macro>
 
 </robot>
