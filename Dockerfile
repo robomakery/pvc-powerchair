@@ -23,9 +23,11 @@ RUN apt-get update && apt-get install -y     \
         python3-colcon-common-extensions     \
         python3-pip                          \
         python3-vcstool                      \
+        ros-noetic-cob-undercarriage-ctrl    \
         ros-noetic-desktop-full              \
         ros-noetic-gazebo-ros-control        \
         ros-noetic-teleop-tools              \
+        ros-noetic-teleop-twist-keyboard     \
         && rm -rf /var/lib/apt/lists/*
 RUN rosdep update
 
