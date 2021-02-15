@@ -1,5 +1,5 @@
 <launch>
-  <arg name="world_name" default="worlds/empty.world" />
+  <arg name="world_name" default="$(find aws_robomaker_small_house_world)/worlds/small_house.world" />
   <arg name="robot_name" default="pvcchair" />
   <arg name="xacro_filename" default="$(find pvcchair_description)/urdf/pvcchair.gazebo" />
   <arg name="controllers_filename" default="$(find pvcchair_bringup_sim)/config/controllers.yaml" />
