@@ -20,4 +20,4 @@ bringup: build
 
 teleop: build
 	xhost +local:docker
-	docker run $(GENERAL_OPTIONS) $(GUI_OPTIONS) devenv:latest bash -c "rosrun key_teleop key_teleop.py key_vel:=cmd_vel"
+	docker run $(GENERAL_OPTIONS) $(GUI_OPTIONS) devenv:latest bash -c "roslaunch pvcchair_bringup_sim teleop.launch"
