@@ -1,0 +1,13 @@
+<launch>
+  <group ns="cob_undercarriage_ctrl">
+    <param name="IniDirectory" value="$(find pvcchair_bringup)/config/cob_undercarriage_ctrl/" />
+    <rosparam file="$(find pvcchair_bringup)/config/cob_undercarriage_ctrl/cob_undercarriage_ctrl.yaml" />
+
+    <node name="cob_undercarriage_ctrl_node" pkg="cob_undercarriage_ctrl" type="cob_undercarriage_ctrl_node" output="screen">
+      <remap from="command" to="/cmd_vel" />
+      <remap from="odometry" to="/odom" />
+    </node>
+
+    <node name="odom_transformer" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0 0 0 0 odom_combined odom" />
+  </group>
+</launch>

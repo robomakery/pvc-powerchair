@@ -1,0 +1,3 @@
+timeout: 0.2
+max_trans_velocity: 0.8
+max_rot_velocity: 0.785
