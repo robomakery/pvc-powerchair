@@ -6,6 +6,6 @@ find_package(catkin REQUIRED)
 catkin_package()
 
 install(
-  DIRECTORY launch rviz
+  DIRECTORY config launch rviz
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
