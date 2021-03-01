@@ -24,3 +24,5 @@ software/.catkin_workspace
 
 software/install/
 software/log/
+
+software/src/aws-robomaker-small-house-world/
