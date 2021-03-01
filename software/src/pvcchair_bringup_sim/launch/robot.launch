@@ -1,5 +1,5 @@
 <launch>
-  <arg name="world_name" default="worlds/empty.world" />
+  <arg name="world_name" default="$(find aws_robomaker_small_house_world)/worlds/small_house.world" />
   <arg name="robot_name" default="pvcchair" />
   <arg name="xacro_filename" default="$(find pvcchair_description)/urdf/pvcchair.gazebo" />
   <arg name="controllers_filename" default="$(find pvcchair_bringup_sim)/config/controllers.yaml" />
@@ -18,7 +18,7 @@
     <arg name="debug" value="false" />
   </include>
 
-  <include file="$(find pvcchair_bringup_sim)/launch/includes/spawn_robot.xml">
+  <include file="$(find pvcchair_bringup_sim)/launch/includes/spawn_robot.launch">
     <arg name="robot_name" value="$(arg robot_name)" />
     <arg name="xacro_filename" value="$(arg xacro_filename)" />
     <arg name="controllers_filename" value="$(arg controllers_filename)" />
@@ -26,6 +26,8 @@
     <arg name="y" value="$(arg y)" />
     <arg name="yaw" value="$(arg yaw)" />
   </include>
+
+  <include file="$(find pvcchair_bringup)/launch/includes/control.launch" />
 
   <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz_config)" />
 </launch>

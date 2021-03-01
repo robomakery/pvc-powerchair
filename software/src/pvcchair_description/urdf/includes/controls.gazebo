@@ -7,27 +7,15 @@
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
       <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
     </plugin>
-  </gazebo>
 
-  <gazebo>
-    <plugin name="diff_drive_controller" filename="libgazebo_ros_diff_drive.so">
-      <commandTopic>cmd_vel</commandTopic>
-      <odometryTopic>odom</odometryTopic>
-      <odometryFrame>odom</odometryFrame>
-      <odometrySource>world</odometrySource>
-      <publishTf>true</publishTf>
-      <publishOdomTF>true</publishOdomTF>
-      <publishWheelTF>false</publishWheelTF>
-      <publishWheelJointState>true</publishWheelJointState>
+    <plugin name="cob_base_drive_chain" filename="libpvcchair_gazebo_cob_base_drive_chain.so">
       <updateRate>50</updateRate>
-      <robotBaseFrame>base_footprint</robotBaseFrame>
-      <rightJoint>wheel_right</rightJoint>
-      <leftJoint>wheel_left</leftJoint>
-      <wheelSeparation>${2*(p2_hlen+c_offset+0.015+0.02)}</wheelSeparation>
-      <wheelDiameter>${2*wheel_radius}</wheelDiameter>
-      <wheelAcceleration>1</wheelAcceleration>
-      <wheelTorque>20</wheelTorque>
-      <rosDebugLevel>na</rosDebugLevel>
+      <steeringTorque>10</steeringTorque>
+      <driveTorque>20</driveTorque>
+      <steeringVel>2</steeringVel>
+      <driveAccel>10</driveAccel>
+      <stateTopic>cob_undercarriage_ctrl/state</stateTopic>
+      <jointCommandTopic>cob_undercarriage_ctrl/joint_command</jointCommandTopic>
     </plugin>
   </gazebo>
 

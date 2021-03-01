@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>pvcchair_bringup</name>
+  <version>0.0.0</version>
+  <description>Launch files for the PVC Pediatric Powerchair</description>
+
+  <author email="nlamprian@gmail.com">Nick Lamprianidis</author>
+  <maintainer email="dylan@robomakery.com">Dylan Vaughn</maintainer>
+
+  <license>GPLv3</license>
+  <url type="website">https://github.com/robomakery/pvc-powerchair</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>cob_undercarriage_ctrl</exec_depend>
+</package>

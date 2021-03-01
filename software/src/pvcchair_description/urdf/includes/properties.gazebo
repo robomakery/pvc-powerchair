@@ -13,10 +13,18 @@
   <xacro:link_material link="seat_link" material="Gazebo/Blue" />
   <xacro:link_material link="arms_link" material="Gazebo/Blue" />
   <xacro:link_material link="back_link" material="Gazebo/Blue" />
-  <xacro:link_material link="wheel_right_link" material="Gazebo/Black" />
-  <xacro:link_material link="wheel_left_link" material="Gazebo/Black" />
-  <xacro:link_material link="caster_right_link" material="Gazebo/Black" />
-  <xacro:link_material link="caster_left_link" material="Gazebo/Black" />
+  <xacro:link_material link="fr_wheel_base_link" material="Gazebo/Gray" />
+  <xacro:link_material link="fl_wheel_base_link" material="Gazebo/Gray" />
+  <xacro:link_material link="br_wheel_base_link" material="Gazebo/Gray" />
+  <xacro:link_material link="bl_wheel_base_link" material="Gazebo/Gray" />
+  <xacro:link_material link="fr_caster_rotation_link" material="Gazebo/DarkGray" />
+  <xacro:link_material link="fl_caster_rotation_link" material="Gazebo/DarkGray" />
+  <xacro:link_material link="br_caster_rotation_link" material="Gazebo/DarkGray" />
+  <xacro:link_material link="bl_caster_rotation_link" material="Gazebo/DarkGray" />
+  <xacro:link_material link="fr_caster_r_wheel_link" material="Gazebo/Black" />
+  <xacro:link_material link="fl_caster_r_wheel_link" material="Gazebo/Black" />
+  <xacro:link_material link="br_caster_r_wheel_link" material="Gazebo/Black" />
+  <xacro:link_material link="bl_caster_r_wheel_link" material="Gazebo/Black" />
 
   <!-- Link Properties -->
 
@@ -32,10 +40,10 @@
     </gazebo>
   </xacro:macro>
 
-  <xacro:wheel_params link="wheel_right_link" />
-  <xacro:wheel_params link="wheel_left_link" />
-  <xacro:wheel_params link="caster_right_link" />
-  <xacro:wheel_params link="caster_left_link" />
+  <xacro:wheel_params link="fr_caster_r_wheel_link" />
+  <xacro:wheel_params link="fl_caster_r_wheel_link" />
+  <xacro:wheel_params link="br_caster_r_wheel_link" />
+  <xacro:wheel_params link="bl_caster_r_wheel_link" />
 
   <!-- Transmissions -->
 
@@ -52,9 +60,13 @@
     </transmission>
   </xacro:macro>
 
-  <xacro:joint_transmission joint="swivel_right" />
-  <xacro:joint_transmission joint="swivel_left" />
-  <xacro:joint_transmission joint="caster_right" />
-  <xacro:joint_transmission joint="caster_left" />
+  <xacro:joint_transmission joint="fr_caster_rotation_joint" />
+  <xacro:joint_transmission joint="fl_caster_rotation_joint" />
+  <xacro:joint_transmission joint="br_caster_rotation_joint" />
+  <xacro:joint_transmission joint="bl_caster_rotation_joint" />
+  <xacro:joint_transmission joint="fr_caster_r_wheel_joint" />
+  <xacro:joint_transmission joint="fl_caster_r_wheel_joint" />
+  <xacro:joint_transmission joint="br_caster_r_wheel_joint" />
+  <xacro:joint_transmission joint="bl_caster_r_wheel_joint" />
 
 </robot>

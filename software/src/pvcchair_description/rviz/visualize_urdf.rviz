@@ -79,53 +79,67 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        caster_left:
+        bl_caster_r_wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        caster_right:
+        bl_caster_rotation_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        gearbox_plate_left:
+        bl_wheel_base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        gearbox_plate_right:
+        br_caster_r_wheel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        br_caster_rotation_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        br_wheel_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fl_caster_r_wheel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fl_caster_rotation_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fl_wheel_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fr_caster_r_wheel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fr_caster_rotation_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fr_wheel_base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
         seat_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        swivel_left:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        swivel_right:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        wheel_axle_left:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        wheel_axle_right:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        wheel_left:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        wheel_right:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -149,27 +163,31 @@ Visualization Manager:
           Value: true
         base_link:
           Value: true
-        caster_left:
+        bl_caster_r_wheel_link:
           Value: true
-        caster_right:
+        bl_caster_rotation_link:
           Value: true
-        gearbox_plate_left:
+        bl_wheel_base_link:
           Value: true
-        gearbox_plate_right:
+        br_caster_r_wheel_link:
+          Value: true
+        br_caster_rotation_link:
+          Value: true
+        br_wheel_base_link:
+          Value: true
+        fl_caster_r_wheel_link:
+          Value: true
+        fl_caster_rotation_link:
+          Value: true
+        fl_wheel_base_link:
+          Value: true
+        fr_caster_r_wheel_link:
+          Value: true
+        fr_caster_rotation_link:
+          Value: true
+        fr_wheel_base_link:
           Value: true
         seat_link:
-          Value: true
-        swivel_left:
-          Value: true
-        swivel_right:
-          Value: true
-        wheel_axle_left:
-          Value: true
-        wheel_axle_right:
-          Value: true
-        wheel_left:
-          Value: true
-        wheel_right:
           Value: true
       Marker Alpha: 1
       Marker Scale: 0.4000000059604645
@@ -180,24 +198,26 @@ Visualization Manager:
       Tree:
         base_footprint:
           base_link:
-            gearbox_plate_left:
-              wheel_axle_left:
-                wheel_left:
+            bl_wheel_base_link:
+              bl_caster_rotation_link:
+                bl_caster_r_wheel_link:
                   {}
-            gearbox_plate_right:
-              wheel_axle_right:
-                wheel_right:
+            br_wheel_base_link:
+              br_caster_rotation_link:
+                br_caster_r_wheel_link:
+                  {}
+            fl_wheel_base_link:
+              fl_caster_rotation_link:
+                fl_caster_r_wheel_link:
+                  {}
+            fr_wheel_base_link:
+              fr_caster_rotation_link:
+                fr_caster_r_wheel_link:
                   {}
             seat_link:
               arms_link:
                 back_link:
                   {}
-            swivel_left:
-              caster_left:
-                {}
-            swivel_right:
-              caster_right:
-                {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -228,7 +248,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.9560139775276184
+      Distance: 1.1780660152435303
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -236,17 +256,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -0.04267461225390434
-        Y: -0.022996431216597557
-        Z: 0.2402113974094391
+        X: -0.05661247670650482
+        Y: -0.017577175050973892
+        Z: 0.2882120609283447
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.15479902923107147
+      Pitch: 0.1497989445924759
       Target Frame: <Fixed Frame>
-      Yaw: 0.6753555536270142
+      Yaw: 0.5953556299209595
     Saved: ~
 Window Geometry:
   Displays:

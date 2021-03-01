@@ -11,11 +11,14 @@
   <url type="website">https://github.com/robomakery/pvc-powerchair</url>
 
   <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>aws_robomaker_small_house_world</exec_depend>
   <exec_depend>gazebo_plugins</exec_depend>
   <exec_depend>gazebo_ros</exec_depend>
   <exec_depend>gazebo_ros_control</exec_depend>
   <exec_depend>key_teleop</exec_depend>
+  <exec_depend>pvcchair_bringup</exec_depend>
   <exec_depend>pvcchair_description</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>rviz</exec_depend>
+  <exec_depend>teleop_twist_keyboard</exec_depend>
 </package>

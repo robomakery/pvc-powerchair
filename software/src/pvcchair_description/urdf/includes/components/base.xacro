@@ -26,8 +26,6 @@
       <xacro:p2 xyz="${+p1_hlen+c_offset} 0 0" rpy="0 ${pi/2} ${pi/2}" />
       <xacro:p3 xyz="${+p1_hlen+c_offset} ${-p2_hlen-c_offset} ${+p3_hlen+c_offset}" rpy="0 0 0" />
       <xacro:p3 xyz="${+p1_hlen+c_offset} ${+p2_hlen+c_offset} ${+p3_hlen+c_offset}" rpy="0 0 0" />
-      <xacro:p4 xyz="${+p1_hlen+c_offset} ${-p2_hlen-c_offset} ${-p4_hlen-c_offset}" rpy="0 0 0" />
-      <xacro:p4 xyz="${+p1_hlen+c_offset} ${+p2_hlen+c_offset} ${-p4_hlen-c_offset}" rpy="0 0 0" />
       <xacro:p4 xyz="${+p1_hlen+2*c_offset+p4_hlen} ${-p2_hlen-c_offset} 0" rpy="0 ${pi/2} 0" />
       <xacro:p4 xyz="${+p1_hlen+2*c_offset+p4_hlen} ${+p2_hlen+c_offset} 0" rpy="0 ${pi/2} 0" />
       <xacro:cd xyz="${+p1_hlen+2*c_offset+p4_len+c_offset} ${-p2_hlen-c_offset} 0" rpy="0 ${-pi/2} ${-pi/2}" />
@@ -50,6 +48,8 @@
       <xacro:p2 xyz="${-p1_hlen-2*c_offset-p3_len-c_offset} 0 ${+c_offset+p9_len+c_offset}" rpy="0 ${pi/2} ${pi/2}" />
       <xacro:p9 xyz="${-p1_hlen-2*c_offset-p3_len-c_offset} ${-p2_hlen-c_offset} ${+c_offset+p9_len+2*c_offset+p9_hlen}" rpy="0 0 0" />
       <xacro:p9 xyz="${-p1_hlen-2*c_offset-p3_len-c_offset} ${+p2_hlen+c_offset} ${+c_offset+p9_len+2*c_offset+p9_hlen}" rpy="0 0 0" />
+      <xacro:p4 xyz="${-p1_hlen-2*c_offset-p3_len-c_offset} ${-p2_hlen-c_offset} ${+c_offset+p9_len+c_offset-p4_hlen}" rpy="0 0 0" />
+      <xacro:p4 xyz="${-p1_hlen-2*c_offset-p3_len-c_offset} ${+p2_hlen+c_offset} ${+c_offset+p9_len+c_offset-p4_hlen}" rpy="0 0 0" />
     </link>
     <joint name="base_joint" type="fixed">
       <origin xyz="0 0 ${base_level}" rpy="0 0 0" />
